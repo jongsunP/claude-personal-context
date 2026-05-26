@@ -1,0 +1,14 @@
+history.jsonl
+policy-limits.json
+remote-settings.json
+.last-cleanup
+cache/
+paste-cache/
+session-env/
+sessions/
+shell-snapshots/
+backups/
+downloads/
+file-history/
+plans/
+projects/*/f*/
