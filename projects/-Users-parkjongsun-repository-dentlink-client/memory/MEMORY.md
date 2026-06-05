@@ -13,6 +13,7 @@
 - [/welcome 페이지 가드 미추가는 의도된 설계](feedback_welcome_guard.md) — 이미 확인한 사용자의 /welcome 직접 접근을 막지 않는 것은 의도적 결정
 - [경고성 주석 배치 위치](feedback_warning_comment_placement.md) — NOTE 주석은 코드 블록 안이 아니라 함수/파일 상단 독립 위치에
 - [PR 리뷰 resolve 자동 처리](feedback_pr_review_resolve.md) — 리뷰 요청 시 수정·커밋·push·resolve 한 번에 처리
+- [E2E 자동화 불가 vs 조건부 vs 미구현 구분](feedback_e2e_impossible_vs_skip.md) — spec에는 실행 가능한 것만. 불가=미작성+문서화, 조건부=skipReason 패턴, 미구현=미작성+추후 /e2e
 
 ## Project
 - [E2E 작업 진행 상황](project_e2e_progress.md) — feature/DL-14803-1, 완성된 스펙 목록, 수정 이력
