@@ -1,0 +1,732 @@
+rm 'mcp-needs-auth-cache.json'
+rm 'plugins/known_marketplaces.json'
+rm 'plugins/marketplaces/claude-plugins-official/.claude-plugin/marketplace.json'
+rm 'plugins/marketplaces/claude-plugins-official/.gcs-sha'
+rm 'plugins/marketplaces/claude-plugins-official/.gitignore'
+rm 'plugins/marketplaces/claude-plugins-official/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/asana/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/asana/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/context7/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/context7/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/.npmrc'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/ACCESS.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/bun.lock'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/package.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/server.ts'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/skills/access/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/discord/skills/configure/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.npmrc'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/bun.lock'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/package.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/server.ts'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/firebase/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/firebase/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/github/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/github/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/gitlab/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/gitlab/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/greptile/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/greptile/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/greptile/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.npmrc'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/ACCESS.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/bun.lock'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/package.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/server.ts'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/skills/access/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/imessage/skills/configure/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/laravel-boost/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/laravel-boost/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/linear/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/linear/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/playwright/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/playwright/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/serena/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/serena/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.npmrc'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/ACCESS.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/bun.lock'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/package.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/server.ts'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/skills/access/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/telegram/skills/configure/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/terraform/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/external_plugins/terraform/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/agents/agent-sdk-verifier-py.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/agents/agent-sdk-verifier-ts.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/commands/new-sdk-app.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/clangd-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/clangd-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/automation-recommender-example.png'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/hooks-patterns.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/mcp-servers.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/plugins-reference.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/skills-reference.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/subagent-templates.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/claude-md-improver-example.png'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/commands/revise-claude-md.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/revise-claude-md-example.png'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/quality-criteria.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/templates.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/update-guidelines.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/architecture-critic.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/business-rules-extractor.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/legacy-analyst.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/security-auditor.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/test-engineer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-assess.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-brief.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-extract-rules.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-harden.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-map.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-reimagine.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-transform.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-review/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-review/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-review/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-review/commands/code-review.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/agents/code-simplifier.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/clean_gone.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/commit-push-pr.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/commit.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/csharp-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/csharp-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/commands/maker-setup.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/skills/cardputer-buddy/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/skills/m5-onboard/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/.mcp.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/commands/example-command.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/skills/example-command/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/example-plugin/skills/example-skill/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/hooks-handlers/session-start.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/hooks/hooks.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-architect.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-explorer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-reviewer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/feature-dev/commands/feature-dev.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/frontend-design/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/frontend-design/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/frontend-design/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/frontend-design/skills/frontend-design/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/gopls-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/gopls-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/.gitignore'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/agents/conversation-analyzer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/configure.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/help.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/hookify.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/list.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/core/__init__.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/core/config_loader.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/core/rule_engine.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/console-log-warning.local.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/dangerous-rm.local.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/require-tests-stop.local.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/sensitive-files-warning.local.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/__init__.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/hooks.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/posttooluse.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/pretooluse.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/stop.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/userpromptsubmit.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/matchers/__init__.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/skills/writing-rules/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/hookify/utils/__init__.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/jdtls-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/jdtls-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/kotlin-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/kotlin-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/hooks-handlers/session-start.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/hooks/hooks.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/lua-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/lua-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/evals/trigger_eval.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/adversarial_prompts.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/attempt_agent.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/known_constructions.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/model_tier_defaults.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/presentation_prompts.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/solver_heuristics.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/verifier_patterns.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/scripts/check_latex.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/scripts/compile_pdf.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/abuse-protection.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/apps-sdk-messages.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/directory-checklist.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/iframe-sandbox.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/payload-budgeting.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/widget-templates.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/auth.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/deploy-cloudflare-workers.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/elicitation.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/remote-http-scaffold.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/resources-and-prompts.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/server-capabilities.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/tool-design.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/versions.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/references/local-security.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/references/manifest-schema.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/commands/create-docker-mcp-tunnel.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/php-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/php-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/code-map.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/concept-map.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/data-explorer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/design-playground.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/diff-review.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/document-critique.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/agent-creator.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/plugin-validator.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/skill-reviewer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/commands/create-plugin.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/examples/agent-creation-prompt.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/examples/complete-agent-examples.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/agent-creation-system-prompt.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/system-prompt-design.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/triggering-examples.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/scripts/validate-agent.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/examples/plugin-commands.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/examples/simple-commands.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/advanced-workflows.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/documentation-patterns.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/frontmatter-reference.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/interactive-commands.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/marketplace-considerations.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/plugin-features-reference.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/testing-strategies.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/load-context.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/validate-bash.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/validate-write.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/advanced.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/migration.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/patterns.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/hook-linter.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/test-hook.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/validate-hook-schema.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/http-server.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/sse-server.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/stdio-server.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/authentication.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/server-types.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/tool-usage.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/create-settings-command.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/example-settings.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/read-settings-hook.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/references/parsing-techniques.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/references/real-world-examples.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/scripts/parse-frontmatter.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/scripts/validate-settings.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/advanced-plugin.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/minimal-plugin.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/standard-plugin.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/references/component-patterns.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/references/manifest-reference.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/skill-development/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/skill-development/references/skill-creator-original.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/code-reviewer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/code-simplifier.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/comment-analyzer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/pr-test-analyzer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/silent-failure-hunter.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/type-design-analyzer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/commands/review-pr.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pyright-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/pyright-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/cancel-ralph.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/help.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/ralph-loop.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/hooks/hooks.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/hooks/stop-hook.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/scripts/setup-ralph-loop.sh'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ruby-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/ruby-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/rust-analyzer-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/rust-analyzer-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/security-guidance/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/security-guidance/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/security-guidance/hooks/hooks.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/security-guidance/hooks/security_reminder_hook.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/session-report/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/analyze-sessions.mjs'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/template.html'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/.claude-plugin/plugin.json'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/LICENSE.txt'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/SKILL.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/analyzer.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/comparator.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/grader.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/assets/eval_review.html'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/eval-viewer/generate_review.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/eval-viewer/viewer.html'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/references/schemas.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/__init__.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/aggregate_benchmark.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/generate_report.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/improve_description.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/package_skill.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/quick_validate.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/run_eval.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/run_loop.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/utils.py'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/swift-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/swift-lsp/README.md'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/typescript-lsp/LICENSE'
+rm 'plugins/marketplaces/claude-plugins-official/plugins/typescript-lsp/README.md'
+[main c9f5478] chore: plugins, mcp-cache gitignore 추가 및 추적 제거
+ 366 files changed, 2 insertions(+), 62486 deletions(-)
+ delete mode 100644 mcp-needs-auth-cache.json
+ delete mode 100644 plugins/known_marketplaces.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/.claude-plugin/marketplace.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/.gcs-sha
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/.gitignore
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/asana/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/asana/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/context7/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/context7/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/.npmrc
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/ACCESS.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/bun.lock
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/package.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/server.ts
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/skills/access/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/discord/skills/configure/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/.npmrc
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/bun.lock
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/package.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/fakechat/server.ts
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/firebase/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/firebase/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/github/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/github/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/gitlab/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/gitlab/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/greptile/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/greptile/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/greptile/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/.npmrc
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/ACCESS.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/bun.lock
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/package.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/server.ts
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/skills/access/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/imessage/skills/configure/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/laravel-boost/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/laravel-boost/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/linear/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/linear/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/playwright/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/playwright/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/serena/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/serena/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/.npmrc
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/ACCESS.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/bun.lock
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/package.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/server.ts
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/skills/access/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/telegram/skills/configure/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/terraform/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/external_plugins/terraform/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/agents/agent-sdk-verifier-py.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/agents/agent-sdk-verifier-ts.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/agent-sdk-dev/commands/new-sdk-app.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/clangd-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/clangd-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/automation-recommender-example.png
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/hooks-patterns.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/mcp-servers.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/plugins-reference.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/skills-reference.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-code-setup/skills/claude-automation-recommender/references/subagent-templates.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/claude-md-improver-example.png
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/commands/revise-claude-md.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/revise-claude-md-example.png
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/quality-criteria.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/templates.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/claude-md-management/skills/claude-md-improver/references/update-guidelines.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/architecture-critic.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/business-rules-extractor.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/legacy-analyst.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/security-auditor.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/agents/test-engineer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-assess.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-brief.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-extract-rules.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-harden.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-map.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-reimagine.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-modernization/commands/modernize-transform.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-review/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-review/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-review/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-review/commands/code-review.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/code-simplifier/agents/code-simplifier.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/clean_gone.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/commit-push-pr.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/commit-commands/commands/commit.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/csharp-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/csharp-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/commands/maker-setup.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/skills/cardputer-buddy/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/cwc-makers/skills/m5-onboard/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/.mcp.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/commands/example-command.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/skills/example-command/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/example-plugin/skills/example-skill/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/README.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/hooks-handlers/session-start.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/explanatory-output-style/hooks/hooks.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-architect.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-explorer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/agents/code-reviewer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/feature-dev/commands/feature-dev.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/frontend-design/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/frontend-design/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/frontend-design/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/frontend-design/skills/frontend-design/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/gopls-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/gopls-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/.gitignore
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/agents/conversation-analyzer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/configure.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/help.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/hookify.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/commands/list.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/core/__init__.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/core/config_loader.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/core/rule_engine.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/console-log-warning.local.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/dangerous-rm.local.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/require-tests-stop.local.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/examples/sensitive-files-warning.local.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/__init__.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/hooks.json
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/posttooluse.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/pretooluse.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/stop.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/hookify/hooks/userpromptsubmit.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/matchers/__init__.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/skills/writing-rules/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/hookify/utils/__init__.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/jdtls-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/jdtls-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/kotlin-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/kotlin-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/README.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/hooks-handlers/session-start.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/learning-output-style/hooks/hooks.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/lua-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/lua-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/evals/trigger_eval.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/adversarial_prompts.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/attempt_agent.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/known_constructions.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/model_tier_defaults.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/presentation_prompts.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/solver_heuristics.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/references/verifier_patterns.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/scripts/check_latex.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/math-olympiad/skills/math-olympiad/scripts/compile_pdf.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/abuse-protection.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/apps-sdk-messages.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/directory-checklist.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/iframe-sandbox.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/payload-budgeting.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-app/references/widget-templates.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/auth.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/deploy-cloudflare-workers.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/elicitation.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/remote-http-scaffold.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/resources-and-prompts.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/server-capabilities.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/tool-design.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcp-server/references/versions.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/references/local-security.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-server-dev/skills/build-mcpb/references/manifest-schema.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/mcp-tunnels/commands/create-docker-mcp-tunnel.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/php-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/php-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/code-map.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/concept-map.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/data-explorer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/design-playground.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/diff-review.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/playground/skills/playground/templates/document-critique.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/agent-creator.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/plugin-validator.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/agents/skill-reviewer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/commands/create-plugin.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/examples/agent-creation-prompt.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/examples/complete-agent-examples.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/agent-creation-system-prompt.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/system-prompt-design.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/references/triggering-examples.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/agent-development/scripts/validate-agent.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/examples/plugin-commands.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/examples/simple-commands.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/advanced-workflows.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/documentation-patterns.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/frontmatter-reference.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/interactive-commands.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/marketplace-considerations.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/plugin-features-reference.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/command-development/references/testing-strategies.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/SKILL.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/load-context.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/validate-bash.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/examples/validate-write.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/advanced.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/migration.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/references/patterns.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/README.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/hook-linter.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/test-hook.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/hook-development/scripts/validate-hook-schema.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/http-server.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/sse-server.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/examples/stdio-server.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/authentication.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/server-types.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/mcp-integration/references/tool-usage.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/create-settings-command.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/example-settings.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/examples/read-settings-hook.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/references/parsing-techniques.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/references/real-world-examples.md
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/scripts/parse-frontmatter.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-settings/scripts/validate-settings.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/advanced-plugin.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/minimal-plugin.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/examples/standard-plugin.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/references/component-patterns.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/plugin-structure/references/manifest-reference.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/skill-development/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/plugin-dev/skills/skill-development/references/skill-creator-original.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/code-reviewer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/code-simplifier.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/comment-analyzer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/pr-test-analyzer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/silent-failure-hunter.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/agents/type-design-analyzer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pr-review-toolkit/commands/review-pr.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pyright-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/pyright-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/cancel-ralph.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/help.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/commands/ralph-loop.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/hooks/hooks.json
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/hooks/stop-hook.sh
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/ralph-loop/scripts/setup-ralph-loop.sh
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ruby-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/ruby-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/rust-analyzer-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/rust-analyzer-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/security-guidance/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/security-guidance/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/security-guidance/hooks/hooks.json
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/security-guidance/hooks/security_reminder_hook.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/session-report/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/analyze-sessions.mjs
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/session-report/skills/session-report/template.html
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/.claude-plugin/plugin.json
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/LICENSE.txt
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/SKILL.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/analyzer.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/comparator.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/agents/grader.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/assets/eval_review.html
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/eval-viewer/generate_review.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/eval-viewer/viewer.html
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/references/schemas.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/__init__.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/aggregate_benchmark.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/generate_report.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/improve_description.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/package_skill.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/quick_validate.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/run_eval.py
+ delete mode 100755 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/run_loop.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/skill-creator/skills/skill-creator/scripts/utils.py
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/swift-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/swift-lsp/README.md
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/typescript-lsp/LICENSE
+ delete mode 100644 plugins/marketplaces/claude-plugins-official/plugins/typescript-lsp/README.md
