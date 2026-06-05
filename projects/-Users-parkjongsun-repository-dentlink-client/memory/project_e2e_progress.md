@@ -4,11 +4,21 @@ description: "DL-14805 e2e 자동화 작업 진행 상황 — 브랜치, 완성�
 metadata: 
   node_type: memory
   type: project
-  originSessionId: f676449a-d653-4892-bf54-aaafe5e1a299
+  originSessionId: c652ebcc-c9e4-43db-86c9-01454ae0f1eb
 ---
 
-브랜치: `feature/DL-14805-e2e`
-마지막 커밋: `d31a94db8` (2026-05-22) — "chore: e2e 작업중"
+## 전체 맥락
+
+E2E 자동화의 4단계 작업이 모두 완료된 상태:
+
+1. **UI 대응** — 바뀐 UI에 맞게 기존 시나리오·셀렉터 수정 ✅
+2. **리팩토링** — steps/ 단위 마이크로 함수 구조화, spec은 조합만 담당 ✅
+3. **Skill 등록** — `/e2e` 스킬로 새 시나리오를 기존 함수 재조합으로 처리 ✅
+4. **PM 시나리오 대응** — 스킬 통해 코드 추가 → 테스트 → 재수정 사이클 자동화 ✅ (구조 완비)
+
+## 현재 상태
+
+`feature/DL-14805-e2e` 브랜치 → `release/v1.74.0`에 PR #4190으로 병합 완료 (2026-06-05)
 
 ## 완성된 Spec 파일 (`e2e/clinic/specs/`)
 
@@ -16,27 +26,24 @@ metadata:
 |------|------|
 | `00_signup.spec.ts` | 회원가입 → 병원생성 → 회원탈퇴 |
 | `01_signin.spec.ts` | 로그인/실패 케이스 |
-| `03_orders/crown.spec.ts` | Crown 주문 4단계 |
-| `03_orders/denture.spec.ts` | Digital Denture 주문 4단계 |
-| `03_orders/veneer.spec.ts` | Premium Veneer 주문 4단계 |
+| `02_onboarding.spec.ts` | 온보딩 플로우 ✅ 완료 |
+| `03_orders/crown.spec.ts` | Crown 주문 |
+| `03_orders/denture.spec.ts` | Digital Denture 주문 |
+| `03_orders/veneer.spec.ts` | Premium Veneer 주문 |
+| `03_orders/instasmile.spec.ts` | Instasmile 주문 (신규) |
 | `04_labShipment.spec.ts` | 기공소 배송/픽업 생성·수정·취소 |
-| `05_labStatus.spec.ts` | 주문 상태 변경 12단계 (New → Completed) |
+| `05_labStatus.spec.ts` | 주문 상태 변경 |
 | `06_linkTalk.spec.ts` | 링크톡 메시지/파일 전송 |
 | `07_billing.spec.ts` | 어드민 결제생성 → Unpaid 조회 → 결제 완료 |
 
-## 삭제된 파일
-- `02_onboard.spec.ts` — 마지막 커밋에서 의도적 삭제. 내용은 `00_signup.spec.ts`(병원생성 플로우)로 흡수됨.
+## steps/ 구조
 
-## 인프라 파일 (완성)
-- `steps/order/order-step1~4.ts` — 주문 단계별 헬퍼
-- `steps/order/order-cases/crown/denture/veneer.ts` — 케이스 설정값
-- `utils/lab.ts`, `utils/login.ts`, `utils/signin.ts`, `utils/session.ts`
-- `setup/global-setup.ts` — 클리닉 계정 storageState 생성
+`e2e/clinic/steps/` 하위: `auth/`, `lab/`, `office/`, `onboard/`, `order/`, `user/`
 
-## 남은 작업 (미확인)
-1. `02_onboard.spec.ts` 재작성 여부 결정 (의도적 삭제인지 작업 중인지)
-2. 실제 테스트 실행 검증 (코드 작성 완료, 통과 여부 미확인)
-3. `e2e/clinic/page.ts` 루트 레벨 오래된 파일 정리 여부
+## 현재 작업 단계
 
-**Why:** 다른 작업 진행 후 이 브랜치로 돌아올 때 빠르게 컨텍스트 복원하기 위해 저장.
-**How to apply:** 새 세션에서 "e2e 작업 계속해줘" 시 이 메모리로 현황 파악 후 진행.
+PM이 준 신규 시나리오를 `/e2e` 스킬로 추가하는 중 **중간에 중단**됨.
+→ 재개 시 어떤 PM 시나리오까지 추가했는지 확인 후 이어서 진행.
+
+**Why:** 다른 작업 또는 토큰 소진으로 중단. 구조와 스킬은 완비된 상태.
+**How to apply:** "e2e 작업 계속해줘" 시 현재 어떤 PM 시나리오 작업 중이었는지 먼저 확인하고 진행.
