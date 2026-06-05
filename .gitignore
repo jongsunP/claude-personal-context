@@ -11,4 +11,6 @@ backups/
 downloads/
 file-history/
 plans/
+plugins/
+mcp-needs-auth-cache.json
 projects/*/f*/
