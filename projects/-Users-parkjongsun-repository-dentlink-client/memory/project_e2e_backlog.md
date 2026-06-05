@@ -10,8 +10,9 @@ metadata:
 ## 진행 중 (feature/DL-14803-1)
 
 ### PR 미생성
-- `feature/DL-14803-1` → `release/v1.74.0` PR 아직 안 만듦
-- 수동 테스트 결과 확인 후 생성 예정
+- `feature/DL-14803-1` → `release/v1.74.0` PR 생성 대기
+- `gh auth login` 필요 → 인증 후 PR 생성 명령어 실행 예정
+- 로컬/스테이징 모두 **97개 중 92 passed, 5 skipped, 0 failed** 확인 완료 (2026-06-06)
 
 ---
 
@@ -43,17 +44,9 @@ metadata:
 
 ---
 
-## Opus 검토 결과 미처리 항목
+## 스테이징/로컬 전체 실행 결과 (2026-06-06)
 
-Opus가 검토했으나 아직 코드로 추가되지 않은 시나리오:
-- DL-14810 (Onboarding): `02_onboarding.spec.ts` 이미 구현 완료 — 실행 확인만 필요
-- 기타 Opus 검토 시나리오: 다음 세션에서 Jira 티켓 기준으로 재확인 필요
-
----
-
-## 스테이징 전체 실행 결과 (2026-06-06)
-
-97개 중 **92 passed, 5 skipped, 0 failed**
+97개 중 **92 passed, 5 skipped, 0 failed** (스테이징·로컬 동일)
 
 **Skip된 5개 (모두 의도된 skip):**
 - 리퍼럴/BP URL 진입 (2개) — 환경변수 미입력
@@ -65,5 +58,11 @@ Opus가 검토했으나 아직 코드로 추가되지 않은 시나리오:
 
 - **Default Scanner null 복원 불가**: `setDefaultScannerPlatform` API가 null 설정을 지원 안 함. originalPlatform이 null이었으면 테스트 후 복원 불가. crown/denture/veneer spec은 PVS를 명시 선택하므로 영향 없음.
 - **Scanner 관련 step4 테스트**: 테스트 계정에 Default Scanner 미설정이면 3개 자동 skip. Default Scanner 설정 시 실행 가능하나 null 복원 불가 주의.
+- **ISV Step3 환경별 분기**: `option.type === "RADIO"` 옵션(Preferred Shade, Gingivectomy Plan)이 로컬에서는 자동 선택, 스테이징에서는 토글 버튼. `isStagingE2E` 분기로 처리함 (`instasmile.ts`).
+- **로컬 테스트 실행 방법**: `.env.development`의 URL이 `:3000`으로 설정되어 `reuseExistingServer`가 오작동. 반드시 env 변수를 override해서 실행:
+  ```
+  NEXT_PUBLIC_E2E_BASE_URL=http://localhost:3001 NEXT_PUBLIC_E2E_BASE_LAB_URL=http://localhost:3006 NEXT_PUBLIC_E2E_BASE_ADMIN_URL=http://localhost:3003 pnpm exec playwright test --project=clinic
+  ```
+  또는 `pnpm run e2e:clinic` 사용.
 
 **How to apply:** 재개 시 이 파일부터 읽고 미완료 항목 확인.
