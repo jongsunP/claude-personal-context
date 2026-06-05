@@ -17,18 +17,18 @@ metadata:
 
 ## 미구현 시나리오
 
-### DL-14803 회원가입 — Step2/3/4 (이메일 인증 필요)
-현재 `00_signup_validation.spec.ts`는 Step1 UI 검증만 커버.
-이메일 실제 인증이 있어야 Step2 이후 진입 가능.
+### DL-14803 회원가입 — Step4 (복잡한 office 세팅 필요)
+`00_signup_step2_3_validation.spec.ts`에서 Step2/3 UI 검증 완료 (10개 테스트 통과, 2026-06-05).
+이메일 인증은 `NEXT_PUBLIC_EMAIL_VERIFICATION_CODE=4520` 우회로 구현.
 
-- **Step2**: 국가 드롭다운, 전화번호 숫자만 입력 검증
-- **Step3**: Role 선택 (Dentist/Assistant/Office Manager 등)
-- **Step4 "Request Access"**: 기존 병원 검색 후 가입 요청 플로우
-- **Step4 "Create Office"**: 동일 주소 병원 존재 시 Y/N 분기
+- ~~**Step2**: 국가 드롭다운, 전화번호 숫자만 입력 검증~~ ✅ 완료
+- ~~**Step3**: Role 선택 (Dentist/Assistant/Office Manager 등)~~ ✅ 완료
+- **Step4 "Request Access"**: 기존 병원 검색 후 가입 요청 플로우 — 테스트용 병원 환경 세팅 필요
+- **Step4 "Create Office"**: 동일 주소 병원 존재 시 Y/N 분기 — 동일 주소 병원 시나리오 재현 어려움
 
-**Why:** 실제 이메일 인증 코드 수신이 필요 → 고정 인증 코드 환경 필요 (현재 `NEXT_PUBLIC_EMAIL_VERIFICATION_CODE=4520` 로 기존 signup spec은 우회 중)
+**Why:** Step4는 office 검색/생성 플로우라 테스트 환경 구성이 복잡. 별도 검토 필요.
 
-**How to apply:** `00_signup.spec.ts`의 `completeSignupFlow` 패턴 참고. 인증 코드 고정값 환경이 확인되면 /e2e 스킬로 바로 추가 가능.
+**How to apply:** /e2e 스킬 + DL-14803 티켓으로 재개 가능.
 
 ---
 

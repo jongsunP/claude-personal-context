@@ -25,6 +25,7 @@ metadata:
 | `03_orders/denture.spec.ts` | Digital Denture 주문 | release/v1.74.0 |
 | `03_orders/veneer.spec.ts` | Premium Veneer 주문 | release/v1.74.0 |
 | `03_orders/instasmile.spec.ts` | Instasmile 주문 | release/v1.74.0 |
+| `00_signup_step2_3_validation.spec.ts` | 회원가입 Step2/3 폼 유효성 검증 (DL-14803) | feature/DL-14803-1 |
 | `03_orders/step4-ui-state.spec.ts` | Step4 UI 상태 검증 (DL-14811) | feature/DL-14803-1 |
 | `04_labShipment.spec.ts` | 기공소 배송/픽업 생성·수정·취소 | release/v1.74.0 |
 | `05_labStatus.spec.ts` | 주문 상태 변경 | release/v1.74.0 |
@@ -36,6 +37,9 @@ metadata:
 1. `test: E2E 신규 시나리오 추가 (DL-14803, DL-14811)` — signup_validation, step4-ui-state, scanner-api, .env.staging
 2. `test: E2E 리퍼럴/BP 환경변수 플레이스홀더 추가 (.env.development)` — .env.development
 3. `fix: e2e Playwright UI clinic-account-setup 분리 제거` — storageState: undefined 제거 (00_signup, 00_signup_validation)
+4. `docs: e2e 스킬 업데이트 — storageState 금지 패턴, scanner-api, 신규 스펙 반영`
+5. `test: E2E Signup Step 2/3 폼 유효성 검증 시나리오 추가 (DL-14803)` — 00_signup_step2_3_validation.spec.ts (10개 테스트 모두 통과)
+6. `docs: e2e 스킬 업데이트 — Step2/3 validation spec, type=number 및 SelectDropdown 실패 패턴 추가`
 
 ## 수정 이력 (중요)
 
@@ -47,7 +51,7 @@ metadata:
 ## 남은 작업
 
 - `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE`, `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` 실제 값 입력 필요 (스테이징/dev .env에 플레이스홀더만 있음)
-- DL-14803 Step2/3/4 시나리오 — 실제 이메일 인증 필요, 별도 구현 검토 필요
+- DL-14803 Step4 시나리오 (Request Access, 동일 주소 병원 분기) — 복잡한 office 세팅 필요, 별도 구현 필요
 - PR 생성: `feature/DL-14803-1` → `release/v1.74.0`
 - 수동 테스트 결과 확인 후 PR
 
