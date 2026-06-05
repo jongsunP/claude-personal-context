@@ -15,7 +15,8 @@
 - [PR 리뷰 resolve 자동 처리](feedback_pr_review_resolve.md) — 리뷰 요청 시 수정·커밋·push·resolve 한 번에 처리
 
 ## Project
-- [E2E 작업 진행 상황](project_e2e_progress.md) — DL-14805, feature/DL-14805-e2e, 스펙 00~07 완성, 남은 작업 정리
+- [E2E 작업 진행 상황](project_e2e_progress.md) — feature/DL-14803-1, 완성된 스펙 목록, 수정 이력
+- [E2E 백로그](project_e2e_backlog.md) — 미완료 시나리오, 환경변수 미입력, PR 생성 대기, 알려진 제약
 
 ## Reference
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal)로 관리, clone/pull/push 명령어
