@@ -16,7 +16,7 @@
 - [E2E 자동화 불가 vs 조건부 vs 미구현 구분](feedback_e2e_impossible_vs_skip.md) — spec에는 실행 가능한 것만. 불가=미작성+문서화, 조건부=skipReason 패턴, 미구현=미작성+추후 /e2e
 
 ## Project
-- [E2E 마스터 플랜](project_e2e_master_plan.md) — 4단계 계획 (UI대응→리팩토링→Skill등록→PM시나리오), 현재 2단계 확인 필요
+- [E2E 마스터 플랜](project_e2e_master_plan.md) — 4단계 완료, 이후 유지·성장 모드 (신규 시나리오 대응 + 스킬 가꾸기)
 - [E2E 작업 진행 상황](project_e2e_progress.md) — feature/DL-14803-1, 완성된 스펙 목록, PR #4192
 - [E2E 백로그](project_e2e_backlog.md) — 미완료 시나리오, 환경변수 미입력, 알려진 제약
 
