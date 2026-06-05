@@ -1,67 +1,31 @@
 ---
 name: project-e2e-backlog
-description: "E2E 미완료 작업·백로그 — 다음 세션 재개 시 우선 확인"
+description: E2E 미완료 항목 및 알려진 제약 — 신규 작업 시 참고
 metadata:
   node_type: memory
   type: project
   originSessionId: c652ebcc-c9e4-43db-86c9-01454ae0f1eb
 ---
 
-## PR 완료
-
-- **PR #4192** `feature/DL-14803-1` → `release/v1.74.0` ✅ 머지 대기 중 (2026-06-06)
-- https://github.com/Innvoaid/dentlink-client/pull/4192
-- 로컬/스테이징 모두 **97개 중 92 passed, 5 skipped, 0 failed** 확인 완료
-
----
-
 ## 미구현 시나리오
 
-### DL-14803 회원가입 — Step4 (복잡한 office 세팅 필요)
-`00_signup_step2_3_validation.spec.ts`에서 Step2/3 UI 검증 완료 (10개 테스트 통과, 2026-06-05).
-이메일 인증은 `NEXT_PUBLIC_EMAIL_VERIFICATION_CODE=4520` 우회로 구현.
+### Signup Step4 (DL-14803)
+- **"Request Access"**: 기존 병원 검색 후 가입 요청 — 테스트용 병원 환경 세팅 필요
+- **"Create Office"**: 동일 주소 병원 존재 시 Y/N 분기 — 시나리오 재현 어려움
 
-- ~~**Step2**: 국가 드롭다운, 전화번호 숫자만 입력 검증~~ ✅ 완료
-- ~~**Step3**: Role 선택 (Dentist/Assistant/Office Manager 등)~~ ✅ 완료
-- **Step4 "Request Access"**: 기존 병원 검색 후 가입 요청 플로우 — 테스트용 병원 환경 세팅 필요
-- **Step4 "Create Office"**: 동일 주소 병원 존재 시 Y/N 분기 — 동일 주소 병원 시나리오 재현 어려움
-
-**Why:** Step4는 office 검색/생성 플로우라 테스트 환경 구성이 복잡. 별도 검토 필요.
-
-**How to apply:** /e2e 스킬 + DL-14803 티켓으로 재개 가능.
-
----
+**How to apply:** `/e2e` 스킬 + DL-14803 티켓으로 재개.
 
 ## 환경변수 미입력
 
-| 변수 | 파일 | 용도 |
-|------|------|------|
-| `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE` | `.env.staging`, `.env.development` | 리퍼럴 URL 진입 테스트 |
-| `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` | `.env.staging`, `.env.development` | BP 파트너 URL 진입 테스트 |
+| 변수 | 용도 |
+|------|------|
+| `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE` | 리퍼럴 URL 진입 테스트 (2개 skip 원인) |
+| `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` | BP 파트너 URL 진입 테스트 (2개 skip 원인) |
 
-값 미입력 시 해당 테스트는 자동 skip됨. 스테이징 DB 또는 백엔드 팀에 값 확인 필요.
+백엔드 팀에 값 확인 후 `.env.staging`, `.env.development`에 입력 시 자동 실행됨.
 
----
+## 알려진 제약
 
-## 스테이징/로컬 전체 실행 결과 (2026-06-06)
-
-97개 중 **92 passed, 5 skipped, 0 failed** (스테이징·로컬 동일)
-
-**Skip된 5개 (모두 의도된 skip):**
-- 리퍼럴/BP URL 진입 (2개) — 환경변수 미입력
-- Default Scanner 설정됨 시나리오 (3개) — 테스트 계정에 Default Scanner 미설정
-
----
-
-## 알려진 제약/한계
-
-- **Default Scanner null 복원 불가**: `setDefaultScannerPlatform` API가 null 설정을 지원 안 함. originalPlatform이 null이었으면 테스트 후 복원 불가. crown/denture/veneer spec은 PVS를 명시 선택하므로 영향 없음.
-- **Scanner 관련 step4 테스트**: 테스트 계정에 Default Scanner 미설정이면 3개 자동 skip. Default Scanner 설정 시 실행 가능하나 null 복원 불가 주의.
-- **ISV Step3 환경별 분기**: `option.type === "RADIO"` 옵션(Preferred Shade, Gingivectomy Plan)이 로컬에서는 자동 선택, 스테이징에서는 토글 버튼. `isStagingE2E` 분기로 처리함 (`instasmile.ts`).
-- **로컬 테스트 실행 방법**: `.env.development`의 URL이 `:3000`으로 설정되어 `reuseExistingServer`가 오작동. 반드시 env 변수를 override해서 실행:
-  ```
-  NEXT_PUBLIC_E2E_BASE_URL=http://localhost:3001 NEXT_PUBLIC_E2E_BASE_LAB_URL=http://localhost:3006 NEXT_PUBLIC_E2E_BASE_ADMIN_URL=http://localhost:3003 pnpm exec playwright test --project=clinic
-  ```
-  또는 `pnpm run e2e:clinic` 사용.
-
-**How to apply:** 재개 시 이 파일부터 읽고 미완료 항목 확인.
+- **Default Scanner null 복원 불가**: `setDefaultScannerPlatform` API가 null 설정 미지원. 테스트 계정에 Default Scanner 미설정이면 step4 관련 3개 자동 skip.
+- **ISV Step3 환경별 분기**: `option.type === "RADIO"` 옵션이 로컬은 자동 선택, 스테이징은 토글 버튼. `isStagingE2E` 분기로 처리 (`instasmile.ts`).
+- **로컬 실행**: `.env.development` URL이 `:3000`이라 `reuseExistingServer` 오작동. `pnpm run e2e:clinic` 사용 필수.
