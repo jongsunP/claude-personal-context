@@ -51,9 +51,19 @@ Opus가 검토했으나 아직 코드로 추가되지 않은 시나리오:
 
 ---
 
+## 스테이징 전체 실행 결과 (2026-06-06)
+
+97개 중 **92 passed, 5 skipped, 0 failed**
+
+**Skip된 5개 (모두 의도된 skip):**
+- 리퍼럴/BP URL 진입 (2개) — 환경변수 미입력
+- Default Scanner 설정됨 시나리오 (3개) — 테스트 계정에 Default Scanner 미설정
+
+---
+
 ## 알려진 제약/한계
 
 - **Default Scanner null 복원 불가**: `setDefaultScannerPlatform` API가 null 설정을 지원 안 함. originalPlatform이 null이었으면 테스트 후 복원 불가. crown/denture/veneer spec은 PVS를 명시 선택하므로 영향 없음.
-- **Scanner 관련 step4 테스트**: 테스트 계정에 구강 스캐너가 미등록이면 시나리오 3이 자동 skip.
+- **Scanner 관련 step4 테스트**: 테스트 계정에 Default Scanner 미설정이면 3개 자동 skip. Default Scanner 설정 시 실행 가능하나 null 복원 불가 주의.
 
 **How to apply:** 재개 시 이 파일부터 읽고 미완료 항목 확인.
