@@ -7,6 +7,12 @@ metadata:
   originSessionId: c652ebcc-c9e4-43db-86c9-01454ae0f1eb
 ---
 
+## 현재 브랜치 / PR
+
+- 브랜치: `feature/DL-14805-1` (기존 `feature/DL-14803-1`에서 rename)
+- PR: [#4193](https://github.com/Innvoaid/dentlink-client/pull/4193) → `release/v1.74.0`
+- 지라: DL-14805 "[e2e] 테스트 코드 수정"
+
 ## 운영 중인 Spec (`e2e/clinic/specs/`)
 
 | 파일 | 내용 |
