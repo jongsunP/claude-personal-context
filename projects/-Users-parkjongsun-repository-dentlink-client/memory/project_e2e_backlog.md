@@ -7,12 +7,11 @@ metadata:
   originSessionId: c652ebcc-c9e4-43db-86c9-01454ae0f1eb
 ---
 
-## 진행 중 (feature/DL-14803-1)
+## PR 완료
 
-### PR 미생성
-- `feature/DL-14803-1` → `release/v1.74.0` PR 생성 대기
-- `gh auth login` 필요 → 인증 후 PR 생성 명령어 실행 예정
-- 로컬/스테이징 모두 **97개 중 92 passed, 5 skipped, 0 failed** 확인 완료 (2026-06-06)
+- **PR #4192** `feature/DL-14803-1` → `release/v1.74.0` ✅ 머지 대기 중 (2026-06-06)
+- https://github.com/Innvoaid/dentlink-client/pull/4192
+- 로컬/스테이징 모두 **97개 중 92 passed, 5 skipped, 0 failed** 확인 완료
 
 ---
 

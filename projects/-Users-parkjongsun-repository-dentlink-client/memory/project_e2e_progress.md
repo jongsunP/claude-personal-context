@@ -51,10 +51,14 @@ metadata:
 - `clearBrowserSession` 호출로 대체 (동일 효과, UI 분리 없음)
 - 2026-05-21부터 존재했던 문제. feature/DL-14803-1에서 근본 수정.
 
+## PR
+
+- **PR #4192**: `feature/DL-14803-1` → `release/v1.74.0` ✅ 생성 완료 (2026-06-06)
+- URL: https://github.com/Innvoaid/dentlink-client/pull/4192
+
 ## 남은 작업
 
-- `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE`, `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` 실제 값 입력 필요 (스테이징/dev .env에 플레이스홀더만 있음)
-- DL-14803 Step4 시나리오 (Request Access, 동일 주소 병원 분기) — 복잡한 office 세팅 필요, 별도 구현 필요
-- **PR 생성 대기**: `feature/DL-14803-1` → `release/v1.74.0` — 로컬·스테이징 모두 92 passed, 5 skipped, 0 failed 수동 확인 완료 (2026-06-06). `gh auth login` 후 PR 생성 예정.
+- `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE`, `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` 실제 값 입력 필요 (스테이징/dev .env에 플레이스홀더만 있음, 백엔드 팀 확인 필요)
+- DL-14803 Step4 시나리오 (Request Access, 동일 주소 병원 분기) — 복잡한 office 세팅 필요, 별도 구현 예정
 
-**How to apply:** 재개 시 `feature/DL-14803-1` 체크아웃 후 위 남은 작업 이어서 진행.
+**How to apply:** 재개 시 PR 머지 여부 확인 후 위 남은 작업 이어서 진행.
