@@ -40,6 +40,8 @@ metadata:
 4. `docs: e2e 스킬 업데이트 — storageState 금지 패턴, scanner-api, 신규 스펙 반영`
 5. `test: E2E Signup Step 2/3 폼 유효성 검증 시나리오 추가 (DL-14803)` — 00_signup_step2_3_validation.spec.ts (10개 테스트 모두 통과)
 6. `docs: e2e 스킬 업데이트 — Step2/3 validation spec, type=number 및 SelectDropdown 실패 패턴 추가`
+7. `docs: e2e 스킬 — 자동화 불가/조건부 가능/미구현 구분 원칙 추가`
+8. `e2e: ISV Step3 로컬/스테이징 환경별 optionButtons 분기 처리` — RADIO 타입 옵션 자동 선택 차이 대응, waitFor 추가, webServer timeout 300_000
 
 ## 수정 이력 (중요)
 
@@ -52,7 +54,6 @@ metadata:
 
 - `NEXT_PUBLIC_E2E_REFERRAL_GROUP_CODE`, `NEXT_PUBLIC_E2E_BP_PARTNER_KEY` 실제 값 입력 필요 (스테이징/dev .env에 플레이스홀더만 있음)
 - DL-14803 Step4 시나리오 (Request Access, 동일 주소 병원 분기) — 복잡한 office 세팅 필요, 별도 구현 필요
-- PR 생성: `feature/DL-14803-1` → `release/v1.74.0`
-- 수동 테스트 결과 확인 후 PR
+- **PR 생성 대기**: `feature/DL-14803-1` → `release/v1.74.0` — `gh auth login` 후 생성 예정. 로컬/스테이징 수동 테스트 확인 중 (2026-06-06)
 
 **How to apply:** 재개 시 `feature/DL-14803-1` 체크아웃 후 위 남은 작업 이어서 진행.
