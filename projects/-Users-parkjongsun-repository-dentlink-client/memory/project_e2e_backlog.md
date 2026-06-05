@@ -9,11 +9,11 @@ metadata:
 
 ## 미구현 시나리오
 
-### Signup Step4 (DL-14803)
+### Signup Step4 (시나리오 출처: DL-14803, 작업 티켓: DL-14805)
 - **"Request Access"**: 기존 병원 검색 후 가입 요청 — 테스트용 병원 환경 세팅 필요
 - **"Create Office"**: 동일 주소 병원 존재 시 Y/N 분기 — 시나리오 재현 어려움
 
-**How to apply:** `/e2e` 스킬 + DL-14803 티켓으로 재개.
+**How to apply:** `/e2e` 스킬 + DL-14805 티켓으로 재개.
 
 ## 환경변수 미입력
 
