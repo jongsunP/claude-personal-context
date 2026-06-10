@@ -14,6 +14,7 @@
 - [경고성 주석 배치 위치](feedback_warning_comment_placement.md) — NOTE 주석은 코드 블록 안이 아니라 함수/파일 상단 독립 위치에
 - [PR 리뷰 resolve 자동 처리](feedback_pr_review_resolve.md) — 리뷰 요청 시 수정·커밋·push·resolve 한 번에 처리
 - [미완료 작업 선제 고지](feedback_honesty_incomplete.md) — 요청을 완전히 못 했으면 사용자가 묻기 전에 먼저 솔직하게 말한다
+- [E2E 빨간색 waitFor 진단 원칙](feedback_e2e_red_highlights.md) — 근본 파악 우선. 시간 단축이 목적 아님. flaky 위험 생기면 대명제 위반
 
 ## Project
 - [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
