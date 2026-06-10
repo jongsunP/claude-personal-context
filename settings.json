@@ -1,7 +1,8 @@
 {
-  "theme": "light-ansi",
-  "model": "claude-sonnet-4-6",
   "permissions": {
-    "defaultMode": "acceptEdits"
-  }
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "claude-sonnet-4-6",
+  "theme": "light-ansi",
+  "skipDangerousModePermissionPrompt": true
 }
