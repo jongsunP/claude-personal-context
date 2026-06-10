@@ -1,0 +1,9 @@
+{
+  "id": "3",
+  "subject": "검증 (typecheck + 가능한 테스트)",
+  "description": "e2e tsconfig 타입체크, 가능하면 영향 spec 로컬 실행",
+  "activeForm": "수정 검증 중",
+  "status": "completed",
+  "blocks": [],
+  "blockedBy": []
+}

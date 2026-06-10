@@ -18,6 +18,7 @@
 ## Project
 - [E2E 마스터 플랜](project_e2e_master_plan.md) — 4단계 완료, 이후 유지·성장 모드 (신규 시나리오 대응 + 스킬 가꾸기)
 - [E2E 백로그](project_e2e_backlog.md) — 미구현 시나리오, 환경변수 미입력, 알려진 제약
+- [E2E 전수 재검토 결과 (PR #4200)](project_e2e_review_findings.md) — isVisible timeout 무시·JWT base64url 함정, 잔류 팀 8개 근본 원인
 
 ## Reference
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal)로 관리, clone/pull/push 명령어
