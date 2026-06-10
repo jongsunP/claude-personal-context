@@ -13,12 +13,9 @@
 - [/welcome 페이지 가드 미추가는 의도된 설계](feedback_welcome_guard.md) — 이미 확인한 사용자의 /welcome 직접 접근을 막지 않는 것은 의도적 결정
 - [경고성 주석 배치 위치](feedback_warning_comment_placement.md) — NOTE 주석은 코드 블록 안이 아니라 함수/파일 상단 독립 위치에
 - [PR 리뷰 resolve 자동 처리](feedback_pr_review_resolve.md) — 리뷰 요청 시 수정·커밋·push·resolve 한 번에 처리
-- [E2E 자동화 불가 vs 조건부 vs 미구현 구분](feedback_e2e_impossible_vs_skip.md) — spec에는 실행 가능한 것만. 불가=미작성+문서화, 조건부=skipReason 패턴, 미구현=미작성+추후 /e2e
 
 ## Project
-- [E2E 마스터 플랜](project_e2e_master_plan.md) — 4단계 완료, 이후 유지·성장 모드 (신규 시나리오 대응 + 스킬 가꾸기)
-- [E2E 백로그](project_e2e_backlog.md) — 미구현 시나리오, 환경변수 미입력, 알려진 제약
-- [E2E 전수 재검토 결과 (PR #4200)](project_e2e_review_findings.md) — isVisible timeout 무시·JWT base64url 함정, 잔류 팀 8개 근본 원인
+- [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
 
 ## Reference
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal)로 관리, clone/pull/push 명령어

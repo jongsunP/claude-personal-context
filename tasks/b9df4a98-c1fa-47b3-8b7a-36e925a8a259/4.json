@@ -3,7 +3,7 @@
   "subject": "기록 남기기 — SKILL.md/보고서/메모리, 커밋·push",
   "description": "SKILL.md에 isVisible 함정 등 패턴 추가, e2e-change-report.md에 잔류 8개 삭제 + 검토 결과 반영, 메모리 저장, 커밋 후 push (PR #4200 반영)",
   "activeForm": "기록 정리 중",
-  "status": "in_progress",
+  "status": "completed",
   "blocks": [],
   "blockedBy": []
 }
