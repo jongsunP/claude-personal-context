@@ -7,12 +7,12 @@ metadata:
   originSessionId: 8ef53b57-e747-49cc-90e8-87c04723f3f4
 ---
 
-## 현재 상태 (2026-06-10 기준)
+## 현재 상태 (2026-06-11 기준)
 
-PR #4200 (`feature/DL-14805-1-3`) — **머지 대기 중**
-- 헤드리스 테스트: 92 passed, 0 failed (스테이징·로컬 모두)
-- 수동 테스트: 스테이징 정상 확인 + 로컬 정상 확인
-- 코드·메모리·SKILL.md·PR 본문 모두 최종 정리 완료
+`feature/DL-14805-1-3` — **코드 완료, 커밋 전 수동 테스트 중**
+- 추가 spec: `00_signup_step4_office_find` (Signup Step4 — Create Office Y/N 분기)
+- 헤드리스 테스트: 94 passed, 0 failed (스테이징 확인 완료, 로컬 확인 중)
+- staging REQUEST_ACCESS 오피스 재생성 완료 (employer 2086, 기존 1943은 삭제됨)
 
 **유지·성장 모드.**
 
