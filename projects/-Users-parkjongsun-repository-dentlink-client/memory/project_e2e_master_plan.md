@@ -9,16 +9,21 @@ metadata:
 
 ## 현재 상태 (2026-06-11 기준)
 
-`feature/DL-14805-1-3` — **코드 완료, 커밋 전 사용자 확인 대기**
-- 추가 spec: `00_signup_step4_office_find` (Signup Step4 — Create Office Y/N 분기)
-- 로컬 전체 실행: 94 passed, 7 skipped, 0 failed (완료)
-- 스테이징 전체 실행: 94 passed, 0 failed (완료)
-- staging REQUEST_ACCESS 오피스 재생성 완료 (employer 2086, 기존 1943은 삭제됨)
+`feature/DL-14805-1-3` — **검증 중, 커밋 전**
+
+### 이번 세션 주요 변경
+- 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
+- `00_signup.spec.ts`, `00_signup_step2_3_validation.spec.ts`: `OTHER_ACCOUNT` → `SIGNUP_TEST_ACCOUNT` 분리 (tata.test5 보호)
+- `e2e/scripts/` 폴더 신설 — one-off setup 스크립트 이동 (specs/에는 실제 시나리오만)
+- `playwright.config.ts`: `clinic-scripts` project 추가
+- 계정 정리: `e2e.signup` (signup/withdraw 테스트용), `tata.test5` (Y 분기 영구 계정)
+- README, SKILL.md, 백로그 문서 업데이트
+
+### 검증 진행 상황
+- 로컬: 여러 번 94 passed / 0 failed ✅
+- 스테이징: 1회 성공 ✅ → 추가 반복 진행 예정 → 로컬 추가 반복 예정 → 커밋
 
 **유지·성장 모드.**
-
-- **신규 시나리오 대응**: PM/기획 요청 → `/e2e` 스킬로 코드 추가 → 테스트 → 재수정
-- **스킬 가꾸기**: 실패 패턴, 새 함수, 환경 변경사항 발견 시 SKILL.md 업데이트
 
 ## 단일 진실 소스 원칙 — 작업현황은 repo에서 관리
 
