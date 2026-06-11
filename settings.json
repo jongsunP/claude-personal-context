@@ -4,5 +4,14 @@
   },
   "model": "claude-sonnet-4-6",
   "theme": "light-ansi",
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "mcpServers": {
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp"],
+      "env": {
+        "FIGMA_API_KEY": "$FIGMA_API_KEY"
+      }
+    }
+  }
 }
