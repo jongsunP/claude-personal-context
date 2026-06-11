@@ -1,12 +1,12 @@
-# claude-personal 레포 자동 동기화
+# claude-personal-context 레포 자동 동기화
 
 - type: feedback
-- name: claude-personal-repo-sync
-- description: claude-personal 레포 설정·동기화 작업은 자동으로 처리
+- name: claude-personal-context-repo-sync
+- description: claude-personal-context 레포 설정·동기화 작업은 자동으로 처리
 
 ## 내용
 
-앞으로 `~/.claude` (claude-personal 레포)에 필요한 설정 변경, 메모리 동기화, gitignore 정리, 커밋·푸시 등의 작업은 사용자가 별도로 요청하지 않아도 자동으로 처리한다.
+앞으로 `~/.claude` (claude-personal-context 레포)에 필요한 설정 변경, 메모리 동기화, gitignore 정리, 커밋·푸시 등의 작업은 사용자가 별도로 요청하지 않아도 자동으로 처리한다.
 
 ## Why
 

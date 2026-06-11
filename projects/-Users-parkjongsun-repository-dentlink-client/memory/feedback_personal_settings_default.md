@@ -9,7 +9,7 @@ metadata:
 
 개인 설정과 팀/프로젝트 설정을 다음 기준으로 철저히 분리한다.
 
-- **개인** (말투, 언어, Claude 행동 방식, 메모리 등) → `~/.claude/` → `jongsunP/claude-personal` 레포
+- **개인** (말투, 언어, Claude 행동 방식, 메모리 등) → `~/.claude/` → `jongsunP/claude-personal-context` 레포
 - **팀/프로젝트** (컨벤션, 아키텍처 규칙, 공유 가이드 등) → `dentlink-client/CLAUDE.md` → 프로젝트 레포
 
 **Why:** 팀 설정과 개인 설정을 완전히 분리해서 관리하고 싶어함. 개인 취향이나 Claude 동작 설정이 팀 공유 파일에 섞이지 않도록.
