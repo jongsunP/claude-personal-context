@@ -4,6 +4,8 @@
 - [사용자 프로필](user_profile.md) — parkjongsun, Dentlink 프론트 개발자, 협업 파트너로서의 Claude를 지향
 - [작업 환경 (집/사무실)](user_environment.md) — 사무실이 주 작업환경, 집 컴퓨터는 git 동기화로 이어서 작업
 
+- [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
+
 ## Feedback
 - [언어 및 말투 설정](feedback_language.md) — 항상 한글 존댓말로 일관되게 응답 (반말 혼용 금지)
 - [메모리 자동 저장 기준](feedback_memory_management.md) — 작업 마무리/중요 판단 시 자동 저장·push, 일관된 협업 방식 유지
