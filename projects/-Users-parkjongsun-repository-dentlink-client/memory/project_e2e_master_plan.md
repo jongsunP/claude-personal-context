@@ -25,6 +25,10 @@ metadata:
 - 로컬: 2연속 94 passed / 0 failed ✅
 - 스테이징: 2연속 94 passed / 0 failed ✅
 
+### 최종 수정 내역 (추가)
+- `browser.newContext()` page에 `setDefaultTimeout(90_000)` 누락 수정 (action timeout 미상속 패턴) — `04_labShipment`, `05_labStatus`
+- `commonSigninLab` 내부 명시적 `timeout: E2E_TIMEOUT_MS` 제거 → page default 사용
+
 **유지·성장 모드.**
 
 ## 단일 진실 소스 원칙 — 작업현황은 repo에서 관리
