@@ -13,17 +13,18 @@ metadata:
 
 ### 검증 결과
 - 로컬 2연속 94 passed / 0 failed ✅
-- 스테이징 2연속+ 94 passed / 0 failed ✅
+- 스테이징 2연속 94 passed / 0 failed ✅
 - 검증 기준: 로컬 2연속 + 스테이징 2연속 (SKILL.md에 명문화됨)
 
-### 이번 브랜치 주요 변경 (41커밋)
+### 이번 브랜치 주요 변경
 - 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
 - `SIGNUP_TEST_ACCOUNT` 분리 (e2e.signup 전용, tata.test5 보호)
 - `e2e/scripts/` 신설 + `clinic-scripts` playwright project 추가
 - flaky `waitForResponse` 전수 제거 (abort 패턴, API 미호출 패턴)
 - `browser.newContext()` page timeout 미상속 전수 수정 (`setDefaultNavigationTimeout` + `setDefaultTimeout` 쌍으로)
 - `commonSigninLab` 내부 명시적 timeout 제거 → page default 위임
-- SKILL.md: 실패 패턴 누적, 검증 기준 섹션 신설
+- `cancelLabPickup` `networkidle` 유지 확정 — 낙관적 네비게이션 후 PATCH 완료 보장에 필수. 제거 시 상세 페이지에서 stale 상태 반환 확인됨
+- SKILL.md: 실패 패턴 누적, 검증 기준 섹션 신설, networkidle 낙관적 네비게이션 패턴 추가
 - README: 타임아웃 수치 수정, 로드맵 4단계 완료 표시
 
 ### 다음 할 일
