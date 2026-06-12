@@ -1,17 +1,18 @@
-# claude-personal-context 레포 자동 동기화
+---
+name: claude-personal-repo-sync
+description: 클로드 개인 설정/메모리 확인·저장은 항상 리모트 기준 — pull/push 자동 처리
+metadata: 
+  node_type: memory
+  type: feedback
+  originSessionId: b61b6ce4-4372-466b-ad4c-e5671a175a48
+---
 
-- type: feedback
-- name: claude-personal-context-repo-sync
-- description: claude-personal-context 레포 설정·동기화 작업은 자동으로 처리
+"확인해줘"는 항상 리모트(jongsunP/claude-personal-context) 기준이다. 로컬 파일만 보는 것으로 끝내지 않는다.
+저장도 마찬가지로 리모트에 push까지 완료해야 저장으로 간주한다.
 
-## 내용
+**Why:** 집/사무실 환경 간 git 동기화로 작업을 이어가는 구조이므로, 리모트가 항상 진실 소스다.
 
-앞으로 `~/.claude` (claude-personal-context 레포)에 필요한 설정 변경, 메모리 동기화, gitignore 정리, 커밋·푸시 등의 작업은 사용자가 별도로 요청하지 않아도 자동으로 처리한다.
-
-## Why
-
-사용자가 명시적으로 "앞으로도 이 레포에 필요한 설정이나 동기화가 있으면 하고 돼도고 해줘"라고 요청함.
-
-## How to apply
-
-작업 중 `~/.claude` 에 변경이 생기거나 동기화가 필요하다고 판단되면 묻지 않고 바로 처리한다.
+**How to apply:**
+- "확인해줘" → `git pull` 후 리모트 최신 내용 기준으로 확인
+- 메모리 저장 → 파일 작성 후 `git add`, `git commit`, `git push`까지 완료
+- `~/.claude` 변경이 생기면 묻지 않고 커밋·푸시 자동 처리
