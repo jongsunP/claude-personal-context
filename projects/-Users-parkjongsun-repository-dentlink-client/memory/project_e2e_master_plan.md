@@ -7,21 +7,23 @@ metadata:
   originSessionId: f986b725-5853-4964-b0af-0a1559a8707b
 ---
 
-## 현재 상태 (2026-06-11 기준)
+## 현재 상태 (2026-06-12 기준)
 
-`feature/DL-14805-1-3` — **검증 중, 커밋 전**
+`feature/DL-14805-1-3` — **커밋·push 완료. PR 존재 (기존 PR 사용)**
 
-### 이번 세션 주요 변경
+### 주요 변경 (누적)
 - 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
 - `00_signup.spec.ts`, `00_signup_step2_3_validation.spec.ts`: `OTHER_ACCOUNT` → `SIGNUP_TEST_ACCOUNT` 분리 (tata.test5 보호)
 - `e2e/scripts/` 폴더 신설 — one-off setup 스크립트 이동 (specs/에는 실제 시나리오만)
 - `playwright.config.ts`: `clinic-scripts` project 추가
-- 계정 정리: `e2e.signup` (signup/withdraw 테스트용), `tata.test5` (Y 분기 영구 계정)
-- README, SKILL.md, 백로그 문서 업데이트
+- flaky `waitForResponse` 전수 제거: 낙관적 네비게이션 abort 패턴(waitForURL + waitForResponse 동시) 및 단계별 저장 오탐 패턴 근본 수정
+- `02_onboarding.spec.ts`: `test.setTimeout(60_000)` 추가 (Next.js JIT 컴파일 대응)
+- SKILL.md: 실패 패턴 2건 추가 (abort 패턴, API 미호출 패턴)
+- README, 백로그 문서 업데이트
 
 ### 검증 진행 상황
-- 로컬: 여러 번 94 passed / 0 failed ✅
-- 스테이징: 1회 성공 ✅ → 추가 반복 진행 예정 → 로컬 추가 반복 예정 → 커밋
+- 로컬: 94 passed / 0 failed ✅
+- 스테이징: 94 passed / 0 failed ✅ (사용자가 재확인 예정)
 
 **유지·성장 모드.**
 
