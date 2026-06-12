@@ -9,25 +9,26 @@ metadata:
 
 ## 현재 상태 (2026-06-12 기준)
 
-`feature/DL-14805-1-3` — **커밋·push 완료. PR 존재 (기존 PR 사용)**
+`feature/DL-14805-1-3` — **검증 완료. PR #4200 머지 대기 중.**
 
-### 주요 변경 (누적)
+### 검증 결과
+- 로컬 2연속 94 passed / 0 failed ✅
+- 스테이징 2연속+ 94 passed / 0 failed ✅
+- 검증 기준: 로컬 2연속 + 스테이징 2연속 (SKILL.md에 명문화됨)
+
+### 이번 브랜치 주요 변경 (41커밋)
 - 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
-- `00_signup.spec.ts`, `00_signup_step2_3_validation.spec.ts`: `OTHER_ACCOUNT` → `SIGNUP_TEST_ACCOUNT` 분리 (tata.test5 보호)
-- `e2e/scripts/` 폴더 신설 — one-off setup 스크립트 이동 (specs/에는 실제 시나리오만)
-- `playwright.config.ts`: `clinic-scripts` project 추가
-- flaky `waitForResponse` 전수 제거: 낙관적 네비게이션 abort 패턴(waitForURL + waitForResponse 동시) 및 단계별 저장 오탐 패턴 근본 수정
-- `02_onboarding.spec.ts`: `test.setTimeout(60_000)` 추가 (Next.js JIT 컴파일 대응)
-- SKILL.md: 실패 패턴 2건 추가 (abort 패턴, API 미호출 패턴)
-- README, 백로그 문서 업데이트
+- `SIGNUP_TEST_ACCOUNT` 분리 (e2e.signup 전용, tata.test5 보호)
+- `e2e/scripts/` 신설 + `clinic-scripts` playwright project 추가
+- flaky `waitForResponse` 전수 제거 (abort 패턴, API 미호출 패턴)
+- `browser.newContext()` page timeout 미상속 전수 수정 (`setDefaultNavigationTimeout` + `setDefaultTimeout` 쌍으로)
+- `commonSigninLab` 내부 명시적 timeout 제거 → page default 위임
+- SKILL.md: 실패 패턴 누적, 검증 기준 섹션 신설
+- README: 타임아웃 수치 수정, 로드맵 4단계 완료 표시
 
-### 검증 진행 상황
-- 로컬: 2연속 94 passed / 0 failed ✅
-- 스테이징: 2연속 94 passed / 0 failed ✅
-
-### 최종 수정 내역 (추가)
-- `browser.newContext()` page에 `setDefaultTimeout(90_000)` 누락 수정 (action timeout 미상속 패턴) — `04_labShipment`, `05_labStatus`
-- `commonSigninLab` 내부 명시적 `timeout: E2E_TIMEOUT_MS` 제거 → page default 사용
+### 다음 할 일
+1. **PR #4200 머지** — 리뷰 완료 후 진행
+2. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
 
 **유지·성장 모드.**
 
