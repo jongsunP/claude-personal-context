@@ -22,8 +22,8 @@ metadata:
 - README, 백로그 문서 업데이트
 
 ### 검증 진행 상황
-- 로컬: 94 passed / 0 failed ✅
-- 스테이징: 94 passed / 0 failed ✅ (사용자가 재확인 예정)
+- 로컬: 2연속 94 passed / 0 failed ✅
+- 스테이징: 2연속 94 passed / 0 failed ✅
 
 **유지·성장 모드.**
 
