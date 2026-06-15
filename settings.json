@@ -3,15 +3,21 @@
     "defaultMode": "bypassPermissions"
   },
   "model": "claude-sonnet-4-6",
-  "theme": "light-ansi",
   "skipDangerousModePermissionPrompt": true,
+  "theme": "light-ansi",
   "mcpServers": {
     "figma": {
       "command": "npx",
-      "args": ["-y", "figma-developer-mcp"],
+      "args": [
+        "-y",
+        "figma-developer-mcp"
+      ],
       "env": {
         "FIGMA_API_KEY": "$FIGMA_API_KEY"
       }
     }
+  },
+  "enabledPlugins": {
+    "figma@claude-plugins-official": true
   }
 }
