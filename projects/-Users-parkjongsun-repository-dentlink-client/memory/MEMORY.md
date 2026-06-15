@@ -24,7 +24,9 @@
 - [claude-personal-context 레포 자동 동기화](feedback_claude_personal_repo_sync.md) — 설정·메모리 변경 시 커밋·푸시 자동 처리
 
 ## Project
+- [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 6개 티켓 중 DL-14887 완료, 나머지 5개 미완료
 - [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
+- [E2E SSE 발견 — networkidle 무력화](project_e2e_sse_discovery.md) — lab 앱 전역 SSE(50s 하트비트)가 networkidle을 막음. 픽업/배송 페이지에서 toPass+reload 패턴 사용
 - [레거시 페이지 목록](project_legacy_pages.md) — /office/onboard/ 등 미사용 페이지, 수정 범위 제외
 
 ## Reference
