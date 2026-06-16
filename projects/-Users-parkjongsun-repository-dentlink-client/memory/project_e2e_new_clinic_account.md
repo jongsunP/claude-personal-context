@@ -62,13 +62,28 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 - [x] EMPLOYER_ID=2158 / EMPLOYEE_ID=2368 확인 후 .env.staging 업데이트
 - [x] E2E 전체 실행 통과 확인 (94 passed, 5 skipped — 2026-06-16)
 
-## 다음 작업
+## 계정 분리 현황 (2026-06-16)
 
-나머지 계정도 E2E 전용으로 분리 예정:
-- tata.test3 → e2e.lab (05_labStatus lab side)
-- tata.test5 → e2e.other (Y분기 Request Access 전용)
-- jongsun.test5 → e2e.shipment (04_labShipment)
-- chajju.admin → e2e.admin (07_billing 및 global-setup/teardown 어드민 API)
+| 계정 | 용도 | 상태 |
+|------|------|------|
+| `tata.test4` → `e2e.clinic` | 기본 클리닉 계정 (dev+stg) | ✅ 완료 |
+| `tata.test5` → `e2e.other` | Y분기 오피스없는 계정 (dev+stg) | ✅ 완료 |
+| `chajju.admin` → `e2e.admin` | 어드민 API 전용 (dev+stg) | ✅ 완료 |
+| `tata.test3` → `e2e.lab` | 기공소 계정 (05_labStatus) | ⏸ 대기 |
+| `jongsun.test5` → `e2e.shipment` | 배송 기공소 계정 (04_labShipment) | ⏸ 대기 |
+
+## 미커밋 env 변경사항
+
+- `clinic/.env.development` — e2e.clinic + e2e.admin + e2e.other 교체
+- `clinic/.env.staging` — e2e.admin + e2e.other 교체
+
+## dev e2e.clinic 계정 세팅 완료 조건
+
+- [x] 어드민 승인
+- [x] 주문 카테고리 연결 (Crown, Digital Denture, Premium Veneer, ISV)
+- [x] 기공소 연결 (tata.test3 dev)
+- [x] Default Scanner: 3Shape
+- [ ] EMPLOYEE_ID=1581 검증 필요 (dev 로컬 테스트 실행으로 확인)
 
 ## 신규 어드민 계정 (생성 중)
 
@@ -81,3 +96,14 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 
 employee ID: dev=1639, stg=2314 (로그인 응답에서 동적 추출 — env 저장 불필요)
 ✅ dev + staging .env 업데이트 완료
+
+## e2e.clinic dev 계정 (생성 중 — 2026-06-16)
+
+| 항목 | 값 | 확인 여부 |
+|------|-----|---------|
+| Office Name | `[OFFICE-DEV] E2E Clinic` | ✅ |
+| EMPLOYER_ID | `1120` | ✅ 오피스 ID 확인 |
+| user_id | `1641` | env 불필요 |
+| EMPLOYEE_ID | `1581` (추정) | ⚠️ 미확인 — 테스트 후 검증 필요 |
+
+pending: 기공소 연결 후 .env.development 업데이트 예정

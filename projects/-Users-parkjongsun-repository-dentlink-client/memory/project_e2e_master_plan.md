@@ -30,7 +30,10 @@ metadata:
 ### 다음 할 일
 
 1. **PR #4200 머지** — 팀 확인 후 배포 전에 진행 (혼자 머지 안 함)
-2. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
+2. **계정 분리 잔여** — tata.test3→e2e.lab, jongsun.test5→e2e.shipment (기공소 계정, 별도 시점에 처리)
+3. **dev EMPLOYEE_ID 검증** — dev 로컬 실행으로 1581 확인 후 env 확정
+4. **env 변경사항 커밋** — 사용자 지시 시점에 일괄 커밋
+5. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
 
 **유지·성장 모드.**
 
