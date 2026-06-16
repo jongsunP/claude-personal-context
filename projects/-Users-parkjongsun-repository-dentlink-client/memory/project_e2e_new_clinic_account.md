@@ -72,10 +72,16 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 | `tata.test3` → `e2e.lab` | 기공소 계정 (05_labStatus) | ⏸ 대기 |
 | `jongsun.test5` → `e2e.shipment` | 배송 기공소 계정 (04_labShipment) | ⏸ 대기 |
 
-## 미커밋 env 변경사항
+## 미커밋 변경사항 (사용자 커밋 지시 대기)
 
 - `clinic/.env.development` — e2e.clinic + e2e.admin + e2e.other 교체
 - `clinic/.env.staging` — e2e.admin + e2e.other 교체
+- `e2e/clinic/steps/order/order-step1-profile.ts` — Add New Patient 버튼 disabled 상태 타이밍 fix
+
+## 검증 완료 (2026-06-16)
+
+- 로컬 2연속 94 passed ✅
+- 스테이징 2연속 94 passed ✅
 
 ## dev e2e.clinic 계정 세팅 완료 조건
 
@@ -83,7 +89,7 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 - [x] 주문 카테고리 연결 (Crown, Digital Denture, Premium Veneer, ISV)
 - [x] 기공소 연결 (tata.test3 dev)
 - [x] Default Scanner: 3Shape
-- [ ] EMPLOYEE_ID=1581 검증 필요 (dev 로컬 테스트 실행으로 확인)
+- [x] EMPLOYEE_ID=1581 확인 (global-setup log + dev 2연속 통과로 검증 완료)
 
 ## 신규 어드민 계정 (생성 중)
 
