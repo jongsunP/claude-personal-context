@@ -68,4 +68,15 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 - tata.test3 → e2e.lab (05_labStatus lab side)
 - tata.test5 → e2e.other (Y분기 Request Access 전용)
 - jongsun.test5 → e2e.shipment (04_labShipment)
-- chajju.admin → e2e.admin (07_billing)
+- chajju.admin → e2e.admin (07_billing 및 global-setup/teardown 어드민 API)
+
+## 신규 어드민 계정 (생성 중)
+
+| 항목 | 값 |
+|------|-----|
+| Email | `e2e.admin@dentlink.app` |
+| Password | `innovaid1` |
+| 환경 | dev + staging 동일 |
+| 용도 | 어드민 API 전용 (브라우저 UI 미사용) |
+
+생성 완료 시: `NEXT_PUBLIC_E2E_ADMIN_ACCOUNT_ID` / `NEXT_PUBLIC_E2E_ADMIN_ACCOUNT_PASSWORD` dev + staging .env 양쪽 업데이트 필요.
