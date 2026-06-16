@@ -77,6 +77,8 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 - `clinic/.env.development` — e2e.clinic + e2e.admin + e2e.other 교체
 - `clinic/.env.staging` — e2e.admin + e2e.other 교체
 - `e2e/clinic/steps/order/order-step1-profile.ts` — Add New Patient 버튼 disabled 상태 타이밍 fix
+- `.claude/skills/e2e/SKILL.md` — 신규 실패 패턴 추가 + 계정명 현행화
+- `e2e/README.md` — 계정명 현행화 (tata.test5→e2e.other) + 사례 1 코드 현행화
 
 ## 검증 완료 (2026-06-16)
 
