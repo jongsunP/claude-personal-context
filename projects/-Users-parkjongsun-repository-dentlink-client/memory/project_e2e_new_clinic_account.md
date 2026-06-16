@@ -79,4 +79,5 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 | 환경 | dev + staging 동일 |
 | 용도 | 어드민 API 전용 (브라우저 UI 미사용) |
 
-생성 완료 시: `NEXT_PUBLIC_E2E_ADMIN_ACCOUNT_ID` / `NEXT_PUBLIC_E2E_ADMIN_ACCOUNT_PASSWORD` dev + staging .env 양쪽 업데이트 필요.
+employee ID: dev=1639, stg=2314 (로그인 응답에서 동적 추출 — env 저장 불필요)
+✅ dev + staging .env 업데이트 완료
