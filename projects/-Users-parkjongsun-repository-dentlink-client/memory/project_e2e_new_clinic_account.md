@@ -55,8 +55,17 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 
 ## 세팅 완료 조건
 
-- [ ] 어드민 승인 완료
-- [ ] 주문 카테고리 연결 (Crown, Digital Denture, Premium Veneer, ISV)
-- [ ] 기공소 연결 (tata.test3)
-- [ ] EMPLOYER_ID / EMPLOYEE_ID 확인 후 .env.staging 업데이트
-- [ ] E2E 전체 실행 통과 확인
+- [x] 어드민 승인 완료
+- [x] 주문 카테고리 연결 (Crown, Digital Denture, Premium Veneer, ISV)
+- [x] 기공소 연결 (tata.test3)
+- [x] Default Scanner: 3Shape 설정 (원복 불가 — 전용 계정이라 문제 없음)
+- [x] EMPLOYER_ID=2158 / EMPLOYEE_ID=2368 확인 후 .env.staging 업데이트
+- [x] E2E 전체 실행 통과 확인 (94 passed, 5 skipped — 2026-06-16)
+
+## 다음 작업
+
+나머지 계정도 E2E 전용으로 분리 예정:
+- tata.test3 → e2e.lab (05_labStatus lab side)
+- tata.test5 → e2e.other (Y분기 Request Access 전용)
+- jongsun.test5 → e2e.shipment (04_labShipment)
+- chajju.admin → e2e.admin (07_billing)
