@@ -70,7 +70,21 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 | `tata.test5` → `e2e.other` | Y분기 오피스없는 계정 (dev+stg) | ✅ 완료 |
 | `chajju.admin` → `e2e.admin` | 어드민 API 전용 (dev+stg) | ✅ 완료 |
 | `tata.test3` → `e2e.lab` | 기공소 계정 (05_labStatus) | ✅ 완료 (검증 미완료) |
-| `jongsun.test5` → `e2e.shipment` | 배송 기공소 계정 (04_labShipment) | ⏸ 대기 |
+| `jongsun.test5` → `e2e.lab` | 배송 기공소 계정 (04_labShipment) — 기공소 로그인 계정 교체 완료 | ✅ 완료 |
+
+## 배송 테스트 SHIPMENT_TARGET_OFFICE 제약 (2026-06-17)
+
+스테이징에서 `[OFFICE-STG] E2E Clinic`으로 DHL 배송 생성이 불가함.
+원인: DHL 배송에는 실제 유효한 주소 + 인바운드/아웃바운드 배송사 DHL 설정 필요.
+`[OFFICE-STG] E2E Clinic`에 해당 설정이 없어 배송 생성 API가 실패함.
+
+**현재 조치:** `NEXT_PUBLIC_E2E_SHIPMENT_TARGET_OFFICE="frankieStgOffice"` 로 유지.
+frankieStgOffice는 DHL 설정이 완료된 기존 오피스.
+
+**해결 조건:** `[OFFICE-STG] E2E Clinic`에 DHL 배송사 설정 완료 시 교체 가능.
+교체 시 `.env.staging`의 `SHIPMENT_TARGET_OFFICE`, `SHIPMENT_TARGET_OFFICE_EMPLOYER` 모두 변경 필요.
+
+---
 
 ## 커밋 완료 (2026-06-16)
 
