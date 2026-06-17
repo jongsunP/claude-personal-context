@@ -7,32 +7,30 @@ metadata:
   originSessionId: f986b725-5853-4964-b0af-0a1559a8707b
 ---
 
-## 현재 상태 (2026-06-16 기준)
+## 현재 상태 (2026-06-17 기준)
 
-`feature/DL-14805-1-3` — **계정 분리 작업 중. e2e.lab까지 커밋 완료, 검증 미완료.**
+`feature/DL-14805-1-3` — **모든 작업 완료. PR #4200 Ready for review.**
 
 ### 검증 결과
-- 로컬 2연속 passed ✅ (2026-06-13 사용자 직접 확인)
-- 스테이징 2연속 passed ✅ (2026-06-13 사용자 직접 확인)
-- 검증 기준: 로컬 2연속 + 스테이징 2연속 (SKILL.md에 명문화됨)
+- 스테이징 전체 통과 ✅ (2026-06-17 사용자 직접 확인)
+- 로컬 전체 통과 ✅ (2026-06-17 사용자 직접 확인, `e2e:clinic:ui` 전체 실행)
 
 ### 이번 브랜치 주요 변경
 - 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
 - `SIGNUP_TEST_ACCOUNT` 분리 (e2e.signup 전용, tata.test5 보호)
 - `e2e/scripts/` 신설 + `clinic-scripts` playwright project 추가
 - flaky `waitForResponse` 전수 제거 (abort 패턴, API 미호출 패턴)
-- `browser.newContext()` page timeout 미상속 전수 수정 (`setDefaultNavigationTimeout` + `setDefaultTimeout` 쌍으로)
-- `commonSigninLab` 내부 명시적 timeout 제거 → page default 위임
-- `cancelLabPickup` `networkidle` 유지 확정 — 낙관적 네비게이션 후 PATCH 완료 보장에 필수. 제거 시 상세 페이지에서 stale 상태 반환 확인됨
-- SKILL.md: 실패 패턴 누적, 검증 기준 섹션 신설, networkidle 낙관적 네비게이션 패턴 추가
-- README: 타임아웃 수치 수정, 로드맵 4단계 완료 표시
+- `browser.newContext()` page timeout 미상속 전수 수정
+- 모든 E2E 계정·오피스 e2e 전용 완료 — 외부 계정 의존성 0
+- 배송 생성 `.nth(0)` 잠재 버그 수정 → `.filter({ hasText: orderId }).first()`
+- 회원가입 입력값 e2e 전용 통일 (`firstName: "Auto"`, `ownerName: "Auto Owner"`)
+- `signup-step3` combobox locator name 속성 제거 (pre-selected 시 accessible name 변경 방지)
+- `00_signup` serial 타임아웃 보강 (로컬 30s→60s, 스테이징 120s 유지)
 
 ### 다음 할 일
 
-1. **PR #4200 머지** — 팀 확인 후 배포 전에 진행 (혼자 머지 안 함)
-2. **e2e.lab 검증 완료** — 로컬 2회차 + 스테이징 2회차 수동 테스트 후 확인 (다음 세션 시작 시)
-3. **jongsun.test5 → e2e.shipment** — 목표 병원 결정 필요 (frankieDevOffice 유지 vs e2e.clinic으로 변경)
-4. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
+1. **PR #4200 머지** — 팀 확인 후 진행 (혼자 머지 안 함)
+2. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
 
 **유지·성장 모드.**
 
