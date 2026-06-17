@@ -72,17 +72,15 @@ NEXT_PUBLIC_E2E_EMPLOYEE_ID="???"   # JWT decode로 확인
 | `tata.test3` → `e2e.lab` | 기공소 계정 (05_labStatus) | ✅ 완료 (검증 미완료) |
 | `jongsun.test5` → `e2e.lab` | 배송 기공소 계정 (04_labShipment) — 기공소 로그인 계정 교체 완료 | ✅ 완료 |
 
-## 배송 테스트 SHIPMENT_TARGET_OFFICE 제약 (2026-06-17)
+## 배송 테스트 SHIPMENT_TARGET_OFFICE 교체 완료 (2026-06-17)
 
-스테이징에서 `[OFFICE-STG] E2E Clinic`으로 DHL 배송 생성이 불가함.
-원인: DHL 배송에는 실제 유효한 주소 + 인바운드/아웃바운드 배송사 DHL 설정 필요.
-`[OFFICE-STG] E2E Clinic`에 해당 설정이 없어 배송 생성 API가 실패함.
+`[OFFICE-STG] E2E Clinic`으로 배송 생성 성공 확인.
+실제 원인은 DHL 설정 문제가 아니라 `.nth(0).click()` 버그였음 — orderId와 무관하게 항상 첫 번째 항목을 선택해 잘못된 오더로 배송이 생성됐던 것.
+`.filter({ hasText: orderId }).first().click()`으로 수정 후 `[OFFICE-STG] E2E Clinic`으로 정상 동작.
 
-**현재 조치:** `NEXT_PUBLIC_E2E_SHIPMENT_TARGET_OFFICE="frankieStgOffice"` 로 유지.
-frankieStgOffice는 DHL 설정이 완료된 기존 오피스.
-
-**해결 조건:** `[OFFICE-STG] E2E Clinic`에 DHL 배송사 설정 완료 시 교체 가능.
-교체 시 `.env.staging`의 `SHIPMENT_TARGET_OFFICE`, `SHIPMENT_TARGET_OFFICE_EMPLOYER` 모두 변경 필요.
+dev/stg 모두 e2e 전용 오피스 사용 중:
+- dev: `[OFFICE-DEV] E2E Clinic`
+- stg: `[OFFICE-STG] E2E Clinic`
 
 ---
 
@@ -91,12 +89,14 @@ frankieStgOffice는 DHL 설정이 완료된 기존 오피스.
 - env 교체 (e2e.clinic + e2e.admin + e2e.other + e2e.lab) ✅
 - order-step1-profile.ts 타이밍 fix ✅
 - SKILL.md / README.md 문서 현행화 ✅
-- 로컬 1회 + 스테이징 1회 통과 확인. 로컬 2회차·스테이징 2회차 검증 미완료 (다음 세션에 이어서)
 
-## 검증 완료 (2026-06-16)
+## 추가 작업 (2026-06-17, feature/DL-14805-1-3)
 
-- 로컬 2연속 94 passed ✅
-- 스테이징 2연속 94 passed ✅
+- e2e.lab 계정으로 04_labShipment 기공소 로그인 교체 ✅
+- shipment-create.ts `.nth(0)` 잠재 버그 수정 → `.filter({ hasText }).first()` ✅
+- 배송 타겟 오피스 e2e 전용으로 교체 (dev: [OFFICE-DEV], stg: [OFFICE-STG] E2E Clinic) ✅
+- 스테이징 04_labShipment 전체 통과 확인 ✅
+- 모든 E2E 계정·오피스 e2e 전용 완료 ✅
 
 ## dev e2e.clinic 계정 세팅 완료 조건
 
