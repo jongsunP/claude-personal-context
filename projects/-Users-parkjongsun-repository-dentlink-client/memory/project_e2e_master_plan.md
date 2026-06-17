@@ -9,28 +9,18 @@ metadata:
 
 ## 현재 상태 (2026-06-17 기준)
 
-`feature/DL-14805-1-3` — **모든 작업 완료. PR #4200 Ready for review.**
+**PR #4200 머지 완료.** `feature/DL-14805-1-3` → master 반영됨.
 
-### 검증 결과
-- 스테이징 전체 통과 ✅ (2026-06-17 사용자 직접 확인)
-- 로컬 전체 통과 ✅ (2026-06-17 사용자 직접 확인, `e2e:clinic:ui` 전체 실행)
-
-### 이번 브랜치 주요 변경
-- 신규 spec: `00_signup_step4_office_find` (Signup Step4 — Y/N 분기)
-- `SIGNUP_TEST_ACCOUNT` 분리 (e2e.signup 전용, tata.test5 보호)
-- `e2e/scripts/` 신설 + `clinic-scripts` playwright project 추가
-- flaky `waitForResponse` 전수 제거 (abort 패턴, API 미호출 패턴)
-- `browser.newContext()` page timeout 미상속 전수 수정
+### 완료된 것
 - 모든 E2E 계정·오피스 e2e 전용 완료 — 외부 계정 의존성 0
-- 배송 생성 `.nth(0)` 잠재 버그 수정 → `.filter({ hasText: orderId }).first()`
-- 회원가입 입력값 e2e 전용 통일 (`firstName: "Auto"`, `ownerName: "Auto Owner"`)
-- `signup-step3` combobox locator name 속성 제거 (pre-selected 시 accessible name 변경 방지)
-- `00_signup` serial 타임아웃 보강 (로컬 30s→60s, 스테이징 120s 유지)
+- 팀 오염 근본 차단 + 방어코드 전 spec 적용
+- flaky waitForResponse 전수 제거
+- 신규 spec: 00_signup_step4_office_find (Y/N 분기)
+- 스테이징·로컬 전체 통과 검증 완료
 
 ### 다음 할 일
 
-1. **PR #4200 머지** — 팀 확인 후 진행 (혼자 머지 안 함)
-2. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
+1. **다음 E2E 시나리오 추가** — `.claude/skills/e2e/references/03-scenario-backlog.md` 백로그 참고. `/e2e <시나리오>` 스킬로 진입
 
 **유지·성장 모드.**
 
