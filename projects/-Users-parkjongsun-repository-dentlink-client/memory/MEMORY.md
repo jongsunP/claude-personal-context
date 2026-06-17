@@ -24,6 +24,7 @@
 - [E2E specs vs scripts 폴더 기준](feedback_e2e_scripts_vs_specs.md) — specs/는 실제 시나리오만. one-off 환경 설정 스크립트는 e2e/scripts/에 보관
 - [claude-personal-context 레포 자동 동기화](feedback_claude_personal_repo_sync.md) — 설정·메모리 변경 시 커밋·푸시 자동 처리
 - [브랜치 네이밍 컨벤션](feedback_branch_naming.md) — 모든 브랜치에 feature/ prefix 필수 (QA 브랜치 포함)
+- [커밋·푸쉬 명시적 요청 시에만](feedback_commit_push_explicit_only.md) — 코드 수정 후 커밋·푸쉬는 자동 실행 금지, 명시적 지시 필요
 
 ## Project
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트

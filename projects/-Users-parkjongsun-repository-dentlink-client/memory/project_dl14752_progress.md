@@ -1,16 +1,20 @@
 ---
 name: project-dl14752-progress
-description: feature/DL-14752 브랜치 전체 완료 및 머지 완료
+description: "feature/DL-14752-qa-2 브랜치 작업 완료, PR"
 metadata: 
   node_type: memory
   type: project
-  originSessionId: 648b2284-6e80-4664-bc9f-6674b3ac16a3
+  originSessionId: 341ad595-f009-4838-8004-c19da807c9f7
 ---
 
-feature/DL-14752 브랜치 작업 전체 완료 후 머지됨 (2026-06-16).
-PR #4206 (→ release/v1.75.0) 머지 완료.
+`feature/DL-14752-qa-2` 브랜치 QA 수정 작업 완료 (2026-06-17).
+PR #4213 (→ release/v1.75.0) 오픈 상태. CodeRabbit 리뷰 resolve 완료.
 
-완료: DL-14887, DL-14873, DL-14732, DL-14705, DL-14666, DL-14664 포함 전체 23개 하위 태스크.
+완료 티켓: DL-14907, DL-15165, DL-14664, DL-14732, DL-15166, DL-15168, DL-15170 (7개)
 
-**Why:** 사용자가 본인이 Jira 완료 처리를 하므로, Claude는 현황만 기억.
-**How to apply:** 이 브랜치는 종료됨. 다음 세션에서 관련 작업 요청 시 머지된 상태 참고.
+QA 확인 필요 사항 (PR 설명에 명시):
+- admin Billing Contact 칩 높이(33px) 시각 확인
+- lab 모바일 Order Detail 탭 하단 여백 + ScrollToTop 노출 확인
+
+**Why:** 사용자가 Jira 완료 처리를 직접 하므로 Claude는 현황만 기억.
+**How to apply:** 다음 세션 시작 시 PR 머지 여부 확인 후 진행.
