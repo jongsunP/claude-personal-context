@@ -28,7 +28,8 @@
 
 ## Project
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트
-- [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 6개 티켓 중 DL-14887 완료, 나머지 5개 미완료
+- [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 코드 검증 완료. 배포 후 수기 확인 3건(DL-14732, DL-14754, DL-15168), PR #4219 머지 대기
+- [DL-15157 GA4/Meta Pixel 전환 추적](project_dl15157_ga_tracking.md) — 회원가입 lazy loading 구현 완료, PR #4218 오픈
 - [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
 - [E2E SSE 발견 — networkidle 무력화](project_e2e_sse_discovery.md) — lab 앱 전역 SSE(50s 하트비트)가 networkidle을 막음. 픽업/배송 페이지에서 toPass+reload 패턴 사용
 - [레거시 페이지 목록](project_legacy_pages.md) — /office/onboard/ 등 미사용 페이지, 수정 범위 제외
