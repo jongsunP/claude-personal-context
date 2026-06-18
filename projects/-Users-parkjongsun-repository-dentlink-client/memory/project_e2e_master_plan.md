@@ -7,6 +7,11 @@ metadata:
   originSessionId: f986b725-5853-4964-b0af-0a1559a8707b
 ---
 
+## 세션 환경
+
+- **현재 작업 워크트리:** `dentlink-client-e2e` → 브랜치 `feature/DL-14805-3`
+- **세션 목적:** E2E 관련 작업 및 테스트 전용
+
 ## 현재 상태 (2026-06-17 기준)
 
 **PR #4200 머지 완료.** `feature/DL-14805-1-3` → master 반영됨.
