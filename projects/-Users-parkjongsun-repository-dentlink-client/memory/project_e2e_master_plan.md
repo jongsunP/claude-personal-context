@@ -12,7 +12,7 @@ metadata:
 - **현재 작업 워크트리:** `dentlink-client-e2e` → 브랜치 `feature/DL-14805-3`
 - **세션 목적:** E2E 관련 작업 및 테스트 전용
 
-## 현재 상태 (2026-06-17 기준)
+## 현재 상태 (2026-06-22 기준)
 
 **PR #4200 머지 완료.** `feature/DL-14805-1-3` → master 반영됨.
 
@@ -22,6 +22,7 @@ metadata:
 - flaky waitForResponse 전수 제거
 - 신규 spec: 00_signup_step4_office_find (Y/N 분기)
 - 스테이징·로컬 전체 통과 검증 완료
+- **Crown 주문 step4 실패 원인 해소 (2026-06-22):** `Crown(수정금지,회귀테스트용)` 상품이 Jun Lab에만 등록되어 있어 E2E 계정 주문 시 pickup API 400 에러 발생 → `[LAB-STG] E2E Lab` 카탈로그에 상품 추가(스테이징 데이터 변경, 코드 수정 없음). 스테이징 2회·로컬 2회 수동 검증 완료.
 
 ### 다음 할 일
 
