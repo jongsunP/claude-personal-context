@@ -38,3 +38,4 @@
 
 ## Reference
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal-context)로 관리, clone/pull/push 명령어
+- [DL-13254 링크 모음](reference_dl13254_links.md) — AOX 관련 Figma 디자인·FigJam 보드·Notion Component 문서·Jira 티켓 URL
