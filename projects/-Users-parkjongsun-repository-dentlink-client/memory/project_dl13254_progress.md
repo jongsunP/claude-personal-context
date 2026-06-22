@@ -77,7 +77,9 @@ metadata:
 ### FE 완료 상태 (2026-06-22 기준)
 - MANDATORY 항상 표시 ✅
 - 선택 시 BUTTON 항목 표시 ✅
-- 중첩 옵션 제외 ✅
+- 중첩 optionValue(Material, Tooth Count 등)도 루트 option명으로 집계 ✅
+  - 예: "12 units" 선택 시 → "Implant Count: $2,700" 으로 표시
+  - `buildOptValInfoMap` 함수가 재귀로 모든 depth 탐색, 루트 option의 type·name으로 매핑
 - Swagger 스펙 기반 calcGroupPrice 유지 ✅
 - 선택 후 항목이 안 보이면 어드민 가격 미등록(데이터) 문제이지 FE 코드 문제 아님
 
