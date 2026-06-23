@@ -28,6 +28,7 @@
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
 
 ## Project
+- [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, Denture SELECT 2열 레이아웃·문구 수정 완료, PR #4266 오픈 (→ release/v1.76.0)
 - [DL-13254 작업 현황](project_dl13254_progress.md) — feature/DL-15197, EstimatedCostPanel 표시 로직 완료(MANDATORY 항상+선택 시), 미커밋 2파일, TODO(@Frankie) productType 조건 보류
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트
 - [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 코드 검증 완료. 배포 후 수기 확인 3건(DL-14732, DL-14754, DL-15168), PR #4219 머지 대기
