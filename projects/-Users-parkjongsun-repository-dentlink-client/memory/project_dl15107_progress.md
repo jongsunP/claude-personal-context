@@ -34,8 +34,25 @@ metadata:
 
 ## 영향 범위
 
-clinic / lab / admin 전 서비스의 Denture 타입 주문 워크플로우 SELECT 단계 UI.
-- 주문 생성: `/orders/create`
-- 주문 수정: `/orders/[order_id]/[step]`
-- 주문 상세: `/orders/[order_id]` (lab, admin)
-- 데이터 구조 변경 없음 — UI/레이아웃만 변경
+Denture 타입 주문의 워크플로우 SELECT 단계 UI만 변경 (데이터 구조 변경 없음).
+
+### Clinic (치과)
+| 페이지 | 경로 | 영향 |
+|---|---|---|
+| 주문 생성 | `/orders/create` | Denture 워크플로우 SELECT 화면 |
+| 주문 수정 | `/orders/[order_id]/[step]` | 기존 Denture 주문 편집 시 |
+
+### Lab (기공소)
+| 페이지 | 경로 | 영향 |
+|---|---|---|
+| 주문 생성 | `/orders/create` | Denture 워크플로우 SELECT 화면 |
+| 주문 수정 | `/orders/[order_id]/[step]` | 기존 Denture 주문 편집 시 |
+| 주문 상세 | `/orders/[order_id]` | `OrderDetailBoxWorkflow` — 워크플로우 요약 표시 |
+
+### Admin
+| 페이지 | 경로 | 영향 |
+|---|---|---|
+| 주문 생성 | `/orders/create` | Denture 워크플로우 SELECT 화면 |
+| 주문 수정 | `/orders/[order_id]/[step]` | 기존 Denture 주문 편집 시 |
+| 주문 상세 | `/orders/[order_id]` | 워크플로우 요약 표시 |
+| 배송 상세 | `/shipments/[shipment_id]` | OrderForm 포함 |
