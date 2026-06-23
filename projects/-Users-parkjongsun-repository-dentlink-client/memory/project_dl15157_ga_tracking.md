@@ -1,24 +1,33 @@
 ---
 name: project-dl15157-ga-tracking
-description: GA4 + Meta Pixel 회원가입 전환 이벤트 구현 완료, PR #4218 오픈
-metadata:
+description: "DL-15157 GA4/Meta Pixel 회원가입 전환 추적 — 버그 수정 완료, PR"
+metadata: 
   node_type: memory
   type: project
-  originSessionId: 175d76c3-e67a-4c38-b338-bdeee9fbce7b
+  originSessionId: 34f25382-fe13-44d6-96ee-c12413abbd45
 ---
 
-`feature/DL-15157` 브랜치. PR #4218 (→ release/v1.75.0) 오픈 상태 (2026-06-18).
+**현재 상태 (2026-06-23):** PR #4260 (`feature/DL-15157-2` → master) 오픈. 스테이징 검증 완료.
 
-핵심 구현:
-- `clinic/src/lib/gtag/gtag.ts` — `fireSignupConversion(email)`: 회원가입 시점에만 GA4/Meta SDK 동적 로드 (lazy loading)
-- `clinic/src/lib/gtag/marketingTags.ts` — `captureAttribution()` / `getAttribution()`: 최초 방문 UTM/광고 파라미터 저장, `_fbc` 쿠키 만료 보정
-- `clinic/src/pages/_app.tsx` — 앱 진입 시 `captureAttribution()` 1회 실행 (production only)
+핵심 구현 파일:
+- `clinic/src/lib/gtag/gtag.ts` — `fireSignupConversion(email)`: SDK onload 후 이벤트 발송
+- `clinic/src/lib/gtag/marketingTags.ts` — `captureAttribution()` / `getAttribution()`: UTM/광고 파라미터 저장
+- `clinic/src/pages/_app.tsx` — 앱 진입 시 `captureAttribution()` 1회 실행 (현재 production 가드 주석 처리 중)
 - `clinic/src/lib/AuthSignupForm/useSignupForm.tsx` — 가입 성공 onSuccess에서 `fireSignupConversion` 호출
-- `clinic/global.d.ts` — `window.dataLayer`, `window.gtag`, `window.fbq` 타입 선언
-- `.env.production` — `NEXT_PUBLIC_GA4_MARKETING_ID`, `NEXT_PUBLIC_META_PIXEL_ID` 값 설정
-- `.env.staging`, `.env.development` — 빈 값 (kill switch)
 
-SDK lazy loading 이유: GA4/Meta SDK를 모든 페이지에서 로드할 필요 없음. 회원가입 이벤트 발생 시점에만 동적 삽입.
+수정한 버그 (기존 master 코드):
+- SDK 로드 전 이벤트 발송 → `loadScriptOnce`에 onload 콜백 추가로 해결
+- GA4 stub 화살표 함수로 배열 push → `function()` 선언으로 Arguments 객체 전달
+- Meta Pixel fbevents.js onload 전 init/track 발송 → onload 이후로 이동
 
-**Why:** 마케팅팀 + PM 스펙을 코드베이스에 맞게 적용. 개발자 피드백으로 lazy loading 리팩토링.
-**How to apply:** 다음 세션 시작 시 PR #4218 머지 여부 확인.
+스테이징 검증 결과:
+- GA4: `google-analytics.com/g/collect` — `en=dentlink_signup` 확인 ✅
+- Meta Pixel: `facebook.com/tr` — `ev=CompleteRegistration` 확인 (네트워크 탭 이미지 타입) ✅
+- transaction_id 두 채널 간 일치 확인 ✅
+
+**배포 전 남은 작업:**
+- PR #4260 머지
+- `_app.tsx`의 `captureAttribution` production 가드 복구 (`// if (!isProduction) return;` 주석 해제)
+
+**Why:** 마스터에 기존 구현이 있었으나 SDK 타이밍 버그로 실제 이벤트 미발송 상태였음.
+**How to apply:** 다음 세션 시 PR #4260 머지 여부 및 production 가드 복구 여부 확인.
