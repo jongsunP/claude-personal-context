@@ -29,7 +29,8 @@
 
 ## Project
 - [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, Denture SELECT 2열 레이아웃·문구 수정 완료, PR #4266 오픈 (→ release/v1.76.0)
-- [DL-13254 작업 현황](project_dl13254_progress.md) — feature/DL-15197, EstimatedCostPanel 표시 로직 완료(MANDATORY 항상+선택 시), 미커밋 2파일, TODO(@Frankie) productType 조건 보류
+- [DL-13254 작업 현황](project_dl13254_progress.md) — feature/DL-15197, rebase 완료, 옵션 이미지·OptionImage 컴포넌트 완료. 남은 것: 주문상세 EstimatedCostPanel, 2단계 상품 노출, PR
+- [DL-13254 주문 2단계 PM 스펙](project_dl13254_step2_spec.md) — 상품 노출 조건(New/Follow-up), 컨설팅 혼합 제한, 예상 가격 표시, lab/admin은 제한 없음
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트
 - [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 코드 검증 완료. 배포 후 수기 확인 3건(DL-14732, DL-14754, DL-15168), PR #4219 머지 대기
 - [DL-15157 GA4/Meta Pixel 전환 추적](project_dl15157_ga_tracking.md) — 회원가입 lazy loading 구현 완료, PR #4218 오픈
