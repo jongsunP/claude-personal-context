@@ -16,10 +16,11 @@ metadata:
 
 ## 기본 정보
 
-- **Jira**: DL-13254 "[치과] 다단계 보철물 주문 프로세스 구축 Phase 2"
+- **Jira**: DL-13254 "[치과] 다단계 보철물 프로세스 구축 Phase 2"
 - **브랜치**: `feature/DL-15197`
 - **워크트리**: `/Users/parkjongsun/Repository/dentlink-client-allonx`
-- **최신 커밋 (2026-06-23)**: `6d2e183a3` — push 완료
+- **최신 커밋 (2026-06-23)**: `a20615590` — push 완료
+- **베이스**: `origin/master` rebase 완료 (v1.75.0 기준, DL-15086 processingDays 포함)
 
 **Why:** AOX 컨설팅 상품 전용 주문 플로우 구축. 핵심은 `productType === "CONSULTATION"` 여부로 UI 분기.
 
@@ -44,8 +45,12 @@ metadata:
 ### Phase 2 — 이번 세션 (2026-06-23)
 | 커밋 | 내용 |
 |---|---|
-| `892bd40bd` | order.types에 productType 추가 (CaseGroupAdminDto/LabDto/Dto), OrderOptionForm isConsultation 가드 |
+| `892bd40bd` | order.types에 productType 추가, OrderOptionForm isConsultation 가드 |
 | `6d2e183a3` | MANDATORY 처리·스웨거 동기화 전체 |
+| `8039d28e3` | 어드민 상품 옵션 이미지 업로드 및 조회 표시 |
+| rebase | origin/master rebase 완료 (processingDays 에러 해결) |
+| 타입 보강 | OptionCreateAdminDto·OptionUpdateAdminDto에 imageUrl·isFeeScheduleVisible 추가 |
+| `a20615590` | 주문 3단계 옵션 이미지 표시 + OptionImage 컴포넌트 추가 |
 
 ---
 
@@ -53,36 +58,28 @@ metadata:
 
 ### 가격표(EstimatedCostPanel) 노출 조건
 ```tsx
-// OrderOptionForm.tsx
+// CONSULTATION이 하나라도 있으면 표시 (정책)
 const isConsultation = !!(
   (order as OrderAdminDto)?.caseGroups?.some(cg => cg.productType === "CONSULTATION") ||
   (order as OrderDto)?.product?.caseGroups?.some(cg => cg.productType === "CONSULTATION")
 );
-
-{isConsultation && productPriceData && (
-  <EstimatedCostPanel productPriceData={productPriceData} />
-)}
 ```
 
-| 서비스 | productPriceData | isConsultation | 결과 |
-|---|---|---|---|
-| 클리닉 CONSULTATION | 있음 | true | ✅ 노출 |
-| 어드민 CONSULTATION | 있음 | true | ✅ 노출 |
-| 랩 | undefined (쿼리 없음) | 상관없음 | ❌ 미노출 |
-| 비CONSULTATION | 있음 | false | ❌ 미노출 |
+### 주문 3단계 옵션 이미지 표시
+- `OptionImage.tsx` — 공통 이미지 컴포넌트 (`shared/ui/src/ProductOptions/OptionImage.tsx`)
+- 옵션 레벨: `ProductOption.tsx`에 `imageUrl` prop 추가 → 타이틀 옆 20×20
+- 옵션값 레벨: `OptionButtons`, `OptionCheckboxes`, `OptionRadioButtons` 모두 적용
+- **주의**: 클리닉(오피스) API가 현재 imageUrl을 내려주지 않음 — BE에 추가 요청 완료, FE는 준비됨
 
 ### MANDATORY 옵션 처리
 - **UI**: `CaseOptionForm.tsx` → `option.type === "MANDATORY"` 면 `return null` (렌더 스킵)
-- **Validation**: `clinic/admin useOrderOptionUpdateForm` → `row.type === "MANDATORY"` 면 `return false` (isRequired여도 통과)
+- **Validation**: clinic/admin `useOrderOptionUpdateForm` → `row.type === "MANDATORY"` 면 `return false`
 - **가격 계산**: `EstimatedCostPanel` → `topLevel.type !== "MANDATORY"` 조건으로 항상 포함
 
-### 타입 동기화 (2026-06-23 기준)
-- `ProductOptionType`에 `"MANDATORY"` 추가 (enum.types.ts)
-- `PriceType`에 `"CONSULTATION"` 추가 (enum.types.ts)
-- `CategoryPurposeType`에서 `"IMPLANT"` 제거 (스웨거 spec 제거 반영)
-- `CaseOptionLabDto.type`에 `"MANDATORY"` 추가 (order.types.ts)
-- `order.types / product.types / api.types` 전체 `priceType`에 `"CONSULTATION"` 반영
-- `CaseGroupLabDto.productType` — order.types에만 선제 추가, data-contracts 미반영 (BE 미오픈)
+### 타입 동기화
+- `OptionAdminDto.imageUrl` — product.types.ts에 추가됨
+- `OptionCreateAdminDto.imageUrl` + `isFeeScheduleVisible` — 추가됨
+- `OptionUpdateAdminDto.imageUrl` + `isFeeScheduleVisible` — 추가됨
 
 ---
 
@@ -105,28 +102,14 @@ priceCalculationType === "ARCH"        → 상악(UNS 1-16) / 하악(UNS 17-32) 
 
 ## 미완료 항목 ❌
 
-### 클리닉
-| 항목 | 설명 |
-|---|---|
-| 주문 2단계 제품 노출 막기 | 조건 미정 — 사용자가 2단계 작업 전 재안내 예정 |
-| 주문 상세 가격표 | 3단계와 동일한 EstimatedCostPanel 추가 필요 |
+| # | 항목 | 설명 |
+|---|---|---|
+| 1 | 클리닉 주문 상세 EstimatedCostPanel | 3단계와 동일한 패널 추가 |
+| 2 | 어드민 주문 상세 EstimatedCostPanel | 동일 |
+| 3 | 클리닉 주문 2단계 제품 노출 막기 | 조건 미정 — 사용자 재안내 필요 |
+| 4 | PR 생성 | 작업 완료 후 |
 
-### 어드민
-| 항목 | 설명 |
-|---|---|
-| 주문 상세 가격표 | 클리닉 동일 |
-| 옵션 이미지 추가 | 어드민 상품 옵션 폼에 이미지 필드 추가 |
-
-### 랩
-| 항목 | 설명 |
-|---|---|
-| 없음 | 모든 변경 없음 (가격표 미노출 이미 처리됨) |
-
-### 공통
-| 항목 | 설명 |
-|---|---|
-| PR 생성 | 미오픈. 작업 완료 확인 후 생성 |
-| AoXWorkflowPanel | 보류 파일. 사용처 없음. 건드리지 말 것 |
+**진행 순서 합의**: 주문 상세(1·2) → 2단계(3) → PR(4)
 
 ---
 
