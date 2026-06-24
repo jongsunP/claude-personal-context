@@ -19,8 +19,10 @@ metadata:
 - **Jira**: DL-13254 "[치과] 다단계 보철물 프로세스 구축 Phase 2"
 - **브랜치**: `feature/DL-15197`
 - **워크트리**: `/Users/parkjongsun/repository/dentlink-client-allonx`
-- **최신 커밋 (2026-06-24)**: `4dee024b2` — push 완료
-- **베이스**: `origin/master` rebase 완료
+- **최신 커밋 (2026-06-24)**: `9f880931d` — push 완료
+- **베이스**: `origin/release/v1.76.0` rebase 완료 (컨플릭 16개 해결)
+- **PR #4281**: feature/DL-15197 → release/v1.76.0
+- **PR #4282**: feature/DL-15197 → develop
 
 **Why:** AOX 컨설팅 상품 전용 주문 플로우 구축. 핵심은 `productType === "CONSULTATION"` 여부로 UI 분기.
 
@@ -98,7 +100,6 @@ metadata:
 | # | 항목 | 설명 |
 |---|---|---|
 | 1 | 주문 상세 가격 표시 | BE에서 `caseGroups[].price` / `optionPrice` DEV 응답 확인 후 검증 |
-| 2 | PR 생성 | 최종 점검 후 |
 
 ---
 
