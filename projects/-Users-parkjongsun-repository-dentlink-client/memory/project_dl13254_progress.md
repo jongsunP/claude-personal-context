@@ -100,16 +100,26 @@ priceCalculationType === "ARCH"        → 상악(UNS 1-16) / 하악(UNS 17-32) 
 
 ---
 
+## 완료된 추가 작업 (2026-06-24 — 커밋 6abf1d45e)
+
+### 주문 상세 EstimatedCostPanel — 서버 저장값 기반 구현
+- `useEstimatedCostFromOrder(caseGroups)` 추가 — `caseGroup.price` + `caseGroup.optionPrice` 직접 사용, 추가 API 호출 없음
+- `EstimatedCostPanelUI` pure UI 컴포넌트로 리팩터 (`lineItems/total/currency` props 수신)
+- clinic `OrderDetailLayout`: `order.caseGroups` → `useEstimatedCostFromOrder`, currency = `order.office.currency`
+- admin 주문 상세: `DataShowGroup` + `DataGrid.DataList`, currency = `data.office.currency`
+- **대기 중**: BE에서 `caseGroups[].price` / `caseGroups[].optionPrice` 필드 값 확인 중 (현재 DEV에서 null)
+
+---
+
 ## 미완료 항목 ❌
 
 | # | 항목 | 설명 |
 |---|---|---|
-| 1 | 클리닉 주문 상세 EstimatedCostPanel | 3단계와 동일한 패널 추가 |
-| 2 | 어드민 주문 상세 EstimatedCostPanel | 동일 |
-| 3 | 클리닉 주문 2단계 제품 노출 막기 | 조건 미정 — 사용자 재안내 필요 |
-| 4 | PR 생성 | 작업 완료 후 |
+| 1 | 주문 상세 EstimatedCostPanel 데이터 확인 | BE에 caseGroups.price / optionPrice 필드 응답 확인 요청 |
+| 2 | 클리닉 주문 2단계 제품 노출 막기 | 스펙 확인 후 진행 |
+| 3 | PR 생성 | 작업 완료 후 |
 
-**진행 순서 합의**: 주문 상세(1·2) → 2단계(3) → PR(4)
+**진행 순서**: BE 확인(1) → 2단계(2) → PR(3)
 
 ## 완료된 추가 작업 (2026-06-24)
 
