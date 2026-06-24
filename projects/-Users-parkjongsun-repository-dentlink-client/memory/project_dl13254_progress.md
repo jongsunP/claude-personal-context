@@ -111,6 +111,12 @@ priceCalculationType === "ARCH"        → 상악(UNS 1-16) / 하악(UNS 17-32) 
 
 **진행 순서 합의**: 주문 상세(1·2) → 2단계(3) → PR(4)
 
+## 완료된 추가 작업 (2026-06-24)
+
+| 커밋 | 내용 |
+|---|---|
+| `2ccdf9b02` | 옵션 imageUrl full-width 독립 표시 — OptionDto 타입 동기화, OptionImage banner 모드, ProductOption 타이틀 썸네일 제거, imageUrl 있으면 항상 option UI 위에 독립 렌더 |
+
 ---
 
 ## 참고: 관련 API 엔드포인트
