@@ -16,13 +16,14 @@ metadata:
 
 ## 기본 정보
 
-- **Jira**: DL-13254 "[치과] 다단계 보철물 프로세스 구축 Phase 2"
+- **Jira**: DL-13254 "[치과] 다단계 보철물 주문 프로세스 구축 Phase 2"
 - **브랜치**: `feature/DL-15197`
 - **워크트리**: `/Users/parkjongsun/repository/dentlink-client-allonx`
-- **최신 커밋 (2026-06-24)**: `9f880931d` — push 완료
+- **최신 커밋**: `ca8d28230` — `fix(review): DL-13254 코드레빗 리뷰 반영` (push 완료)
 - **베이스**: `origin/release/v1.76.0` rebase 완료 (컨플릭 16개 해결)
-- **PR #4281**: feature/DL-15197 → release/v1.76.0
-- **PR #4282**: feature/DL-15197 → develop
+- **PR #4281**: feature/DL-15197 → release/v1.76.0 (오픈, Joy·Tom 리뷰 대기)
+- **PR #4283**: feature/DL-15197-develop → develop (**머지 완료**)
+- **PR #4282**: feature/DL-15197 → develop (**닫힘**, #4283으로 대체)
 
 **Why:** AOX 컨설팅 상품 전용 주문 플로우 구축. 핵심은 `productType === "CONSULTATION"` 여부로 UI 분기.
 
@@ -49,7 +50,7 @@ metadata:
 | `6f41ed31f` | EstimatedCostPanel 컨설팅 전용 가드·중복 식별자 수정 |
 | `c7e56bf5b` | 어드민 상품 등록·수정 폼에 상품 유형 Radio UI 추가 |
 
-### Phase 2 — 이번 세션 (2026-06-23 ~ 24)
+### Phase 2 — 본 세션
 | 커밋 | 내용 |
 |---|---|
 | `892bd40bd` | order.types에 productType 추가, OrderOptionForm isConsultation 가드 |
@@ -60,6 +61,7 @@ metadata:
 | `6abf1d45e` | 주문 상세 EstimatedCostPanel — 서버 저장값 기반 (useEstimatedCostFromOrder) |
 | `1faf61e4f` | Estimated Cost 패널 노출 조건 개선 (isConsultationOrder 양방향 감지) |
 | `4dee024b2` | 주문 2단계 CONSULTATION 차단·필터 및 3단계 가격 패널 조건 적용 |
+| `ca8d28230` | CodeRabbit 리뷰 반영 (8건 수정, 7건 근거 있게 스킵, 15개 스레드 resolve) |
 
 ---
 
@@ -75,14 +77,14 @@ metadata:
 ### 주문 3단계 (옵션/가격)
 - **EstimatedCostPanel 노출**: `isConsultation && serviceType !== "LAB"` — 치과/어드민만
 - **isConsultation 감지**: `caseGroups[].productType === "CONSULTATION"` (admin 경로) OR `product.caseGroups[].productType === "CONSULTATION"` (clinic 경로) 양방향
-- **악궁 x2 계산**: `toothNotationChartType === "ARCH"` 기반 (CaseNavigation과 동일 기준), catalog API 의존 없음
+- **악궁 x2 계산**: `toothNotationChartType === "ARCH"` 기반, catalog API 의존 없음
 - **기존 상품 영향 없음**: EstimatedCostPanel이 CONSULTATION 전용이라 기존 코드 경로 미진입
 
 ### 주문 상세
 - **CONSULTATION이면**: Order Summary 자리를 EstimatedCostPanel로 대체 (공존 아님)
 - **데이터 소스**: `useEstimatedCostFromOrder` — `caseGroup.price` + `caseGroup.optionPrice` 서버 저장값 그대로
 - **admin 경로**: `order.caseGroups`, **clinic 경로**: `order.product?.caseGroups` 양방향 감지
-- **대기 중**: BE에서 `caseGroups[].price` / `caseGroups[].optionPrice` 값 응답 확인 필요 (현재 DEV null)
+- **대기 중**: BE에서 `caseGroups[].price` / `caseGroups[].optionPrice` 값 응답 확인 필요 (DL-15204 진행 중)
 
 ### 옵션 이미지
 - `OptionImage.tsx` — banner 모드, option UI 위 full-width 독립 렌더
@@ -93,13 +95,22 @@ metadata:
 - Validation 제외
 - 가격 계산엔 항상 포함
 
+### CodeRabbit 리뷰 반영 (`ca8d28230`)
+- OptionImage `alt` prop 추가
+- `useAdminProductPricesQuery` enabled 조건에 `!!query?.officeId` 추가
+- EstimatedCostPanel + 어드민 주문상세 `formatCurrency` 사용 (KRW 소수점 자동 처리)
+- `handleReplaceCase` useCallback deps 누락 수정
+- `products/[product_id]` reset 시 `type: data.type ?? "PROSTHETICS"` fallback
+- 이미지 업로드 네트워크 에러 무시 방어
+- `api.types.ts` + `product.types.ts` 4개 OptionDto에 `"MANDATORY"` 추가
+
 ---
 
 ## 미완료 항목 ❌
 
 | # | 항목 | 설명 |
 |---|---|---|
-| 1 | 주문 상세 가격 표시 | BE에서 `caseGroups[].price` / `optionPrice` DEV 응답 확인 후 검증 |
+| 1 | 주문 상세 가격 표시 검증 | BE(DL-15204) 완료 후 DEV에서 `caseGroups[].price` / `optionPrice` 응답값 확인 |
 
 ---
 
@@ -118,7 +129,7 @@ metadata:
 | 9 | Surgical Guide x2 미적용 | ✅ |
 | 10 | 상품 노출 기준: ID 아닌 type | ✅ (Admin 세팅 영역) |
 | 11 | 주문 상세: CONSULTATION이면 Order Summary 대체 | ✅ |
-| 12 | 주문 상세: 서버 저장값 표시 | ✅ (BE 데이터 확인 대기) |
+| 12 | 주문 상세: 서버 저장값 표시 | ⏳ BE 완료 후 검증 필요 |
 
 ---
 
@@ -129,4 +140,4 @@ metadata:
 | clinic | `GET /office/products/prices` | productIds만 필요 |
 | admin  | `GET /admin/products/prices` | productIds + **officeId 필수** |
 
-**How to apply:** 다음 세션 재개 시 미완료 항목 확인 후 BE 데이터 검증 → PR 생성 순서로 진행.
+**How to apply:** 다음 세션 재개 시 BE(DL-15204) 완료 여부 확인 후 DEV 데이터 검증만 남음. PR #4281 리뷰 승인 대기 중.
