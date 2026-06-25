@@ -31,7 +31,8 @@
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
-- [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, Denture SELECT 2열 레이아웃·문구 수정 완료, PR #4266 오픈 (→ release/v1.76.0)
+- [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, PR #4266 오픈 + QA 픽스 PR #4284 오픈 (→ release/v1.76.0)
+- [DL-15287 작업 현황](project_dl15287_progress.md) — feature/DL-15287, Shippable→Physical 명칭 변경, PR #4285 오픈 (→ release/v1.76.0)
 - [DL-13254 작업 현황](project_dl13254_progress.md) — feature/DL-15197, rebase 완료, 옵션 이미지·OptionImage 컴포넌트 완료. 남은 것: 주문상세 EstimatedCostPanel, 2단계 상품 노출, PR
 - [DL-13254 주문 2단계 PM 스펙](project_dl13254_step2_spec.md) — 상품 노출 조건(New/Follow-up), 컨설팅 혼합 제한, 예상 가격 표시, lab/admin은 제한 없음
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트

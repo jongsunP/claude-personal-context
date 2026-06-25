@@ -7,11 +7,12 @@ metadata:
   originSessionId: eabe9861-890d-4891-9906-2b90aae71cb5
 ---
 
-## 현황: 최종 검토 완료, PR 머지 대기
+## 현황: QA 픽스 PR 오픈 (#4284)
 
 **브랜치:** `feature/DL-15107`
 **워크트리 경로:** `/Users/parkjongsun/Repository/dentlink-client-denture`
 **PR:** #4266 → `release/v1.76.0` (https://github.com/Innvoaid/dentlink-client/pull/4266)
+**QA 픽스 PR:** #4284 (`feature/DL-15107-qa-1` → `release/v1.76.0`) — SELECT 버튼 flex:1 제거로 콘텐츠 크기 복원
 
 **Why:** [치과] Denture 26 Q3 구조 변경 — Partial Denture 삭제, 선택 화면 2열 레이아웃 적용, Temporary Denture 안내 문구 To-be 반영
 
