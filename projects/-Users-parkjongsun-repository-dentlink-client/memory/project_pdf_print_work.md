@@ -92,4 +92,3 @@ metadata:
 - [ ] 검증 결과에 따라 머지할 브랜치 결정
 - [ ] (백로그) lab/clinic PrintPdf.tsx 코드 중복 공통화 (브랜치 선택 후)
 - [ ] (백로그) Track 2, 3 및 public/pdfjs/ (6.8MB) 제거 검토 — Branch C 안정화 이후
-- [ ] (보안) BE팀에 JIRA_API_TOKEN ECS 환경변수 평문 노출 이슈 전달 (Secrets Manager 또는 SSM 사용 권고)
