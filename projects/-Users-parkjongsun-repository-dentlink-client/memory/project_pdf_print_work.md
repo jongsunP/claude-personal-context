@@ -1,6 +1,6 @@
 ---
 name: project-pdf-print-work
-description: 라벨 프린트 PDF 관련 작업 현황 — 공통 베이스 완성 + 3개 브랜치 준비 완료, develop 브랜치 통한 스테이징 테스트 준비 (2026-07-03)
+description: 라벨 프린트 PDF 관련 작업 현황 — Track 1 서버사이드 로컬 동작 확인, 비교 UI 추가, PR #4326 오픈 (2026-07-03)
 metadata: 
   node_type: memory
   type: project
@@ -90,10 +90,41 @@ DL-15439 [1순위] → DL-15438 [2순위] → DL-15437 [3순위]
 
 ---
 
+## Track 1 서버사이드 핵심 구현 (2026-07-03 세션에서 해결)
+
+### 해결한 문제들
+1. **`canvas.node` native binary 없음** → `canvasFactory`에 `@napi-rs/canvas` 직접 주입. pdfjs-dist가 node-canvas(`require("canvas")`)를 호출하지 않도록 차단
+2. **텍스트 ☒ 박스 표시** → `disableFontFace: true`로 텍스트를 베지어 패스로 변환 (`@napi-rs/canvas`는 브라우저 FontFace API 미지원)
+3. **배경만 보이고 텍스트 없음** → `cMapUrl`, `standardFontDataUrl`을 `path.join(process.cwd(), "public/pdfjs/...")` 파일시스템 경로로 전달
+
+### 현재 `pdf-to-image.ts` 핵심 옵션
+```ts
+{
+  canvasFactory: napiCanvasFactory,  // @napi-rs/canvas 직접 주입
+  cMapUrl: path.join(process.cwd(), "public/pdfjs/cmaps/"),
+  standardFontDataUrl: path.join(process.cwd(), "public/pdfjs/standard_fonts/"),
+  useSystemFonts: true,      // 폰트 미임베드 시 OS 폰트 fallback
+  disableFontFace: true,     // 텍스트 → 베지어 패스 변환
+}
+```
+
+### 비교 UI 상태 (임시)
+- `PrintShipmentLabelListItem.tsx`: Track 1(서버) / Track 2(브라우저) 수직 배치
+- `PrintPdf.tsx`: `forceTrack?: "server" | "browser"` prop 추가
+- **TODO**: 스테이징 검증 후 비교 UI 제거, `<PrintPdf src={labelUrl} />` 단일 렌더로 복원
+
+---
+
+## PR 현황
+
+- **PR #4326**: `feature/DL-15439` → `develop` (스테이징 검증용)
+
+---
+
 ## 남은 작업
 
-- [ ] **develop 브랜치 재생성** — 기존 원격 develop 삭제 → master 기준으로 신규 develop push
-- [ ] **스테이징 배포 및 검증** — DL-15439 → DL-15438 → DL-15437 순서 (develop 향 PR)
-- [ ] 검증 결과에 따라 머지할 브랜치 결정 (최종 타겟: master)
+- [ ] **스테이징 배포 후 Track 1 검증** — CloudWatch CPU/Memory/Container restarts 확인
+- [ ] **비교 UI 제거** — Track 1 검증 완료 후 `PrintShipmentLabelListItem.tsx` 단일 렌더 복원, `PrintPdf.tsx` forceTrack prop 제거
+- [ ] 검증 결과에 따라 develop → master 머지 브랜치 결정
 - [ ] (백로그) lab/clinic PrintPdf.tsx 코드 중복 공통화 (브랜치 선택 후)
 - [ ] (백로그) Track 2, 3 및 public/pdfjs/ (6.8MB) 제거 검토 — Branch C 안정화 이후
