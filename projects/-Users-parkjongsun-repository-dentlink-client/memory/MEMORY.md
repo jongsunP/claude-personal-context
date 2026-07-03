@@ -31,6 +31,7 @@
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
+- [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, 워크트리 `/Repository/dentlink-client-e2e` 준비 완료. 코드 변경 완료, 테스트 실행·pass 확인 대기
 - [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — PR #4214 분석 완료. 두 PDF 시스템(pdfjs-dist vs @react-pdf/renderer) 구조, 해결된 것/잔존 부채 정리
 - [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, PR #4266 오픈 + QA 픽스 PR #4284 오픈 (→ release/v1.76.0)
 - [DL-15287 작업 현황](project_dl15287_progress.md) — feature/DL-15287, Shippable→Physical 명칭 변경, PR #4285 오픈 (→ release/v1.76.0)
