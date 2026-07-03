@@ -32,7 +32,7 @@
 
 ## Project
 - [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, 워크트리 `/Repository/dentlink-client-e2e` 준비 완료. 코드 변경 완료, 테스트 실행·pass 확인 대기
-- [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — PR #4214 분석 완료. 두 PDF 시스템(pdfjs-dist vs @react-pdf/renderer) 구조, 해결된 것/잔존 부채 정리
+- [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — 3개 브랜치 준비 완료. develop 브랜치 재생성 후 DL-15437→DL-15439→DL-15438 순서로 스테이징 검증 예정
 - [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, PR #4266 오픈 + QA 픽스 PR #4284 오픈 (→ release/v1.76.0)
 - [DL-15287 작업 현황](project_dl15287_progress.md) — feature/DL-15287, Shippable→Physical 명칭 변경, PR #4285 오픈 (→ release/v1.76.0)
 - [DL-13254 작업 현황](project_dl13254_progress.md) — feature/DL-15197, rebase 완료, 옵션 이미지·OptionImage 컴포넌트 완료. 남은 것: 주문상세 EstimatedCostPanel, 2단계 상품 노출, PR
