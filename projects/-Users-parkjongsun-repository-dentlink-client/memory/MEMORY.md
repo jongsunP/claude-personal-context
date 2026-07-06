@@ -31,6 +31,7 @@
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
+- [DL-15478 이미지 최적화 원복](project_dl15478_progress.md) — feature/DL-15478, PR #4335 오픈. DL-15348 프리로드·eager 제거, 배포 후 성능 확인 예정
 - [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, 워크트리 `/Repository/dentlink-client-e2e` 준비 완료. 코드 변경 완료, 테스트 실행·pass 확인 대기
 - [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — 3개 브랜치 준비 완료. develop 브랜치 재생성 후 DL-15437→DL-15439→DL-15438 순서로 스테이징 검증 예정
 - [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, PR #4266 오픈 + QA 픽스 PR #4284 오픈 (→ release/v1.76.0)
