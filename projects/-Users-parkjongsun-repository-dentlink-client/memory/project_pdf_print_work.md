@@ -120,12 +120,18 @@ import { Canvas, GlobalFonts, SKRSContext2D, createCanvas } from "@napi-rs/canva
 
 ---
 
+## PR 현황 (2026-07-06 기준)
+
+- **PR #4336**: `feature/DL-15438` → `master` (Draft, 비교용)
+  - 서버사이드 코드만 포함 (static 파일 없음)
+  - `public/pdfjs/` 제거 → `require.resolve("pdfjs-dist/package.json")`으로 node_modules 경로 참조
+  - 동시 요청 제한(MAX_CONCURRENT=2) 인라인 구현 완료
+  - clinic/lab 양쪽 모두 적용
+
 ## 남은 작업
 
-- [ ] **동시 요청 제한 로직 추가** — `/api/pdf-to-image`에 concurrency limiter 적용 (`p-limit` 등으로 동시 변환 수 제한, 초과 요청은 순차 대기). OOM / 헬스체크 타임아웃 방지용. 배포 전 필수.
-- [ ] **DL-15438 PR 생성** → develop (스테이징 검증용)
-- [ ] PR #4326 (DL-15439) 처리 — 닫기 또는 방향 변경
+- [ ] PR #4336 리뷰 후 develop 타겟 PR로 전환 또는 재생성
+- [ ] PR #4326 (DL-15439) 닫기
 - [ ] 스테이징 배포 후 Track 1 검증 — CloudWatch CPU/Memory/Container restarts 확인
 - [ ] 검증 완료 후 develop → master 머지
 - [ ] (백로그) lab/clinic PrintPdf.tsx 코드 중복 공통화
-- [ ] (백로그) Track 2, 3 및 public/pdfjs/ (6.8MB) 제거 검토
