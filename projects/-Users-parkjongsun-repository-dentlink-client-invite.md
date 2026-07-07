@@ -47,5 +47,8 @@ Related work: DL-14232 / DL-15493 member management invite flow
 
 ## Next start point
 
-- Worktree intentionally uncommitted per user request.
-- Next likely step: browser QA with logged-in clinic account for desktop and mobile widths, especially drawer open/close, authority dropdown, remove member visibility, and support-widget z-order on mobile.
+- Code is committed and pushed on `feature/DL-14232`. Latest commit: `291dfb61c ui: 멤버 상세 권한 메뉴 스타일 보정 (DL-15493)`.
+- Authority dropdown now uses the existing project `PopupMenu` with `useFixedPortal` so it is not clipped by drawer content or the Remove Member area.
+- Member detail content was aligned to existing project UI primitives (`Typography`, `Button`, `PopupMenu`, `ProfileImage`, `Icon`) rather than raw one-off styled text/buttons where practical.
+- Local `HEAD` and `origin/feature/DL-14232` matched `291dfb61c`; worktree was clean after push.
+- Jira could not be opened in the current Codex session. Next likely step: update Jira parent/subtask status from a Jira-capable session, then continue with remaining DL-14232 child cards.

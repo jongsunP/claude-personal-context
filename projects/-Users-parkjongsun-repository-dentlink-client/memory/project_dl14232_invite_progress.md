@@ -28,7 +28,7 @@ metadata:
 | DL-15490 | [FE] 이메일 템플릿 및 링크 | 해야 할 일 |
 | DL-15491 | [FE] 초대시 쿠키 세팅 및 기존 쿠키 갱신 | 해야 할 일 |
 | DL-15492 | [FE] 초대시 홈 알림 및 필요한 세팅 | 해야 할 일 |
-| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 진행 중 (member detail drawer 미커밋) |
+| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 진행 중 (member list/detail drawer pushed; invite list pending BE/design) |
 | DL-15494 | [FE] 클리닉 회원 초대 페이지 API | 해야 할 일 |
 | DL-15495 | [FE] 디자인시스템 변경 대응 | 해야 할 일 |
 
@@ -54,7 +54,7 @@ metadata:
   - `InvitationItem` string literal → enum 타입 교체, `HYGIENIST` role 추가
   - 타이포 수정: "Invite New Memers" → "Invite New Members"
 
-- 2026-07-07: **DL-15493 멤버 상세 drawer 구조 정리 진행 중 (미커밋)**
+- 2026-07-07: **DL-15493 멤버 리스트/상세 drawer 구조 정리 완료 (커밋/푸시)**
   - 작업 브랜치/워크트리: `/Users/parkjongsun/Repository/dentlink-client-invite`, `feature/DL-14232`
   - 멤버 상세는 더 이상 `/office/managed/members/[employee_id]` route/page로 가지 않음. 데스크탑/모바일 모두 `/office/managed` 리스트에서 선택 시 drawer를 띄움.
   - 공용 drawer 레이아웃은 `shared/ui/src/SlideDrawer/SlideDrawer.tsx` 로 생성. 다른 화면에서도 재사용 가능한 portal 기반 right slide drawer.
@@ -64,5 +64,9 @@ metadata:
   - 권한 변경/Remove Member 로직은 새 `OfficeMemberDetailContent` 로 이식. PopupMenu trigger의 nested button warning은 div trigger로 수정.
   - 기존 old 상세 코드 삭제: `MemberDetailLayer`, `MemberInfo`, `MemberDelete`, `MemberRequest`, `pages/office/managed/members/[employee_id].tsx`.
   - `OFFICE_MANAGED_MEMBERS` route 상수와 menu entry 제거. 기존 상세 URL은 404 확인.
-  - 검증: `pnpm --filter dentlink-clinic-web type` 통과, `/office/managed` Next compile/200 확인.
-- 다음 작업: DL-15490 ([FE] 이메일 템플릿 및 링크)
+  - Authority dropdown은 기존 프로젝트 `PopupMenu` + `useFixedPortal` 패턴으로 정리해 drawer/Remove Member 영역에 잘리지 않게 함.
+  - 상세 내부 텍스트/버튼은 기존 프로젝트 UI primitive(`Typography`, `Button`, `PopupMenu`, `ProfileImage`, `Icon`) 기반으로 보정.
+  - 최종 커밋/푸시: `291dfb61c ui: 멤버 상세 권한 메뉴 스타일 보정 (DL-15493)` on `feature/DL-14232`.
+  - 검증: `pnpm --filter dentlink-clinic-web type` 통과, 커밋 훅 clinic/lab/admin type 통과, push hook 통과(기존 lint warning만 출력), `/office/managed` Next compile/200 확인.
+  - Jira는 이번 Codex 세션에서 접근 불가. 다음 Jira 가능 세션에서 DL-14232/DL-15493 상태 코멘트 업데이트 필요.
+- 다음 작업: Jira 업데이트 후 DL-15490 ([FE] 이메일 템플릿 및 링크) 또는 남은 DL-14232 하위카드 진행
