@@ -28,7 +28,7 @@ metadata:
 | DL-15490 | [FE] 이메일 템플릿 및 링크 | 해야 할 일 |
 | DL-15491 | [FE] 초대시 쿠키 세팅 및 기존 쿠키 갱신 | 해야 할 일 |
 | DL-15492 | [FE] 초대시 홈 알림 및 필요한 세팅 | 해야 할 일 |
-| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 해야 할 일 |
+| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 진행 중 (member detail drawer 미커밋) |
 | DL-15494 | [FE] 클리닉 회원 초대 페이지 API | 해야 할 일 |
 | DL-15495 | [FE] 디자인시스템 변경 대응 | 해야 할 일 |
 
@@ -53,4 +53,16 @@ metadata:
   - `useInviteCreate`를 `shared/ui` → `lab/src/lib/members/`로 이동 (서비스 소유 원칙)
   - `InvitationItem` string literal → enum 타입 교체, `HYGIENIST` role 추가
   - 타이포 수정: "Invite New Memers" → "Invite New Members"
+
+- 2026-07-07: **DL-15493 멤버 상세 drawer 구조 정리 진행 중 (미커밋)**
+  - 작업 브랜치/워크트리: `/Users/parkjongsun/Repository/dentlink-client-invite`, `feature/DL-14232`
+  - 멤버 상세는 더 이상 `/office/managed/members/[employee_id]` route/page로 가지 않음. 데스크탑/모바일 모두 `/office/managed` 리스트에서 선택 시 drawer를 띄움.
+  - 공용 drawer 레이아웃은 `shared/ui/src/SlideDrawer/SlideDrawer.tsx` 로 생성. 다른 화면에서도 재사용 가능한 portal 기반 right slide drawer.
+  - 이 페이지 전용 shell은 `OfficeMemberDetailDrawer`, 상세 본문/로직은 `OfficeMemberDetailContent` 로 분리.
+  - desktop은 right drawer, mobile은 같은 drawer shell의 100% width fullscreen 표현. X 클릭 시 리스트로 복귀. mobile dim click close는 비활성.
+  - 리스트 row snapshot을 `employeeSnapshot` 으로 즉시 표시하고, `useEmployeeDetailQuery(employeeId)` 로 상세 데이터를 보강.
+  - 권한 변경/Remove Member 로직은 새 `OfficeMemberDetailContent` 로 이식. PopupMenu trigger의 nested button warning은 div trigger로 수정.
+  - 기존 old 상세 코드 삭제: `MemberDetailLayer`, `MemberInfo`, `MemberDelete`, `MemberRequest`, `pages/office/managed/members/[employee_id].tsx`.
+  - `OFFICE_MANAGED_MEMBERS` route 상수와 menu entry 제거. 기존 상세 URL은 404 확인.
+  - 검증: `pnpm --filter dentlink-clinic-web type` 통과, `/office/managed` Next compile/200 확인.
 - 다음 작업: DL-15490 ([FE] 이메일 템플릿 및 링크)
