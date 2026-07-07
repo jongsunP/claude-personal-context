@@ -24,7 +24,7 @@ metadata:
 | 티켓 | 제목 | 상태 |
 |---|---|---|
 | DL-15162 | [FE] 개발 플래닝 | 진행 중 |
-| DL-15489 | [FE] 어드민 작업 | 해야 할 일 |
+| DL-15489 | [FE] 어드민 작업 | ✅ PR #4342 (→ develop) |
 | DL-15490 | [FE] 이메일 템플릿 및 링크 | 해야 할 일 |
 | DL-15491 | [FE] 초대시 쿠키 세팅 및 기존 쿠키 갱신 | 해야 할 일 |
 | DL-15492 | [FE] 초대시 홈 알림 및 필요한 세팅 | 해야 할 일 |
@@ -44,3 +44,13 @@ metadata:
 ## 진행 이력
 
 - 2026-07-07: 워크트리 생성, FE 하위 작업 8개 확인. DL-15162(개발 플래닝)만 진행 중 상태.
+- 2026-07-07: **DL-15489 완료** (PR #4342, feature/DL-15489 → develop)
+  - `user.apis.admin.ts` 신규 API 7개 추가 (findUserInvitationList, updateUserInvitationAuthority, updateUserInvitationRole, resendUserInvitation, deleteUserInvitation, validateUserInvitationEmails, createUserInvitationList)
+  - `MemberInvitesAdmin` 컴포넌트 + `useInviteCreate` / `useDeleteInvitation` 훅 admin 서비스에 신규 생성
+  - `DataFilters`에 `filterHeaderAction` / `hideSearch` / `onChangeFilter` / `disabledSearch` prop 추가
+  - 그룹타입·그룹명 선택 시 Search 없이 즉시 URL 반영 (Search 버튼 제거)
+  - Invite New Members 버튼: 항상 노출, 그룹타입+그룹명 모두 선택 시에만 활성화
+  - `useInviteCreate`를 `shared/ui` → `lab/src/lib/members/`로 이동 (서비스 소유 원칙)
+  - `InvitationItem` string literal → enum 타입 교체, `HYGIENIST` role 추가
+  - 타이포 수정: "Invite New Memers" → "Invite New Members"
+- 다음 작업: DL-15490 ([FE] 이메일 템플릿 및 링크)
