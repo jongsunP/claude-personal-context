@@ -31,6 +31,7 @@
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
+- [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
 - [DL-15478 이미지 최적화 원복](project_dl15478_progress.md) — feature/DL-15478, PR #4335 오픈. DL-15348 프리로드·eager 제거, 배포 후 성능 확인 예정
 - [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, 워크트리 `/Repository/dentlink-client-e2e` 준비 완료. 코드 변경 완료, 테스트 실행·pass 확인 대기
 - [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — 서버사이드(DL-15438)만 배포 결정. PR #4336 Draft 오픈(master 비교용). concurrency limiter + node_modules 경로 적용 완료
