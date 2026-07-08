@@ -45,6 +45,7 @@
 - [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
 - [E2E SSE 발견 — networkidle 무력화](project_e2e_sse_discovery.md) — lab 앱 전역 SSE(50s 하트비트)가 networkidle을 막음. 픽업/배송 페이지에서 toPass+reload 패턴 사용
 - [레거시 페이지 목록](project_legacy_pages.md) — /office/onboard/ 등 미사용 페이지, 수정 범위 제외
+- [DL-14232 Clinic Invite](../../dentlink-client-invite.md) — Clinic 초대/회원관리 UI 작업 체크포인트. 실제 Clinic invite API 전 단계까지 완료
 
 ## Reference
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal-context)로 관리, clone/pull/push 명령어

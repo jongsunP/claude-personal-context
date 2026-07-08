@@ -1,99 +1,126 @@
-# Dentlink Invite checkpoint - 2026-07-08
+# Dentlink Client Invite - DL-14232
 
-Repo: /Users/parkjongsun/repository/dentlink-client
-Branch: feature/DL-14232
-Latest pushed commit: ef4a0606a [DL-14232] ui: 초대 화면 디자인 시스템 정리
-Status: pushed, worktree clean at the time of handoff
+Last updated: 2026-07-08
 
-## User direction / constraints
+## Repository
+
+```text
+/Users/parkjongsun/repository/dentlink-client
+```
+
+## Branch
+
+```text
+feature/DL-14232
+```
+
+## Jira
+
+```text
+DL-14232 - [치과] employee 초대 기능
+```
+
+## Latest Pushed Commit
+
+```text
+34e9c0ee8 [DL-14232] feat: 클리닉 초대 UI 및 멤버 갱신 처리 보정
+```
+
+## Current Status
+
+- Admin invite API work: completed in branch.
+- Lab invite refactor: completed in branch.
+- Clinic member-management design work: completed/reviewed.
+- Clinic invite page/modal UI: completed up to the point before real Clinic invite API integration.
+- Real Clinic invite API is still unavailable, so invite list/create/send is mock/local state only.
+
+## User Direction / Constraints
 
 - Always answer the user in Korean honorific style.
-- Goal for clinic invite work: complete up to immediately before real invite API integration.
-- Do not call invite APIs directly while checking UI.
-- No e2e required for this task; only UI click/smoke checks were requested.
-- Use existing project UI/design system first. New styling/components are allowed only when there is no suitable existing component or when a local adapter is needed.
-- Figma is the reference, but implementation should follow existing project conventions where exact Figma parity conflicts with established components.
-- Do not commit additional changes unless the user explicitly asks.
+- Figma is the reference, but implementation should follow existing FE conventions and existing components.
+- Do not hardcode or invent patterns when existing UI/form/query conventions can be used.
+- Do not call invite APIs directly while checking UI because Clinic invite API is not ready.
+- Commit/push only when explicitly requested.
 
-## Branch-wide invite-related completed work
+## Branch-Wide Invite Work
 
-### Admin completed
+### Admin
 
-- Included branch commit: 150345436 feat: 어드민 초대 기능 신규 API 전체 대응 및 기공소 리팩토링 (DL-15489)
-- Admin invitation list was updated for the new invite API flow.
-- Admin member invite creation was added through MemberInvitesAdmin.
-- Admin invitation email validation/create hooks were added.
-- Admin invitation resend and delete flows are wired.
-- Admin invitation list filtering/query handling and query key were updated.
+- Admin invite API work is already included in this branch.
+- Admin invitation list/create/validation/resend/delete flows were handled in prior commits.
 
-### Lab completed
+### Lab
 
-- Lab member invite creation logic was refactored.
-- Lab invite UI continues through the shared MemberInvitesUI flow.
-- Existing Lab invite list/update/resend/cancel flow remains in place.
+- Lab invite flow was refactored in prior commits.
+- Lab continues through the existing shared MemberInvitesUI flow.
 
-### Clinic member management completed
+### Clinic Member Management
 
-- Included branch commits: DL-15493 series 95d993e1a, 370f122dc, e261acc11, 291dfb61c.
-- /office/managed member list shows Pending Members entry point only for OWNER authority.
-- OFFICE_MANAGED_INVITES link constant points to /office/managed/invites.
-- Member list authority chip was added/normalized.
-- Member detail was changed to drawer-based UI; old standalone detail route/components were removed.
-- Member detail drawer and authority UI were adjusted to existing project UI primitives.
+- `/office/managed` member list and member detail drawer were reviewed.
+- Owner-only Pending Members entry point exists.
+- Member authority label was normalized across desktop/mobile/detail.
+- Member detail mutation refresh behavior was fixed so lists/detail/counts update after API actions.
 
-### Clinic invite page completed
+## Clinic Work Completed
 
-- Included branch commits: faad6f8a4 and ef4a0606a.
-- Added /office/managed/invites route guarded by OWNER authority.
-- Added OfficePendingMembersPage using mock/local state.
-- Added mock invite data, invite types, and useOfficePendingMembers local-state hook.
-- Implemented All / Pending / Expired tabs.
-- Implemented Pending Members table with Email / Role / Authority / Status / Action columns.
-- Implemented role and authority dropdowns using existing DropdownBase through a clinic-local adapter.
-- Implemented status labels for Pending Acceptance, Pending Approval, and Invitation Expired.
-- Implemented action buttons for Resend / Cancel / Approve / Reject / Delete as UI/local handlers.
-- Implemented responsive/mobile list representation.
-- Added provisional Invite Members modal using existing Modal/Button/dropdown pieces. Figma modal design is not available yet.
-- Reworked invite page to use existing UI primitives: Tabs, DataListTable, DropdownBase, Modal, Button, Chip, Typography, Icon.
-- Removed over-splitting where possible; kept local table/dropdown/modal components because they are clinic invite specific adapters/compositions.
+- `/office/managed/invites` invite page.
+- All / Pending / Expired tabs.
+- Pending Members table.
+- No pagination on invite page.
+- Empty/min-height and dynamic row-height behavior.
+- Status/action mapping:
+  - Pending Acceptance: Resend / Cancel
+  - Pending Approval: Approve / Reject
+  - Invitation Expired: Resend / Delete
+- Invite Members modal based on existing project `Modal`.
+- Email chip input based on existing `MultiChipInput`.
+- Email validation:
+  - empty guard
+  - invalid email guard
+  - duplicate email guard
+  - max 10 emails
+- Draft invitation table in modal.
+- Send button disabled until every draft has role and authority.
+- Role/Authority code API hooks:
+  - `useRoleTypeQuery`
+  - `useAuthorityTypeQuery`
+- Role/Authority dropdowns use existing `PopupMenu` through a local adapter and `useFixedPortal`.
+- Shared UI components were not modified for this work.
+- The gray selected row background in an open dropdown comes from existing `PopupMenu` `selected` behavior, not a custom Figma-only style.
 
-### Figma/design notes confirmed
+## Member List / Detail Sync
 
-- Figma source: 0097. 치과 employee 초대 기능, node 101:4640 / invite page area 224:48715.
-- Confirmed invite layout: toolbar height 54, tab compact instances, Invite Members button, Pending_chart/card, 55px card header, table header 44px, rows 72px, role/authority dropdowns 160x37.
-- Help link text: Check role & authority differences.
-- Help icon is Arrow/diagonal-line; screen used SvgArrowDiagonalLine but icon/style was reviewed against Figma.
-- Pagination/stepper should not be shown because it was removed/hidden recently.
-- Invite modal design was not available in Figma, so current modal is explicitly provisional.
+The following mutations now invalidate relevant queries so lists/detail refresh after API actions:
 
-## Verification already done
+- authority change
+- member removal
+- approval
+- rejection
 
-- Commit hook type checks passed when committing ef4a0606a.
-- Push to origin/feature/DL-14232 succeeded.
-- Browser UI smoke checked without direct API calls:
-  - /office/managed/invites rendered.
-  - All/Pending/Expired tab interaction worked.
-  - Role/authority dropdowns opened and selection responded.
-  - Invite Members modal opened/closed.
-  - /office/managed member list rendered.
-  - Member detail drawer opened.
-- Push hook produced existing lint/coverage output but did not block push.
+Affected cache categories:
 
-## Remaining work
+- pending employee list
+- desktop managed employee list
+- mobile infinite managed employee list
+- approved employee counts when counts can change
+- selected employee detail cache
 
-### Clinic remaining before completion/release
+## Verification
 
-- Connect real clinic invite APIs.
-- Replace mock data/local hook with API/query/mutation hooks.
-- Map API DTO values for role, authority, status, expiration dates, and actions.
-- Wire create invite, resend, cancel, approve, reject, and delete to real mutations.
-- Add server-backed loading/error/empty behavior.
-- Revisit Invite Members modal when Figma design becomes available.
-- Do final QA after API integration.
+- `corepack pnpm --filter dentlink-clinic-web type` passed.
+- `corepack pnpm --filter dentlink-clinic-web build` passed.
+- `corepack pnpm --filter dentlink-clinic-web lint` passed with existing project warnings.
+- `corepack pnpm prettier --check <changed files>` passed.
+- `git diff --check` passed.
+- Commit hook type checks passed for clinic/lab/admin.
+- Push hook completed; it printed existing lint/coverage warnings but did not block push.
 
-### Current overall judgment
+## Remaining Future Work
 
-- Admin/Lab invite API-related work is already included in this branch and should be treated as completed scope unless new regressions are found.
-- Clinic invite work is complete only to the API-before stage: UI shell, design-system cleanup, routing, owner-only entry point, and local/mock interactions are done.
-- The main remaining blocker is real Clinic invite API integration.
+When Clinic invite APIs are available:
 
+- Replace mock/local invite state with API queries.
+- Wire create/resend/cancel/approve/reject/delete mutations.
+- Map API DTO values for role, authority, status, expiration, and row actions.
+- Add loading/error states for API-backed invite list/modal.
+- Add post-mutation query invalidation using the same member-list sync standard.
