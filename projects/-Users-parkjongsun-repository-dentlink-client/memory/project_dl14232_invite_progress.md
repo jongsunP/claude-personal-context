@@ -18,7 +18,7 @@ metadata:
 - 경로: `/Users/parkjongsun/Repository/dentlink-client-invite`
 - 브랜치: `feature/DL-14232`
 - 기준: `origin/master` (faf7f6fff)
-- 최신 커밋: `277a3314b` ([DL-14232] fix: 초대 화면 디자인 QA 수정)
+- 최신 커밋: `f00341b5d` ([DL-14232] fix: 멤버 상세 정보 보더 수정)
 
 ## [FE] 하위 작업 목록
 
@@ -83,6 +83,10 @@ metadata:
   - 회원 상세 authority dropdown selected check 제거
   - PopupMenu outside-click 판정 수정: drawer blank/dim 영역 클릭 시 dropdown 닫힘
   - Jira DL-14232에 최신 커밋/검증/잔여 API blocker 코멘트 업데이트
+- 2026-07-09: **멤버 상세 Member Info 후속 보더 수정 커밋/푸시 완료** (`f00341b5d`)
+  - `Member Info` 리스트 래퍼의 외곽 border/radius/overflow 제거
+  - row 사이 divider만 유지하여 Figma 의도처럼 테이블 박스 형태로 보이지 않게 조정
+  - Jira DL-14232 comment `43085`에 후속 커밋/검증 기록
 
 ## 현재 남은 작업 (DL-15494 범위)
 
@@ -97,4 +101,4 @@ metadata:
 - 탭 카운트: 별도 API 없음. `findPendingMembers` 응답 `counts.all/pending/expired` 사용
 - sourceType `EMPLOYEE` → approve/rejectEmployee API, `INVITATION` → invitation API (BE 미준비)
 - 모바일 초대 리스트: Figma 디자인 미제공 상태로 임시 구현 (이메일+상태, 드롭다운, 액션 버튼 카드 형태)
-- 최신 검증: `git diff --check`, clinic direct TypeScript, commit-hook clinic/lab/admin type, push-hook lint/coverage 통과. Build와 Computer Use QA는 사용자 지시에 따라 제외.
+- 최신 검증: `git diff --check`, `pnpm --filter dentlink-clinic-web type`, `pnpm --filter dentlink-clinic-web lint`, commit-hook clinic/lab/admin type, push-hook lint/coverage 통과. Build와 Computer Use QA는 사용자 지시에 따라 제외.

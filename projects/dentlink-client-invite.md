@@ -23,7 +23,7 @@ DL-14232 - [치과] employee 초대 기능
 ## Latest Pushed Commit
 
 ```text
-277a3314b [DL-14232] fix: 초대 화면 디자인 QA 수정
+f00341b5d [DL-14232] fix: 멤버 상세 정보 보더 수정
 ```
 
 ## Current Status
@@ -33,7 +33,7 @@ DL-14232 - [치과] employee 초대 기능
 - Clinic member-management design work: completed/reviewed.
 - Clinic invite page/modal UI: completed up to the point before real Clinic invite API integration.
 - Real Clinic invite API is still unavailable, so invite list/create/send is mock/local state only.
-- Latest design QA commit was pushed to `origin/feature/DL-14232`.
+- Latest design QA follow-up commit was pushed to `origin/feature/DL-14232`.
 
 ## User Direction / Constraints
 
@@ -103,9 +103,16 @@ DL-14232 - [치과] employee 초대 기능
   - Modal width/min-height, two-column layout, email input copy, Member Info table, empty state, scroll behavior, and footer buttons adjusted against Figma.
 - Member list/detail:
   - Member detail profile area now shows profile icon, full name without ellipsis, authority badge, and `(Me)` beside the badge.
-  - Member Info border/separator colors and Typography variants normalized.
+  - Member Info row separators and Typography variants normalized; outer border/radius/overflow was removed in follow-up commit `f00341b5d` so the section does not look like a table box.
   - Member authority dropdown selected-check icon removed.
   - PopupMenu outside-click behavior fixed for drawer/dim clicks.
+
+## Latest Follow-Up Correction
+
+- Commit/push: `f00341b5d [DL-14232] fix: 멤버 상세 정보 보더 수정`.
+- Removed the `Member Info` list wrapper outer border/radius/overflow.
+- Kept only row-to-row divider lines, matching the intended member-detail Figma structure.
+- Jira DL-14232 comment `43085` records the pushed commit and verification.
 
 ## Member List / Detail Sync
 
@@ -128,6 +135,7 @@ Affected cache categories:
 
 - `git diff --check` passed.
 - Direct clinic TypeScript check passed: `cd clinic && ./node_modules/.bin/tsc --noEmit`.
+- Follow-up verification: `pnpm --filter dentlink-clinic-web type`, `pnpm --filter dentlink-clinic-web lint`, commit-hook clinic/lab/admin type checks, and push-hook lint/shared coverage guard passed with existing warnings/output.
 - Commit hook type checks passed for clinic/lab/admin.
 - Push hook lint/coverage checks completed successfully with existing project warnings.
 - Build was intentionally not run in the latest pass.
