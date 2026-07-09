@@ -18,6 +18,7 @@ metadata:
 - 경로: `/Users/parkjongsun/Repository/dentlink-client-invite`
 - 브랜치: `feature/DL-14232`
 - 기준: `origin/master` (faf7f6fff)
+- 최신 커밋: `50dbae903` (fix: StyledMobileList display:none 오버라이드 깨짐 수정)
 
 ## [FE] 하위 작업 목록
 
@@ -28,9 +29,9 @@ metadata:
 | DL-15490 | [FE] 이메일 템플릿 및 링크 | 해야 할 일 |
 | DL-15491 | [FE] 초대시 쿠키 세팅 및 기존 쿠키 갱신 | 해야 할 일 |
 | DL-15492 | [FE] 초대시 홈 알림 및 필요한 세팅 | 해야 할 일 |
-| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 진행 중 (member list/detail drawer pushed; invite list pending BE/design) |
-| DL-15494 | [FE] 클리닉 회원 초대 페이지 API | 해야 할 일 |
-| DL-15495 | [FE] 디자인시스템 변경 대응 | 해야 할 일 |
+| DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | ✅ UI 완료 + API 연동 완료 (approve/reject) |
+| DL-15494 | [FE] 클리닉 회원 초대 페이지 API | 진행 중 (초대 생성·Resend·Cancel·Delete BE 미준비) |
+| DL-15495 | [FE] 디자인시스템 변경 대응 | 해야 할 일 (이번 범위 외) |
 | DL-15499 | QA | 해야 할 일 |
 | DL-15503 | [FE] 클리닉 회원 초대 페이지 UI | 해야 할 일 |
 
@@ -47,28 +48,41 @@ metadata:
 
 - 2026-07-07: 워크트리 생성, FE 하위 작업 8개 확인. DL-15162(개발 플래닝)만 진행 중 상태.
 - 2026-07-07: **DL-15489 완료** (PR #4342, feature/DL-15489 → develop)
-  - `user.apis.admin.ts` 신규 API 7개 추가 (findUserInvitationList, updateUserInvitationAuthority, updateUserInvitationRole, resendUserInvitation, deleteUserInvitation, validateUserInvitationEmails, createUserInvitationList)
-  - `MemberInvitesAdmin` 컴포넌트 + `useInviteCreate` / `useDeleteInvitation` 훅 admin 서비스에 신규 생성
-  - `DataFilters`에 `filterHeaderAction` / `hideSearch` / `onChangeFilter` / `disabledSearch` prop 추가
-  - 그룹타입·그룹명 선택 시 Search 없이 즉시 URL 반영 (Search 버튼 제거)
-  - Invite New Members 버튼: 항상 노출, 그룹타입+그룹명 모두 선택 시에만 활성화
-  - `useInviteCreate`를 `shared/ui` → `lab/src/lib/members/`로 이동 (서비스 소유 원칙)
-  - `InvitationItem` string literal → enum 타입 교체, `HYGIENIST` role 추가
-  - 타이포 수정: "Invite New Memers" → "Invite New Members"
+- 2026-07-07: **DL-15493 멤버 리스트/상세 drawer 구조 정리 완료**
+  - 멤버 상세 drawer 전환, SlideDrawer 공용 컴포넌트 생성, OfficeMemberDetailContent Figma 기반 구현
+  - 최종 커밋: `291dfb61c`
+- 2026-07-09: **`/office/managed/invites` API 연동 완료**
+  - `usePendingMembersQuery` 생성 (status 파라미터 기반)
+  - `useOfficePendingMembers` mock → 실제 API 전환
+  - 탭 상태: URL query `?status=ALL|PENDING|EXPIRED`
+  - 탭 카운트: `OfficePendingMemberListDto.counts` 에서 직접 참조
+  - approve / reject mutation에 invalidateQueries 추가
+- 2026-07-09: **코드 리뷰 수정 전체 (15개 파일) 커밋** (`e4fc864a8`)
+  - canRemoveMember undefined guard 추가
+  - OfficeMemberAuthorityChip EnumTypes 통일
+  - OfficeMemberDetailDrawer → useIsBelowTablet
+  - (Me) 라벨 Figma 스펙 (body2/bold/information)
+  - InviteMembersModal Date.now() → useRef 카운터
+  - MAX_INVITE_EMAIL_COUNT 상수 중앙화 (InviteMembersModal.types.ts)
+  - OfficePendingMembersDropdown label 매칭 제거
+  - Page/Table 네이밍·flex 컨벤션 통일
+  - SlideDrawer 스크롤 락 타이밍 isMounted 기준
+  - useInvitations query 로직 hook 내부 이동 (admin)
+  - useInviteCreate import 경로·any 타입 수정 (admin)
+- 2026-07-09: **버그 수정 2건**
+  - handleInviteMembers 빈 함수 lint 에러 수정 (`c5ba31238`)
+  - StyledMobileList display:none CSS 오버라이드 깨짐 수정 (`50dbae903`)
+    - styled(DisplayFlexCol) → styled.div 로 원복 (CSS 주입 순서 문제)
 
-- 2026-07-07: **DL-15493 멤버 리스트/상세 drawer 구조 정리 완료 (커밋/푸시)**
-  - 작업 브랜치/워크트리: `/Users/parkjongsun/Repository/dentlink-client-invite`, `feature/DL-14232`
-  - 멤버 상세는 더 이상 `/office/managed/members/[employee_id]` route/page로 가지 않음. 데스크탑/모바일 모두 `/office/managed` 리스트에서 선택 시 drawer를 띄움.
-  - 공용 drawer 레이아웃은 `shared/ui/src/SlideDrawer/SlideDrawer.tsx` 로 생성. 다른 화면에서도 재사용 가능한 portal 기반 right slide drawer.
-  - 이 페이지 전용 shell은 `OfficeMemberDetailDrawer`, 상세 본문/로직은 `OfficeMemberDetailContent` 로 분리.
-  - desktop은 right drawer, mobile은 같은 drawer shell의 100% width fullscreen 표현. X 클릭 시 리스트로 복귀. mobile dim click close는 비활성.
-  - 리스트 row snapshot을 `employeeSnapshot` 으로 즉시 표시하고, `useEmployeeDetailQuery(employeeId)` 로 상세 데이터를 보강.
-  - 권한 변경/Remove Member 로직은 새 `OfficeMemberDetailContent` 로 이식. PopupMenu trigger의 nested button warning은 div trigger로 수정.
-  - 기존 old 상세 코드 삭제: `MemberDetailLayer`, `MemberInfo`, `MemberDelete`, `MemberRequest`, `pages/office/managed/members/[employee_id].tsx`.
-  - `OFFICE_MANAGED_MEMBERS` route 상수와 menu entry 제거. 기존 상세 URL은 404 확인.
-  - Authority dropdown은 기존 프로젝트 `PopupMenu` + `useFixedPortal` 패턴으로 정리해 drawer/Remove Member 영역에 잘리지 않게 함.
-  - 상세 내부 텍스트/버튼은 기존 프로젝트 UI primitive(`Typography`, `Button`, `PopupMenu`, `ProfileImage`, `Icon`) 기반으로 보정.
-  - 최종 커밋/푸시: `291dfb61c ui: 멤버 상세 권한 메뉴 스타일 보정 (DL-15493)` on `feature/DL-14232`.
-  - 검증: `pnpm --filter dentlink-clinic-web type` 통과, 커밋 훅 clinic/lab/admin type 통과, push hook 통과(기존 lint warning만 출력), `/office/managed` Next compile/200 확인.
-  - Jira는 이번 Codex 세션에서 접근 불가. 다음 Jira 가능 세션에서 DL-14232/DL-15493 상태 코멘트 업데이트 필요.
-- 다음 작업: Jira 업데이트 후 DL-15490 ([FE] 이메일 템플릿 및 링크) 또는 남은 DL-14232 하위카드 진행
+## 현재 남은 작업 (DL-15494 범위)
+
+- 초대 생성 API (`createInvitation`) 연동 — BE 준비 대기
+- Resend / Cancel / Delete mutation — invitationId 기반, BE 미준비
+- Role / Authority 수정 API — sourceType별 분기, BE 미준비
+- 모바일 초대 페이지 디자인 미확정 — Figma 확정 후 반영
+
+## 설계 메모
+
+- 탭 카운트: 별도 API 없음. `findPendingMembers` 응답 `counts.all/pending/expired` 사용
+- sourceType `EMPLOYEE` → approve/rejectEmployee API, `INVITATION` → invitation API (BE 미준비)
+- 모바일 초대 리스트: Figma 디자인 미제공 상태로 임시 구현 (이메일+상태, 드롭다운, 액션 버튼 카드 형태)
