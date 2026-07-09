@@ -23,14 +23,16 @@ metadata:
 
 | 티켓 | 제목 | 상태 |
 |---|---|---|
-| DL-15162 | [FE] 개발 플래닝 | 진행 중 |
-| DL-15489 | [FE] 어드민 작업 | ✅ PR #4342 (→ develop) |
+| DL-15162 | [FE] 개발 플래닝 | Ready for Deploy |
+| DL-15489 | [FE] 어드민 작업 | ✅ PR #4342 (→ develop, merged) |
 | DL-15490 | [FE] 이메일 템플릿 및 링크 | 해야 할 일 |
 | DL-15491 | [FE] 초대시 쿠키 세팅 및 기존 쿠키 갱신 | 해야 할 일 |
 | DL-15492 | [FE] 초대시 홈 알림 및 필요한 세팅 | 해야 할 일 |
 | DL-15493 | [FE] 클리닉 회원 초대 페이지 UI | 진행 중 (member list/detail drawer pushed; invite list pending BE/design) |
 | DL-15494 | [FE] 클리닉 회원 초대 페이지 API | 해야 할 일 |
 | DL-15495 | [FE] 디자인시스템 변경 대응 | 해야 할 일 |
+| DL-15499 | QA | 해야 할 일 |
+| DL-15503 | [FE] 클리닉 회원 초대 페이지 UI | 해야 할 일 |
 
 ## 관련 비FE 작업 (참고용)
 
