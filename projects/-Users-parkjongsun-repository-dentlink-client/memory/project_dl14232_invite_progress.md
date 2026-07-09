@@ -18,7 +18,7 @@ metadata:
 - 경로: `/Users/parkjongsun/Repository/dentlink-client-invite`
 - 브랜치: `feature/DL-14232`
 - 기준: `origin/master` (faf7f6fff)
-- 최신 커밋: `50dbae903` (fix: StyledMobileList display:none 오버라이드 깨짐 수정)
+- 최신 커밋: `277a3314b` ([DL-14232] fix: 초대 화면 디자인 QA 수정)
 
 ## [FE] 하위 작업 목록
 
@@ -73,6 +73,16 @@ metadata:
   - handleInviteMembers 빈 함수 lint 에러 수정 (`c5ba31238`)
   - StyledMobileList display:none CSS 오버라이드 깨짐 수정 (`50dbae903`)
     - styled(DisplayFlexCol) → styled.div 로 원복 (CSS 주입 순서 문제)
+- 2026-07-09: **디자인 QA 수정 커밋/푸시 완료** (`277a3314b`)
+  - shared `ChartDropdown` 추가 및 초대 페이지 role/authority 드롭다운에 적용
+  - ChartDropdown 메뉴 포탈/fixed positioning 적용으로 테이블/리스트 내부 clipping 방지
+  - 초대 페이지 Pending Members 제목/도움말 링크/테이블 헤더/row padding/status/last-row border/min-height 조정
+  - 테이블 높이는 44px header + 300px body minimum 기준으로 정리, 임의 `548px` 높이 제거
+  - Invite Members modal 폭/높이/좌우 컬럼/이메일 입력 문구/Member Info 테이블/empty state/footer 버튼 정렬
+  - 회원 상세 profile header full-name wrapping, authority badge + `(Me)` 위치, Member Info border/typography 조정
+  - 회원 상세 authority dropdown selected check 제거
+  - PopupMenu outside-click 판정 수정: drawer blank/dim 영역 클릭 시 dropdown 닫힘
+  - Jira DL-14232에 최신 커밋/검증/잔여 API blocker 코멘트 업데이트
 
 ## 현재 남은 작업 (DL-15494 범위)
 
@@ -80,9 +90,11 @@ metadata:
 - Resend / Cancel / Delete mutation — invitationId 기반, BE 미준비
 - Role / Authority 수정 API — sourceType별 분기, BE 미준비
 - 모바일 초대 페이지 디자인 미확정 — Figma 확정 후 반영
+- 사용자 직접 Computer Use QA 이후 발견되는 미세 디자인 이슈 반영
 
 ## 설계 메모
 
 - 탭 카운트: 별도 API 없음. `findPendingMembers` 응답 `counts.all/pending/expired` 사용
 - sourceType `EMPLOYEE` → approve/rejectEmployee API, `INVITATION` → invitation API (BE 미준비)
 - 모바일 초대 리스트: Figma 디자인 미제공 상태로 임시 구현 (이메일+상태, 드롭다운, 액션 버튼 카드 형태)
+- 최신 검증: `git diff --check`, clinic direct TypeScript, commit-hook clinic/lab/admin type, push-hook lint/coverage 통과. Build와 Computer Use QA는 사용자 지시에 따라 제외.

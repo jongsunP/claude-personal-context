@@ -1,11 +1,11 @@
 # Dentlink Client Invite - DL-14232
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Repository
 
 ```text
-/Users/parkjongsun/repository/dentlink-client
+/Users/parkjongsun/Repository/dentlink-client-invite
 ```
 
 ## Branch
@@ -23,7 +23,7 @@ DL-14232 - [치과] employee 초대 기능
 ## Latest Pushed Commit
 
 ```text
-34e9c0ee8 [DL-14232] feat: 클리닉 초대 UI 및 멤버 갱신 처리 보정
+277a3314b [DL-14232] fix: 초대 화면 디자인 QA 수정
 ```
 
 ## Current Status
@@ -33,6 +33,7 @@ DL-14232 - [치과] employee 초대 기능
 - Clinic member-management design work: completed/reviewed.
 - Clinic invite page/modal UI: completed up to the point before real Clinic invite API integration.
 - Real Clinic invite API is still unavailable, so invite list/create/send is mock/local state only.
+- Latest design QA commit was pushed to `origin/feature/DL-14232`.
 
 ## User Direction / Constraints
 
@@ -85,8 +86,26 @@ DL-14232 - [치과] employee 초대 기능
   - `useRoleTypeQuery`
   - `useAuthorityTypeQuery`
 - Role/Authority dropdowns use existing `PopupMenu` through a local adapter and `useFixedPortal`.
-- Shared UI components were not modified for this work.
-- The gray selected row background in an open dropdown comes from existing `PopupMenu` `selected` behavior, not a custom Figma-only style.
+- Shared `ChartDropdown` was added for compact chart/table dropdown use.
+- Clinic invite role/authority dropdowns now use `ChartDropdown`.
+- `ChartDropdown` keeps the compact trigger/menu shape close to the existing dropdown family while adding Figma-requested chart dropdown states.
+- Dropdown menus are portaled/fixed so they are not clipped inside invite table/list containers.
+- The gray selected row background in an open dropdown is intentional for the chart dropdown request and aligned with the design-system update direction.
+
+## Latest Design QA Corrections
+
+- Invite page/table:
+  - Pending Members heading/help-link typography and spacing adjusted.
+  - Table header background, first/last column padding, row height, status colors, and bottom-border behavior adjusted.
+  - Table min-height follows 44px header + 300px body minimum; arbitrary 548px height was removed.
+  - Mobile invite page entry remains hidden because mobile invite page is not supported by the requirement.
+- Invite Members modal:
+  - Modal width/min-height, two-column layout, email input copy, Member Info table, empty state, scroll behavior, and footer buttons adjusted against Figma.
+- Member list/detail:
+  - Member detail profile area now shows profile icon, full name without ellipsis, authority badge, and `(Me)` beside the badge.
+  - Member Info border/separator colors and Typography variants normalized.
+  - Member authority dropdown selected-check icon removed.
+  - PopupMenu outside-click behavior fixed for drawer/dim clicks.
 
 ## Member List / Detail Sync
 
@@ -107,13 +126,12 @@ Affected cache categories:
 
 ## Verification
 
-- `corepack pnpm --filter dentlink-clinic-web type` passed.
-- `corepack pnpm --filter dentlink-clinic-web build` passed.
-- `corepack pnpm --filter dentlink-clinic-web lint` passed with existing project warnings.
-- `corepack pnpm prettier --check <changed files>` passed.
 - `git diff --check` passed.
+- Direct clinic TypeScript check passed: `cd clinic && ./node_modules/.bin/tsc --noEmit`.
 - Commit hook type checks passed for clinic/lab/admin.
-- Push hook completed; it printed existing lint/coverage warnings but did not block push.
+- Push hook lint/coverage checks completed successfully with existing project warnings.
+- Build was intentionally not run in the latest pass.
+- Computer Use visual QA was intentionally left to the user in the latest pass.
 
 ## Remaining Future Work
 
