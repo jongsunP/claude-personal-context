@@ -14,24 +14,29 @@ metadata:
 
 ## 현재 상태 (2026-07-13 기준)
 
-**패키지 업그레이드(Next.js 16 / RQ v5 / SC v6) 이후 스테이징 E2E 전면 진단 완료.**
-`feature/DL-15560`은 진단 전용 브랜치 — 수정은 별도 워크트리에서 진행.
+**패키지 업그레이드(Next.js 16 / RQ v5 / SC v6) 이후 E2E 수정 완료 — `feature/DL-15560`.**
 
-### 스테이징 진단 결과 (99개 중 49 통과 / 11 실패 / 34 미실행)
+### DL-15560 수정 내용 (완료)
 
-#### 작업 우선순위
+| 수정 파일 | 내용 |
+|-----------|------|
+| `playwright.config.ts` | 로컬 `navigationTimeout` 30s → 45s (Next.js 16 이후 페이지 전환 느려짐 대응) |
+| `timeouts.ts` | 로컬 `E2E_TIMEOUT_MS` 15s → 20s |
+| `order-setup.ts` | `CHANGE_OFFICE_WAIT` 분리 (staging 30s) + `waitForLoadState("domcontentloaded")` 추가 |
+| 모든 orders/labStatus spec | `beforeAll` 내 `test.setTimeout(staging: 5min)` 추가 |
+| `signup-step{1,2,3}.ts`, `shipment-order.ts`, `lab.ts` 등 | "Next" 버튼 `exact: true` 일괄 적용 |
+| `shipment-create.ts` | `/lab/employers/own/clients` API `page.route()` 모킹 추가 (Elasticsearch 환경 의존 제거) |
 
-**1순위 — 기존 문제 (버전업 무관)**
-- `00_signup.spec.ts` — `waitForSignupEmailVerified` 90s 타임아웃. 스테이징 이메일 발송 지연. skip 또는 폴링 시간 조정 필요.
-- `03_orders/crown.spec.ts` — `Crown(수정금지,회귀테스트용)` 스테이징 카탈로그 미등록. 이전에도 반복 발생. `[LAB-STG] E2E Lab`에 상품 재등록으로 해결 (코드 수정 없음).
+### 검증 결과
 
-**2순위 — 버전업 유발 문제 (단일 원인, 9건 + cascade 34건)**
-- 공통 패턴: `prepareOrderSession: Change Office 실패 → API 재패치 시도` 후 `page.goto: Target page, context or browser has been closed`
-- 집중 파일: `e2e/clinic/steps/order/order-setup.ts` — `prepareOrderSession` 함수의 Change Office UI 흐름
-- 영향 spec: denture, instasmile, step4-ui-state(2), veneer, labStatus, linkTalk(2), billing
+- **로컬 2연속**: ✅ 94 passed, 5 skipped × 2회
+- **스테이징**: ❌ crown/veneer/step4-ui-state/labStatus step2 실패 — 스테이징 어드민 상품 미등록 (코드 무관). 나머지는 통과.
 
-**3순위 — 신규 시나리오**
-- 별도 작업자 있음. 2순위 해결 시 신규 spec의 실패 대부분 자동 해소될 가능성 높음.
+### 어드민 상품 재등록 필요 (미완료)
+
+- `Crown(수정금지,회귀테스트용)` — Restorations 카테고리
+- `Design Service - Crown(수정금지,회귀테스트용,배송없음)` 의 Digital 서브 상품
+- 재등록 후 `pnpm e2e:clinic:stg` 2연속 통과 확인 필요
 
 ### 완료된 것 (이전 이력)
 - 모든 E2E 계정·오피스 e2e 전용 완료 — 외부 계정 의존성 0
@@ -40,7 +45,7 @@ metadata:
 - 신규 spec: 00_signup_step4_office_find (Y/N 분기)
 - PR #4200 머지 완료 (`feature/DL-14805-1-3` → master)
 
-**유지·성장 모드 → 현재 버전업 대응 모드.**
+**버전업 대응 코드 수정 완료. 어드민 환경 세팅 후 스테이징 2연속 통과로 최종 완료.**
 
 ## 단일 진실 소스 원칙 — 작업현황은 repo에서 관리
 

@@ -36,7 +36,19 @@ const cells = await page.locator(".calendar-table [data-date].valid").all();
 
 **원칙: `.all()`은 "지금 DOM에 있는 것만" 반환하고 대기하지 않는다. 반드시 `waitForSelector`로 적어도 1개가 존재함을 먼저 확인한 뒤 호출한다.**
 
-### 3. 동일 텍스트 버튼이 여러 개면 스코프를 좁혀라
+### 3. 버튼 locator는 처음부터 `exact: true`로 작성한다
+
+```ts
+// ❌ partial match — UI 변경으로 "Next" 포함 버튼이 추가되면 wrong 요소 클릭
+await page.getByRole("button", { name: "Next" }).click();
+
+// ✅ exact match — 텍스트 완전 일치만 매칭
+await page.getByRole("button", { name: "Next", exact: true }).click();
+```
+
+**Why:** 패키지 업데이트 등으로 UI가 변경되면 동일 텍스트를 포함하는 버튼이 추가될 수 있음. 처음부터 `exact: true`로 작성하면 이런 변화에 안전하다. v1.77.1(Next.js 16) 업데이트 후 "Next" 버튼 오매칭으로 여러 spec이 깨진 사례 있음.
+
+### 4. 동일 텍스트 버튼이 여러 개면 스코프를 좁혀라
 
 ```ts
 // ❌ 페이지 전체에서 "Not selected" — 투어라운드 토글과 픽업 버튼이 동시에 매치될 수 있음
@@ -46,12 +58,12 @@ await page.getByRole("button", { name: "Not Selected" }).first().click();
 await page.locator(".pvs-container").getByRole("button").click();
 ```
 
-### 4. 텍스트/라벨이 동적 생성인지 반드시 확인
+### 5. 텍스트/라벨이 동적 생성인지 반드시 확인
 - 앱 코드에서 상수로 정의됐는지 → 안전
 - `EnumMap`, `config`, 서버 응답, 사용자 설정 등에서 오는지 → 대체 locator 필요
 - 확인 방법: `grep -rn "텍스트값" shared/ui/src clinic/src`
 
-### 5. fallback 코드는 실제로 동작하는지 검증 후 작성
+### 6. fallback 코드는 실제로 동작하는지 검증 후 작성
 - dead code(실제로 도달하지 않는 경로)는 조용히 실패하므로 쓰지 않거나 에러를 throw
 - 클래스명 참조 시 앱 코드에서 실제 클래스 확인 (`div.calendar-ui-body` ≠ `div.calendar-body`)
 

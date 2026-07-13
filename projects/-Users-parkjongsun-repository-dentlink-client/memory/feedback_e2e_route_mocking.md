@@ -16,6 +16,7 @@ metadata:
 
 **적용 사례**:
 - `/office/employers/search-office` (Elasticsearch 기반 오피스 매칭): staging에서 인덱스가 비어있어 항상 0건 반환 → `page.route()`로 모킹, 이후 Request Access(`POST /office/employee`)는 real API 호출
+- `/lab/employers/own/clients` (lab 배송 생성 오피스 검색): staging Elasticsearch 인덱스에서 E2E 클리닉 오피스 미조회 → `page.route("**/lab/employers/own/clients**", ...)`로 모킹. 이후 오피스 선택 → 주문 선택 → Create → Confirm 플로우는 real API 호출. `page.route()`는 `page.goto` **이전**에 등록해야 페이지 진입 시 첫 API 요청도 인터셉트된다.
 
 **Why:** staging Elasticsearch 인덱스가 비어있어 search-office가 0건 반환 → 모킹 없이는 Y 분기 테스트 자체가 불가. 핵심 로직(employee 생성 API)은 real API로 검증하므로 대원칙 위반 아님.
 
