@@ -1,0 +1,15 @@
+{
+  "pid": 93924,
+  "version": "2.1.207",
+  "jsonPath": "/Users/parkjongsun/.claude/daemon.json",
+  "logPath": "/Users/parkjongsun/.claude/daemon.log",
+  "startedAt": 1783911211964,
+  "origin": "transient",
+  "spawnedBy": {
+    "label": "claude",
+    "cwd": "/Users/parkjongsun/Repository/dentlink-client-e2e",
+    "pid": 20735
+  },
+  "procStart": "Mon Jul 13 02:53:30 2026",
+  "launchTarget": "/Users/parkjongsun/.local/share/claude/versions/2.1.207"
+}

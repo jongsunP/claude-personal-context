@@ -1,9 +1,0 @@
-{
-  "id": "1",
-  "subject": "e2e 전체 파일 심층 검토 (Fable 5)",
-  "description": "미정독 파일 전부 정독: specs 본문 12개, utils/lab.ts 등 8개, steps 22개, fixtures.ts. 발견 사항 수집.",
-  "activeForm": "e2e 전체 파일 심층 검토 중",
-  "status": "completed",
-  "blocks": [],
-  "blockedBy": []
-}

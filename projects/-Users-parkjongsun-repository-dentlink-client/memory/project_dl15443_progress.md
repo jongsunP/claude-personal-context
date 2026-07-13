@@ -7,11 +7,11 @@ metadata:
   originSessionId: b38ba49f-0c20-4c71-8ac7-32e7ba45c50a
 ---
 
-## 작업 현황: DL-15443 — 완료
+## 작업 현황: DL-15443 — PR 오픈 완료
 
 **Why:** Partial Denture (incl. Flipper) 제품이 스테이징에서 사라져 Partial Denture with Framework로 교체.
 
-**How to apply:** 완료. PR #4337 머지 대기 중 (→ release/v1.77.0).
+**How to apply:** 완료. PR #4337 오픈 (→ release/v1.77.0). 현재 `dentlink-client-e2e` 워크트리는 DL-15560(진단 브랜치)으로 이동.
 
 ---
 

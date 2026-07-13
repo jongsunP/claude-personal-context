@@ -1,0 +1,61 @@
+{
+  "proto": 1,
+  "supervisorPid": 93924,
+  "updatedAt": 1783915713389,
+  "workers": {
+    "793354bb": {
+      "pid": 93981,
+      "procStart": "Mon Jul 13 02:53:32 2026",
+      "sessionId": "793354bb-8078-405f-ae8a-032351ddf7a3",
+      "rendezvousSock": "/tmp/cc-daemon-501/4ca14806/rv/793354bb.sock",
+      "ptySock": "/tmp/cc-daemon-501/4ca14806/spare/e286a943.pty.sock",
+      "cliVersion": "2.1.207",
+      "startedAt": 1783911599860,
+      "attempt": 1,
+      "cwd": "/Users/parkjongsun/Repository/dentlink-client",
+      "dispatch": {
+        "proto": 1,
+        "short": "793354bb",
+        "nonce": "c44d9e4a",
+        "sessionId": "793354bb-8078-405f-ae8a-032351ddf7a3",
+        "createdAt": 1783911597962,
+        "source": "slash",
+        "cwd": "/Users/parkjongsun/Repository/dentlink-client",
+        "launch": {
+          "mode": "resume",
+          "sessionId": "/Users/parkjongsun/.claude/projects/-Users-parkjongsun-Repository-dentlink-client/217ad2b3-57c5-41b4-b679-6e5794d87c0b.jsonl",
+          "fork": true,
+          "flagArgs": [
+            "--permission-mode",
+            "bypassPermissions"
+          ]
+        },
+        "env": {
+          "CLAUDE_BG_ISOLATION": "none"
+        },
+        "isolation": "none",
+        "respawnFlags": [
+          "--permission-mode",
+          "bypassPermissions"
+        ],
+        "seed": {
+          "intent": "다시 정리하자. 그러면 우선 여기 브랜치를 마스터로 해서 확인해줘. 내 목적은. 원래부터 e2e에 문제가 있었는지? 버전업으로 문제가 생긴건지? 버전업이후 새로운 시나리오가 문제인것인지 정확힌 분류 정리가 필요해",
+          "name": "Create feature branch and move current changes"
+        },
+        "cols": 177,
+        "rows": 46
+      },
+      "decModes": [
+        1000,
+        1002,
+        1003,
+        1006,
+        2004,
+        1004,
+        2031
+      ],
+      "rvAuth": "a6bdb7f177cb991bc30af41b7e0d9862",
+      "ptyAuth": "84fbd2120667b7d0647e6c0efe8503d9"
+    }
+  }
+}

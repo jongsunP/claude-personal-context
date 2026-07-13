@@ -1,9 +1,0 @@
-{
-  "id": "5",
-  "subject": "e2e 진행사항·백로그 일원화 정리",
-  "description": "메모리 백로그 2분류 재작성, review_findings 수정, ~/.claude 개인 레포에서 프로젝트 작업현황 분리→repo로 이동, 중복 파일 정리, 보고서 최종 업데이트, 커밋·push",
-  "activeForm": "e2e 기록 일원화 정리 중",
-  "status": "completed",
-  "blocks": [],
-  "blockedBy": []
-}

@@ -18,6 +18,7 @@
 - [미완료 작업 선제 고지](feedback_honesty_incomplete.md) — 요청을 완전히 못 했으면 사용자가 묻기 전에 먼저 솔직하게 말한다
 - [브리핑 시 백로그 포함](feedback_briefing_include_backlog.md) — 현황 브리핑 시 즉시 작업 외 백로그(미구현·세팅 대기)도 함께 언급
 - [E2E 빨간색 waitFor 진단 원칙](feedback_e2e_red_highlights.md) — 근본 파악 우선. 시간 단축이 목적 아님. flaky 위험 생기면 대명제 위반
+- [E2E 결정론 원칙](feedback_e2e_determinism.md) — 어떤 스크립트로 몇 번 실행해도 항상 동일한 결과. 로컬 2연속 + 스테이징 2연속 = 완료 기준
 - [불확실할 때 먼저 질문](feedback_ask_when_uncertain.md) — 의도가 불명확하거나 되돌리기 어려운 작업 전엔 먼저 확인 후 진행
 - [E2E page.route() 모킹 허용 조건](feedback_e2e_route_mocking.md) — Elasticsearch 등 환경 의존적 표시용 API에 한해 허용. 핵심 API는 real 호출 필수
 - [E2E 고정 오피스(setup fixture) 삭제 위험](feedback_e2e_fixture_office_risk.md) — 영구 보존 주석 있어도 삭제 가능. MAIN employer가 가장 안정적 타겟
@@ -33,7 +34,7 @@
 ## Project
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
 - [DL-15478 이미지 최적화 원복](project_dl15478_progress.md) — feature/DL-15478, PR #4335 오픈. DL-15348 프리로드·eager 제거, 배포 후 성능 확인 예정
-- [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, 워크트리 `/Repository/dentlink-client-e2e` 준비 완료. 코드 변경 완료, 테스트 실행·pass 확인 대기
+- [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, PR #4337 오픈 (→ release/v1.77.0). e2e 워크트리는 DL-15560으로 이동
 - [라벨 프린트 PDF 작업 현황](project_pdf_print_work.md) — 서버사이드(DL-15438)만 배포 결정. PR #4336 Draft 오픈(master 비교용). concurrency limiter + node_modules 경로 적용 완료
 - [DL-15107 작업 현황](project_dl15107_progress.md) — feature/DL-15107, PR #4266 오픈 + QA 픽스 PR #4284 오픈 (→ release/v1.76.0)
 - [DL-15287 작업 현황](project_dl15287_progress.md) — feature/DL-15287, Shippable→Physical 명칭 변경, PR #4285 오픈 (→ release/v1.76.0)
@@ -42,7 +43,7 @@
 - [E2E 신규 클리닉 계정 세팅](project_e2e_new_clinic_account.md) — e2e.clinic@dentlink.app, tata.test4 대체 계정, 오피스 정보 및 .env 업데이트 체크리스트
 - [DL-14752 티켓 진행 현황](project_dl14752_progress.md) — 코드 검증 완료. 배포 후 수기 확인 3건(DL-14732, DL-14754, DL-15168), PR #4219 머지 대기
 - [DL-15157 GA4/Meta Pixel 전환 추적](project_dl15157_ga_tracking.md) — 회원가입 lazy loading 구현 완료, PR #4218 오픈
-- [E2E 마스터 플랜](project_e2e_master_plan.md) — 유지·성장 모드. 백로그·노하우는 repo(.claude/skills/e2e/, e2e/README.md)가 진실 소스
+- [E2E 마스터 플랜](project_e2e_master_plan.md) — 버전업 대응 모드. feature/DL-15560 진단 완료. 우선순위: 기존문제→버전업→신규시나리오
 - [E2E SSE 발견 — networkidle 무력화](project_e2e_sse_discovery.md) — lab 앱 전역 SSE(50s 하트비트)가 networkidle을 막음. 픽업/배송 페이지에서 toPass+reload 패턴 사용
 - [레거시 페이지 목록](project_legacy_pages.md) — /office/onboard/ 등 미사용 페이지, 수정 범위 제외
 - [DL-14232 Clinic Invite](../../dentlink-client-invite.md) — Clinic 초대/회원관리 UI 작업 체크포인트. 실제 Clinic invite API 전 단계까지 완료

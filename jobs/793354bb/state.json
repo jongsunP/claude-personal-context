@@ -1,0 +1,29 @@
+{
+  "state": "working",
+  "detail": "비교 분석 완료됐습니다. 정리해 드리겠습니다. --- ## 분류 결과 | | 마스터 | DL-15418 | |---|---|---| | **통과** | 78 | 53 | | **실패** | **3** | **8** ",
+  "tempo": "blocked",
+  "needs": "send a prompt to start",
+  "output": null,
+  "children": null,
+  "linkScanOffset": 0,
+  "template": "bg",
+  "respawnFlags": [
+    "--permission-mode",
+    "bypassPermissions",
+    "--model",
+    "claude-sonnet-4-6"
+  ],
+  "bgIsolation": "none",
+  "providerEnv": {},
+  "intent": "다시 정리하자. 그러면 우선 여기 브랜치를 마스터로 해서 확인해줘. 내 목적은. 원래부터 e2e에 문제가 있었는지? 버전업으로 문제가 생긴건지? 버전업이후 새로운 시나리오가 문제인것인지 정확힌 분류 정리가 필요해",
+  "name": "Create feature branch and move current changes",
+  "nameSource": "auto",
+  "sessionId": "793354bb-8078-405f-ae8a-032351ddf7a3",
+  "resumeSessionId": "793354bb-8078-405f-ae8a-032351ddf7a3",
+  "daemonShort": "793354bb",
+  "cwd": "/Users/parkjongsun/Repository/dentlink-client",
+  "createdAt": "2026-07-13T02:59:56.124Z",
+  "updatedAt": "2026-07-13T03:00:02.776Z",
+  "firstTerminalAt": null,
+  "backend": "daemon"
+}

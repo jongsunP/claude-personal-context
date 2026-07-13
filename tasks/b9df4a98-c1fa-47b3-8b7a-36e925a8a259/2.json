@@ -1,9 +1,0 @@
-{
-  "id": "2",
-  "subject": "발견 사항 코드 수정",
-  "description": "isVisible({timeout}) 교체(의도 확인 후), base64url, 하드코딩 비밀번호 제거, 사소 4건 + 심층 검토에서 추가 발견분. feature/DL-14805-1-3에 커밋.",
-  "activeForm": "코드 수정 적용 중",
-  "status": "completed",
-  "blocks": [],
-  "blockedBy": []
-}

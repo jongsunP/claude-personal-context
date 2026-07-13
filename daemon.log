@@ -1,0 +1,24 @@
+[2026-07-13T02:53:31.962Z] [supervisor] ─── daemon start ─── version=2.1.207 pid=93924 origin=transient
+[2026-07-13T02:53:31.970Z] [supervisor] auth: scheduling proactive refresh in 23768s
+[2026-07-13T02:53:31.975Z] [supervisor] auth: scheduling proactive refresh in 23768s
+[2026-07-13T02:53:31.987Z] [supervisor] workers=0
+[2026-07-13T02:53:31.997Z] [bg] bg: control socket bound at /tmp/cc-daemon-501/4ca14806/control.sock
+[2026-07-13T02:53:32.015Z] [bg] bg spare spawned host pid=93976
+[2026-07-13T02:53:32.201Z] [bg] bg claimed-spare 8a43a37f (slash)
+[2026-07-13T02:53:32.204Z] [bg] bg spawned 0c91bbba (spare)
+[2026-07-13T02:53:32.212Z] [bg] bg spare spawned host pid=93981
+[2026-07-13T02:59:59.944Z] [bg] bg claimed-spare 793354bb (slash)
+[2026-07-13T03:00:00.033Z] [bg] bg spawned 3a675dce (spare)
+[2026-07-13T03:00:00.136Z] [bg] bg spare spawned host pid=9185
+[2026-07-13T03:01:37.825Z] [bg] bg claimed-spare 56493dc1 (spare)
+[2026-07-13T03:01:37.898Z] [bg] bg spare spawned host pid=12713
+[2026-07-13T03:06:48.712Z] [bg] bg claimed-spare e01f7fc2 (spare)
+[2026-07-13T03:06:48.730Z] [bg] bg spare spawned host pid=23956
+[2026-07-13T03:06:49.462Z] [bg] bg settled 56493dc1 (killed)
+[2026-07-13T03:08:05.210Z] [bg] bg claimed-spare 8e5a5f6e (spare)
+[2026-07-13T03:08:05.240Z] [bg] bg spare spawned host pid=26651
+[2026-07-13T03:08:06.378Z] [bg] bg settled 0c91bbba (killed)
+[2026-07-13T04:02:32.790Z] [bg] bg settled 3a675dce (done)
+[2026-07-13T04:07:32.979Z] [bg] bg settled e01f7fc2 (done)
+[2026-07-13T04:08:33.239Z] [bg] bg settled 8e5a5f6e (done)
+[2026-07-13T04:08:33.389Z] [bg] bg settled 8a43a37f (done)

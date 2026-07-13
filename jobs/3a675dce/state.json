@@ -1,0 +1,38 @@
+{
+  "state": "blocked",
+  "detail": "어떤 작업을 이어가실 건가요?",
+  "tempo": "blocked",
+  "inFlight": {
+    "tasks": 0,
+    "queued": 0,
+    "kinds": []
+  },
+  "tokens": 548,
+  "needs": "어떤 작업을 이어가실 건가요?",
+  "output": null,
+  "children": null,
+  "linkScanOffset": 26162,
+  "linkScanPath": "/Users/parkjongsun/.claude/projects/-Users-parkjongsun-Repository-dentlink-client/3a675dce-94e8-4163-8dd0-d35739561a88.jsonl",
+  "template": "claude",
+  "respawnFlags": [
+    "--agent",
+    "claude",
+    "--permission-mode",
+    "bypassPermissions"
+  ],
+  "providerEnv": {},
+  "intent": "현재 상황은?",
+  "name": "estimated cost panel option image",
+  "nameSource": "auto",
+  "sessionId": "3a675dce-94e8-4163-8dd0-d35739561a88",
+  "resumeSessionId": "3a675dce-94e8-4163-8dd0-d35739561a88",
+  "daemonShort": "3a675dce",
+  "cliVersion": "2.1.207",
+  "cwd": "/Users/parkjongsun/Repository/dentlink-client",
+  "createdAt": "2026-07-13T03:01:37.345Z",
+  "updatedAt": "2026-07-13T03:01:52.263Z",
+  "firstTerminalAt": null,
+  "originCwd": "/Users/parkjongsun/Repository/dentlink-client",
+  "backend": "daemon",
+  "suggestedReply": "DL-15443 E2E 테스트 실행해줘"
+}
