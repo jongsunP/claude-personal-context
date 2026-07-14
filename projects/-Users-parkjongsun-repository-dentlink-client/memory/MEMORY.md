@@ -19,6 +19,7 @@
 - [브리핑 시 백로그 포함](feedback_briefing_include_backlog.md) — 현황 브리핑 시 즉시 작업 외 백로그(미구현·세팅 대기)도 함께 언급
 - [E2E 빨간색 waitFor 진단 원칙](feedback_e2e_red_highlights.md) — 근본 파악 우선. 시간 단축이 목적 아님. flaky 위험 생기면 대명제 위반
 - [E2E 결정론 원칙](feedback_e2e_determinism.md) — 어떤 스크립트로 몇 번 실행해도 항상 동일한 결과. 로컬 2연속 + 스테이징 2연속 = 완료 기준
+- [E2E 순차 실행 필수](feedback_e2e_sequential_run.md) — 로컬·스테이징 동시 실행 금지. auth 파일 오염으로 false negative 대량 발생
 - [불확실할 때 먼저 질문](feedback_ask_when_uncertain.md) — 의도가 불명확하거나 되돌리기 어려운 작업 전엔 먼저 확인 후 진행
 - [E2E page.route() 모킹 허용 조건](feedback_e2e_route_mocking.md) — Elasticsearch 등 환경 의존적 표시용 API에 한해 허용. 핵심 API는 real 호출 필수
 - [E2E 고정 오피스(setup fixture) 삭제 위험](feedback_e2e_fixture_office_risk.md) — 영구 보존 주석 있어도 삭제 가능. MAIN employer가 가장 안정적 타겟
