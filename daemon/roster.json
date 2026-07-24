@@ -1,7 +1,7 @@
 {
   "proto": 1,
-  "supervisorPid": 93924,
-  "updatedAt": 1783915713389,
+  "supervisorPid": 27295,
+  "updatedAt": 1784021948046,
   "workers": {
     "793354bb": {
       "pid": 93981,
@@ -46,10 +46,6 @@
         "rows": 46
       },
       "decModes": [
-        1000,
-        1002,
-        1003,
-        1006,
         2004,
         1004,
         2031

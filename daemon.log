@@ -22,3 +22,38 @@
 [2026-07-13T04:07:32.979Z] [bg] bg settled e01f7fc2 (done)
 [2026-07-13T04:08:33.239Z] [bg] bg settled 8e5a5f6e (done)
 [2026-07-13T04:08:33.389Z] [bg] bg settled 8a43a37f (done)
+[2026-07-13T09:29:39.916Z] [supervisor] auth: proactive refresh starting
+[2026-07-13T09:29:40.622Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-07-13T09:29:40.622Z] [supervisor] auth: proactive refresh succeeded
+[2026-07-13T17:29:01.858Z] [supervisor] auth: proactive refresh starting
+[2026-07-13T17:29:02.705Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-07-13T17:29:02.705Z] [supervisor] auth: proactive refresh succeeded
+[2026-07-14T01:14:22.487Z] [supervisor] binary at /Users/parkjongsun/.local/bin/claude changed (/Users/parkjongsun/.local/share/claude/versions/2.1.207 → /Users/parkjongsun/.local/share/claude/versions/2.1.208) — self-restarting for upgrade
+[2026-07-14T01:14:22.502Z] [supervisor] shutting down (cause=upgrade, uptime=80451s, leases=0, live_workers=1)
+[2026-07-14T01:14:25.595Z] [supervisor] ─── daemon start ─── version=2.1.208 pid=68150 origin=transient
+[2026-07-14T01:14:25.603Z] [supervisor] auth: scheduling proactive refresh in 637s
+[2026-07-14T01:14:25.604Z] [supervisor] auth: scheduling proactive refresh in 637s
+[2026-07-14T01:14:25.610Z] [supervisor] workers=0
+[2026-07-14T01:14:25.614Z] [bg] bg: control socket bound at /tmp/cc-daemon-501/4ca14806/control.sock
+[2026-07-14T01:14:25.626Z] [bg] bg adopt: adopted=1 respawned=0 dead=0
+[2026-07-14T01:14:25.627Z] [bg] bg orphan-spare reap: 1
+[2026-07-14T01:14:25.643Z] [bg] bg spare spawned host pid=68215
+[2026-07-14T01:14:40.645Z] [bg] bg: post-takeover prewarm burst — respawned 0/1 stale workers, 1 refused in 0s
+[2026-07-14T01:25:02.630Z] [supervisor] auth: proactive refresh starting
+[2026-07-14T01:25:03.395Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-07-14T01:25:03.396Z] [supervisor] auth: proactive refresh succeeded
+[2026-07-14T09:11:24.185Z] [supervisor] binary at /Users/parkjongsun/.local/bin/claude changed (/Users/parkjongsun/.local/share/claude/versions/2.1.208 → /Users/parkjongsun/.local/share/claude/versions/2.1.209) — self-restarting for upgrade
+[2026-07-14T09:11:24.209Z] [supervisor] shutting down (cause=upgrade, uptime=28619s, leases=0, live_workers=1)
+[2026-07-14T09:11:27.134Z] [supervisor] ─── daemon start ─── version=2.1.209 pid=27295 origin=transient
+[2026-07-14T09:11:27.141Z] [supervisor] auth: scheduling proactive refresh in 576s
+[2026-07-14T09:11:27.142Z] [supervisor] auth: scheduling proactive refresh in 576s
+[2026-07-14T09:11:27.148Z] [supervisor] workers=0
+[2026-07-14T09:11:27.152Z] [bg] bg: control socket bound at /tmp/cc-daemon-501/4ca14806/control.sock
+[2026-07-14T09:11:27.158Z] [bg] bg adopt: adopted=1 respawned=0 dead=0
+[2026-07-14T09:11:27.163Z] [bg] bg orphan-spare reap: 1
+[2026-07-14T09:11:27.177Z] [bg] bg spare spawned host pid=27305
+[2026-07-14T09:11:42.178Z] [bg] bg: post-takeover prewarm burst — respawned 0/1 stale workers, 1 refused in 0s
+[2026-07-14T09:21:03.286Z] [supervisor] auth: proactive refresh starting
+[2026-07-14T09:21:03.785Z] [supervisor] auth: scheduling proactive refresh in 28560s
+[2026-07-14T09:21:03.785Z] [supervisor] auth: proactive refresh succeeded
+[2026-07-14T09:39:08.021Z] [supervisor] shutting down (cause=signal, uptime=1661s, leases=0, live_workers=1)

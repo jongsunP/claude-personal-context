@@ -29,10 +29,12 @@
 - [커밋·푸쉬 명시적 요청 시에만](feedback_commit_push_explicit_only.md) — 코드 수정 후 커밋·푸쉬는 자동 실행 금지, 명시적 지시 필요
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
 - [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 임의 형식 금지
+- [노션 문서 응답 형식](feedback_notion_format.md) — 마크다운 코드블록 하나에 전체 내용, 중간 설명 없이 한 번에 복사 가능하게
 - [기존 코드·컨텍스트 기반 선제 추론](feedback_infer_from_context.md) — 확인/수정 시 기존 패턴·세트 파일을 먼저 보고 일관성 있게 처리 (사용자 지적 전에)
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
+- [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
 - [DL-15478 이미지 최적화 원복](project_dl15478_progress.md) — feature/DL-15478, PR #4335 오픈. DL-15348 프리로드·eager 제거, 배포 후 성능 확인 예정
 - [DL-15443 작업 현황](project_dl15443_progress.md) — feature/DL-15443, PR #4337 오픈 (→ release/v1.77.0). e2e 워크트리는 DL-15560으로 이동
