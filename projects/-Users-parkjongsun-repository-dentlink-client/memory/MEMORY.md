@@ -7,6 +7,7 @@
 - [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
 
 ## Feedback
+- [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context 지침(권한·브랜치·범위·기록·보고)을 모든 Dentlink 작업에 적용, 시작 시 pull·체크포인트 대조
 - [언어 및 말투 설정](feedback_language.md) — 항상 한글 존댓말로 일관되게 응답 (반말 혼용 금지)
 - [메모리 자동 저장 기준](feedback_memory_management.md) — 작업 마무리/중요 판단 시 자동 저장·push, 일관된 협업 방식 유지
 - [툴 사용 권한 사전 허락](feedback_permissions.md) — 작업 중 모든 툴 사용 묻지 않고 바로 진행 (외부 영향 제외)
@@ -28,7 +29,7 @@
 - [브랜치 네이밍 컨벤션](feedback_branch_naming.md) — 모든 브랜치에 feature/ prefix 필수 (QA 브랜치 포함)
 - [커밋·푸쉬 명시적 요청 시에만](feedback_commit_push_explicit_only.md) — 코드 수정 후 커밋·푸쉬는 자동 실행 금지, 명시적 지시 필요
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
-- [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 임의 형식 금지
+- [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 타겟은 배포 예정 release
 - [노션 문서 응답 형식](feedback_notion_format.md) — 마크다운 코드블록 하나에 전체 내용, 중간 설명 없이 한 번에 복사 가능하게
 - [기존 코드·컨텍스트 기반 선제 추론](feedback_infer_from_context.md) — 확인/수정 시 기존 패턴·세트 파일을 먼저 보고 일관성 있게 처리 (사용자 지적 전에)
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
