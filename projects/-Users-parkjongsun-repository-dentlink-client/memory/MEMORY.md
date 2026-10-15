@@ -34,6 +34,7 @@
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 ## Project
+- [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
 - [DL-15478 이미지 최적화 원복](project_dl15478_progress.md) — feature/DL-15478, PR #4335 오픈. DL-15348 프리로드·eager 제거, 배포 후 성능 확인 예정
@@ -52,6 +53,7 @@
 - [DL-14232 Clinic Invite](../../dentlink-client-invite.md) — Clinic 초대/회원관리 UI 작업 체크포인트. 실제 Clinic invite API 전 단계까지 완료
 
 ## Reference
+- [codex-personal-context 인수 정본](reference_codex_personal_context.md) — 이전 에이전트(Codex) 작업 기록 repo, 이어받기 전 pull·현재 상태 확인
 - [Claude 메모리 동기화 방법](reference_claude_sync.md) — ~/.claude를 git repo(jongsunP/claude-personal-context)로 관리, clone/pull/push 명령어
 - [DL-13254 링크 모음](reference_dl13254_links.md) — AOX 관련 Figma 디자인·FigJam 보드·Notion Component 문서·Jira 티켓 URL
 - [스테이징 배포 태그 형식](reference_stg_deploy_tag.md) — 코드 변경 없이 배포 시 `stg/clinic/[브랜치명]` 태그 push 사용
