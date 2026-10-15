@@ -11,9 +11,9 @@ metadata:
 DL-16317 권한관리는 Codex가 진행하다 2026-10-15 Claude가 이어받았다. 상세 기록 정본은 codex-personal-context `projects/dentlink-permission-management.md` ([[codex-personal-context-handoff]]).
 
 - **Web PR:** Innvoaid/dentlink-client#4700, `feature/DL-16317` → `release/v1.89.0` (master 파생 → feature → release). 정식 worktree `/Users/parkjongsun/Repository/dentlink-client-permission`(Codex 사용, 2026-10-15 기준 96ff6836b에 머물러 원격보다 뒤처짐 — 쓰기 전 `git pull --ff-only` 필요).
-- **2026-10-15 Claude 처리 (원격 55ad768d5):** CodeRabbit 3건 반영·답글·resolve.
+- **2026-10-15 Claude 처리 (원격 55ad768d5):** CodeRabbit 3건 반영·답글·resolve, CodeRabbit이 3건 모두 해소 확인(07:10Z).
   1. `handlePlaceOrder` 가드 제거(부분 상세 "Place Order" 무반응 수정) — 9578b2b31
-  2. `[step].tsx` 403 외 조회 실패 시 빈 화면 → `OrderDetailUnavailable` 표시(403 페이지 이동은 안 함, 2131 제외), `isOfficeOrderLoadFailed` 추가 — 7cca1ddf4. **확정 요구 밖 UI 동작이라 사용자/기획 확인 대상으로 고지함.**
+  2. `[step].tsx` 403 외 조회 실패 시 빈 화면 → `OrderDetailUnavailable` 표시(403 페이지 이동은 안 함, 2131 제외), `isOfficeOrderLoadFailed` 추가 — 7cca1ddf4. (리뷰 대응 범위로 별도 승인 불필요 — 사용자 확인)
   3. `OrderDetailLayout` 시스템 메시지 권한 ref를 `useLayoutEffect`에서 갱신 — 55ad768d5
 - **확정 정책 요지:** Member 부분 상세는 주문 변경/취소·Case 제목·승인/거절·채팅 작성만 제한, 조회·파일·환자 Edit·주문 링크 이동은 유지. 403은 조회 불가, 401/네트워크는 권한 거절로 바꾸지 않음, 2131 병원 전환 유지.
 - **남은 것:** 팀 리뷰 → release 병합 → 배포 → 실데이터 쓰기 QA(저장·승인/거절·채팅/파일·Draft 3종·담당 변경 전후·여러 기공소). Office 앱(`dentlink-app-permission`)은 개발 잔여 6건 + **기록에 없는 미커밋 변경 32파일 존재(소유권 미확인, 건드리지 않음)**.
