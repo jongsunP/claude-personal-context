@@ -16,3 +16,5 @@ metadata:
 
 **Why:** 사용자가 "설정 화면이 서버 응답대로 안 그려지는 것 같다"고 관찰해 원인 후보를 정리함.
 **How to apply:** 수정 요청이 오면 위 원인 중 어느 것인지 먼저 특정하고, displayName은 BE 보완·웹 PUSH 제외/공통 묶음 규칙/user 영역은 기획 결정이 필요함을 구분한다. 승인 범위는 [[dentlink-app-fix-approval-scope]]를 따른다.
+
+**확정 기준(2026-11-10 사용자):** view의 employee→user를 디자인 순서대로, 각 categories를 서버 순서 그대로 그린다. 서버 displayName은 제거 예정(orderScopes 포함). FE가 공통 대문자 코드로 매핑하고 없으면 코드 그대로 노출. 기공소는 다국어(영=디자인 영어, 한=한글). 매핑 누락은 즉시 보고. 누락 확인 결과: 치과앱·치과웹 orderScope(ALL_ORDERS/MY_ORDERS_ONLY) 매핑 없음(displayName 제거 시 주문 범위 선택 사라짐), 치과앱 도메인 사전은 ORDERS만, employee/user 영역 제목 없음. 기공소앱·기공소웹은 누락 없음. 수정은 승인 대기.
