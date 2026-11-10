@@ -15,3 +15,5 @@ metadata:
 
 **Why:** 다음 세션이 같은 조사를 반복하지 않고 남은 일(iOS 실기기 확인 결과 대응)만 이어가기 위함.
 **How to apply:** 재개 시 위 정본과 live Git을 대조하고, 사용자 실기기 결과에 따라 다음을 정한다. 관련: [[dentlink-app-fix-approval-scope]], [[record-to-both-claude-and-codex-context]].
+
+**메인 세션 마감(2026-11-10 19:05):** 이 세션 요청 모두 완료·대기. 남은 작업은 별도 세션 “알림 설정 목록 서버 데이터 의존 여부 조사”(displayName 제거·매핑 정리 범위 승인 대기). 대기: 다니엘 머지·심사, 기획 결정, 사용자 폰 정리.
