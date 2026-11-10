@@ -22,3 +22,5 @@ metadata:
 **구현(2026-11-10, commit·push: Office b50a8d5 / Lab 0a8245d / Web bad9e697c):** 치과앱·기공소앱 각 feature 브랜치 checkout, 웹은 worktree `~/Repository/dentlink-client-notification-center`(feature/DL-17058)에서 수정. GET 배열 순서대로 employee→user, 연속 묶음만 합침, displayName FE 사용 제거(Swagger 생성 파일은 유지), 웹 PUSH 항목·채널 노출. 매핑은 사용자가 공유 예정(주문 범위 매핑 비어 있어 지금은 코드 노출). 테스트·tsc 통과, 화면 실행 확인·매핑 반영 대기.
 
 **주문 범위 매핑(미커밋):** 기존 리소스 All Orders/전체 주문, My Orders Only/내 주문만 보기를 치과앱·웹에 넣음. 코드당 한 문구 최종 매핑표 제안은 정본 문서 8절 — 사용자 확정 후 4제품 정렬. Figma API(figma-developer-mcp)는 토큰 만료 403.
+
+**실제 응답·결정(2026-11-10):** 사용자 제공 Office/Lab DEV 응답을 정본 9절에 기록. MY_ORDERS_ONLY = "My Orders Only" 확정. 매핑 키는 `영역.카테고리`→`카테고리`→코드 제안(미구현). 앱/웹 묶음 규칙 차이(CHAT 그룹)는 미결.
