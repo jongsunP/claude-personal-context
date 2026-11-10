@@ -11,6 +11,7 @@ metadata:
 2. **Android Notifee ReactHost 호환 패치:** 알림센터와 분리해 dentlink-app#348(→release/v2.2.5), dentlink-lab-app#44(→release/v1.0.6) PR까지 **완료**. 반영·심사는 앱 개발자. PR 본문 맨 위 요약(필요 이유·위험도 낮음~보통) 포함.
 3. **웹 알림센터 서비스별 노출 페이지 현황:** **완료**(기획자 공유, 결정 후 변경 또는 현행 유지). master `bafb0b1`·develop `d76c85f` 동일. 치과 웹: 미노출 없음. 기공소 웹 미노출: 주문상세 `/orders/[order_id]`, 주문 승인, `/mc/*`, `/milling/*`(데스크톱·모바일), `/pickup`·`/pickup/[id]`·`/shipping/[id]`·`/shipping/scan`·`/members`·`/my` 계열(모바일만). 상세는 codex-personal-context `projects/dentlink-unified-notification-center-web-visibility-2026-11-10.md`.
 4. 루트 `patches/`(iOS Notifee 등) 새 설치 미적용 발견은 사용자 결정으로 **고려하지 않음**.
+5. **같은 날 앞서 Codex가 한 작업에서 남은 것(사용자 결정 대기, 내가 먼저 착수하지 않음):** 웹 CodeRabbit 수정 `feature/DL-17058@38ca4ed`은 release PR #4862에만 있고 develop(개발서버)에는 미포함 — 반영하려면 별도 develop PR·배포 승인 필요. CodeRabbit Docstring Coverage 경고는 사용자 결정으로 추후 검토. 웹 개발서버·앱 실기기 사용자 QA(알림함 읽음·랜딩, 설정·권한·소속 전환, 실제 deliveryId 푸시)와 앱 개발자 PR(#346/#42) 리뷰 대기. 홈 연관 3건(DL-17062/17065/17068)은 본체 외.
 
 **Why:** 다음 세션이 같은 조사를 반복하지 않고 남은 일(iOS 실기기 확인 결과 대응)만 이어가기 위함.
 **How to apply:** 재개 시 위 정본과 live Git을 대조하고, 사용자 실기기 결과에 따라 다음을 정한다. 관련: [[dentlink-app-fix-approval-scope]], [[record-to-both-claude-and-codex-context]].
