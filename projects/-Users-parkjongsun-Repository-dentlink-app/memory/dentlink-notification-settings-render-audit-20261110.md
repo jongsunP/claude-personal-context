@@ -18,3 +18,5 @@ metadata:
 **How to apply:** 수정 요청이 오면 위 원인 중 어느 것인지 먼저 특정하고, displayName은 BE 보완·웹 PUSH 제외/공통 묶음 규칙/user 영역은 기획 결정이 필요함을 구분한다. 승인 범위는 [[dentlink-app-fix-approval-scope]]를 따른다.
 
 **확정 기준(2026-11-10 사용자):** view의 employee→user를 디자인 순서대로, 각 categories를 서버 순서 그대로 그린다. 서버 displayName은 제거 예정(orderScopes 포함). FE가 공통 대문자 코드로 매핑하고 없으면 코드 그대로 노출. 기공소는 다국어(영=디자인 영어, 한=한글). 매핑 누락은 즉시 보고. 누락 확인 결과: 치과앱·치과웹 orderScope(ALL_ORDERS/MY_ORDERS_ONLY) 매핑 없음(displayName 제거 시 주문 범위 선택 사라짐), 치과앱 도메인 사전은 ORDERS만, employee/user 영역 제목 없음. 기공소앱·기공소웹은 누락 없음. 수정은 승인 대기.
+
+**구현(2026-11-10, 미커밋):** 치과앱·기공소앱 각 feature 브랜치 checkout, 웹은 worktree `~/Repository/dentlink-client-notification-center`(feature/DL-17058)에서 수정. GET 배열 순서대로 employee→user, 연속 묶음만 합침, displayName FE 사용 제거(Swagger 생성 파일은 유지), 웹 PUSH 항목·채널 노출. 매핑은 사용자가 공유 예정(주문 범위 매핑 비어 있어 지금은 코드 노출). 테스트·tsc 통과, 화면 실행 확인·commit 대기.
