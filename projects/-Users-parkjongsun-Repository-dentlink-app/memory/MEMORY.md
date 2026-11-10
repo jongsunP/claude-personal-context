@@ -4,3 +4,4 @@
 - [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
 - [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
 - [커넥터 현황](connectors-status.md) — Slack·Figma·Notion 동작, Jira는 관리자 승인 대기
+- [알림 설정 렌더 조사](dentlink-notification-settings-render-audit-20261110.md) — 서버 view 순서는 따르나 이름 FE·묶음 규칙 상이·user 미표시·웹 PUSH 제외
