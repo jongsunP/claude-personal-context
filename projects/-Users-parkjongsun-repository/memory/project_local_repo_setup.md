@@ -26,6 +26,8 @@ metadata:
 
 **GitHub 실조회 (2026-11-11)**: Office PR345·Lab PR41(태그 보완)은 11/10 main에 머지 완료 — codex 11/09 기록의 "머지 대기"는 지난 상태. 진행 중인 알림센터 PR: 웹 #4862 → release/v1.94.0 OPEN, Office #346·Lab #42 → main Draft OPEN. 기록상 "대기"는 항상 GitHub로 재확인할 것.
 
+**커넥터·로그인 준비 (같은 날)**: Claude 계정의 Figma·Atlassian MCP 커넥터는 실제 조회로 정상(Jira는 innovaid 사이트 read-write). 인증 필요로 뜨는 `atlassian`·`figma`는 웹 저장소 팀 `.mcp.json`, `plugin:figma:figma`는 플러그인 중복이라 무시. Xcode 라이선스 미동의 → 사용자 터미널에서 `sudo xcodebuild -license accept` 필요. 테스트 로그인은 전용 Chrome for Testing 프로필 `~/.local/share/codex-test-sessions/dentlink/development/browser-profile`(CDP 9233), 비밀번호는 키체인 `codex.dentlink.development.{web-clinic|web-lab|app-office|app-lab}`에 사용자가 직접. Chrome Apple Events JS 허용은 보안 설정이라 사용자가 직접.
+
 **도구**: Ruby3.4·JDK17·Android SDK·AVD `Dentlink_API_36`·Reactotron·Colima/Docker 격리 프로필(Stopped)·Chrome for Testing·Playwright. Office·Lab Android 개발 앱 설치.
 - 함정: 16GB Mac에서 빌드 후 Gradle/Kotlin 데몬이 남으면 에뮬레이터가 멈춤 → `./gradlew --stop`. `yarn start`는 `--experimental-debugger` 옵션 오류라 `yarn metro-log` 사용. SDKROOT·UTF-8 로케일 필요.
 - iOS 시뮬레이터 개발 앱 빌드는 시도하지 않음(플레이북상 Apple Silicon 빌드 경계).
