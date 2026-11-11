@@ -41,3 +41,4 @@ metadata:
 - 개발 준비 재점검(2026-11-11): 웹 훅 연결·Git 작성자·gh workflow 권한 OK, coverage-baseline.json을 최신 master로 재생성해 알림센터 worktree에 상속, Revopush CLI 설치. 남은 사용자 준비: Lab 시트 쓰기 인증(service-account.json 또는 gcloud ADC), `revopush login`, 두 앱 `scripts/.env.codepush.local`(Slack Webhook).
 - 남은 인증 정리(2026-11-11): CodePush 알림 설정 `scripts/.env.codepush.local`은 두 앱 저장소에 이미 커밋돼 있어 준비 불필요(팀 README와 달리 Webhook 노출 상태, 팀 저장소는 미변경). Revopush 로그인은 사용자가 보류(CLI만 설치). 웹 Lab 시트 인증은 사용자가 "이제 그 시트에 추가 안 해도 된다"고 해 미준비(gcloud만 설치).
 - 사용자 결정(2026-11-11): CodePush Webhook이 저장소에 커밋된 것은 팀 방식 그대로 둔다(다시 문제 제기하지 않음). Lab 번역 시트는 더 이상 채우지 않으므로 시트 인증 불필요.
+- 마감 재검토: studio dev 4100 응답 확인. 비차단 한계 — e2e env 시크릿 전용 3키 비어 일부 가입 시나리오 로컬 건너뜀(사람 관리). 사무실 Codex는 다음 사용 때 pull + `./setup-local-codex.sh`로 오늘 지침 반영 필요.
