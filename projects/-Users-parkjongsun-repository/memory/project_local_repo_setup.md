@@ -36,3 +36,4 @@ metadata:
 
 관련: [[user-environment]], [[codex-guidelines-adopted]]
 - iOS 기기 창: Simulator.app 없음 → `open 'devices://device/open?id=<UDID>'`(DeviceHub). 창 소유 앱 이름은 `Device Hub`. 에이전트 셸은 화면 녹화·손쉬운 사용 권한이 없어 창 확인은 CGWindowList로.
+- 최종 점검(2026-11-11): 키체인 계정 4개 모두 실제 로그인 성공(격리 컨텍스트, 값 미출력). `.zshrc`에 `$JAVA_HOME/bin` PATH 추가(없으면 `java`가 /usr/bin 껍데기로 실패). 사용자가 패널 탭을 닫아 기기·Metro는 꺼진 상태, Clinic 3000·Lab 3005 서버만 실행 중.
