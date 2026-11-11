@@ -40,7 +40,7 @@
 ## Project
 - [테스트 계정·env 토큰 규칙](feedback_test_credentials.md) — env 개인 토큰 금지, 개발 계정은 키체인 codex.dentlink.development.* 에 저장해 재사용
 - [Dentlink FE 메인세션](project_main_session.md) — 2026-11-11 지정, 폴더 ~/repository, 하위 세션은 feat 브랜치 직접 생성·모델 상속, 폴링 금지
-- [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 저장소·도구는 사무실과 맞춤 완료(2026-11-11), 앱 env·웹 최신 env는 사무실에서 복사 필요
+- [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 2026-11-11 세팅 완료·마감(저장소·도구·env·worktree·iOS/Android 앱·테스트 로그인·키체인), 실행 환경은 사용자가 종료
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
