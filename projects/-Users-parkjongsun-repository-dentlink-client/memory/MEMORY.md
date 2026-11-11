@@ -37,7 +37,7 @@
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
-- [로컬 레포 세팅 현황](project_local_repo_setup.md) — 집 컴퓨터에 dentlink-app·lab-app·studio clone·JS 의존성 완료, env 파일·iOS pods·Android SDK 미비
+- [로컬 레포 세팅 현황](project_local_repo_setup.md) — 집 컴퓨터에 dentlink-app·lab-app·studio clone·JS 의존성 완료, 실행 환경(Ruby·JDK·Android SDK·pods) 세팅 완료, env 파일만 미비
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.
