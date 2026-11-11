@@ -37,6 +37,7 @@
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
+- [테스트 계정·env 토큰 규칙](feedback_test_credentials.md) — env 개인 토큰 금지, 개발 계정은 키체인 codex.dentlink.development.* 에 저장해 재사용
 - [Dentlink FE 메인세션](project_main_session.md) — 2026-11-11 지정, 폴더 ~/repository, 하위 세션은 feat 브랜치 직접 생성·모델 상속, 폴링 금지
 - [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 저장소·도구는 사무실과 맞춤 완료(2026-11-11), 앱 env·웹 최신 env는 사무실에서 복사 필요
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인

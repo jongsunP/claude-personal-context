@@ -7,7 +7,7 @@ metadata:
 
 2026-11-11 사용자 지시로 집 Mac의 Claude Code 세션 `local_ee66b909-c034-43a9-af56-066bf4ace9c5`("Dentlink FE 메인세션", claude-opus-5-5)이 웹·Office·Lab 전체를 총괄하는 메인세션이 됐다. 정본 기록은 codex `projects/dentlink-fe.md` Session Ownership.
 
-**Why:** 사용자는 메인을 접수·조율 중심으로 두고 실제 구현은 기능별 세션에 맡기는 Codex 시절 운영을 그대로 원한다. 사무실 Mac의 Codex 메인세션(`01a08f0c-…`)과의 관계는 아직 정하지 않았다.
+**Why:** 사용자는 메인을 접수·조율 중심으로 두고 실제 구현은 기능별 세션에 맡기는 Codex 시절 운영을 그대로 원한다. 2026-11-11 사용자 결정: 사무실 Mac의 Codex 메인세션(`01a08f0c-…`)과 이 세션은 **각각 따로 운영하고 codex-personal-context만 공유 보관소로 쓴다**(서로 메시지·통제 없음, 이어받을 때 pull 후 정본·live Git 확인).
 
 **How to apply:**
 - 폴더 `/Users/parkjongsun/repository`(저장소들이 모인 일반 폴더). 메모리는 이 폴더 키에 있고, 웹 폴더 키 `-Users-parkjongsun-repository-dentlink-client/memory`는 여기로 연결된 링크.
