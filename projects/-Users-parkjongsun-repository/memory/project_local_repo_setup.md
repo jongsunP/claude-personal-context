@@ -38,3 +38,4 @@ metadata:
 - iOS 기기 창: Simulator.app 없음 → `open 'devices://device/open?id=<UDID>'`(DeviceHub). 창 소유 앱 이름은 `Device Hub`. 에이전트 셸은 화면 녹화·손쉬운 사용 권한이 없어 창 확인은 CGWindowList로.
 - 최종 점검(2026-11-11): 키체인 계정 4개 모두 실제 로그인 성공(격리 컨텍스트, 값 미출력). `.zshrc`에 `$JAVA_HOME/bin` PATH 추가(없으면 `java`가 /usr/bin 껍데기로 실패). 사용자가 패널 탭을 닫아 기기·Metro는 꺼진 상태, Clinic 3000·Lab 3005 서버만 실행 중.
 - 마감(2026-11-11): 세팅 완료, 사용자가 실행 중인 서버·기기·Metro를 직접 종료. 로그인은 기기·전용 Chrome 프로필·키체인에 남음. 다시 켤 때는 [[running-services-and-report-scope]]의 복구 순서. 정본 체크포인트는 codex `projects/dentlink-fe.md` 최상단 "집 Mac 작업환경 세팅·Claude Code 메인세션 지정 마감".
+- 개발 준비 재점검(2026-11-11): 웹 훅 연결·Git 작성자·gh workflow 권한 OK, coverage-baseline.json을 최신 master로 재생성해 알림센터 worktree에 상속, Revopush CLI 설치. 남은 사용자 준비: Lab 시트 쓰기 인증(service-account.json 또는 gcloud ADC), `revopush login`, 두 앱 `scripts/.env.codepush.local`(Slack Webhook).
