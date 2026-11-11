@@ -7,7 +7,7 @@
 - [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
 
 ## Feedback
-- [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context 지침 적용, 모든 기록은 Claude 메모리·codex 양쪽에, 앱은 main 기반·develop 미운용
+- [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context가 정본(읽는 순서·Claude Code 대응표), 핵심 규칙 요약, 기록은 양쪽에
 - [언어 및 말투 설정](feedback_language.md) — 항상 한글 존댓말로 일관되게 응답 (반말 혼용 금지)
 - [메모리 자동 저장 기준](feedback_memory_management.md) — 작업 마무리/중요 판단 시 자동 저장·push, 일관된 협업 방식 유지
 - [툴 사용 권한 사전 허락](feedback_permissions.md) — 작업 중 모든 툴 사용 묻지 않고 바로 진행 (외부 영향 제외)
@@ -37,6 +37,7 @@
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
+- [Dentlink FE 메인세션](project_main_session.md) — 2026-11-11 지정, 폴더 ~/repository, 하위 세션은 feat 브랜치 직접 생성·모델 상속, 폴링 금지
 - [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 저장소·도구는 사무실과 맞춤 완료(2026-11-11), 앱 env·웹 최신 env는 사무실에서 복사 필요
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
