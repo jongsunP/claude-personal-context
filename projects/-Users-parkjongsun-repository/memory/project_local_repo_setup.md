@@ -35,3 +35,4 @@ metadata:
 - 로그인 확인(2026-11-11): 웹 Clinic·Lab(테스트 Chrome 전용 프로필), Office Android·iOS(frankieDevOffice), Lab iOS(frankieDevLab) 로그인 확인. Android Lab(frankieDevLab)까지 전부 로그인 완료. 키체인 비밀번호 항목은 없음(선택). Chrome Apple Events JS 허용 확인. 사용자가 "다 했어"라고 해도 화면·쿠키 이름으로 실제 상태를 확인한 뒤 진행(여러 번 실제와 달랐음).
 
 관련: [[user-environment]], [[codex-guidelines-adopted]]
+- iOS 기기 창: Simulator.app 없음 → `open 'devices://device/open?id=<UDID>'`(DeviceHub). 창 소유 앱 이름은 `Device Hub`. 에이전트 셸은 화면 녹화·손쉬운 사용 권한이 없어 창 확인은 CGWindowList로.
