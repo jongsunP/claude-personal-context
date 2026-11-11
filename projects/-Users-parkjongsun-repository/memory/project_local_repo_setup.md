@@ -32,5 +32,6 @@ metadata:
 - 함정: 16GB Mac에서 빌드 후 Gradle/Kotlin 데몬이 남으면 에뮬레이터가 멈춤 → `./gradlew --stop`. `yarn start`는 `--experimental-debugger` 옵션 오류라 `yarn metro-log` 사용. UTF-8 로케일 필요. SDKROOT 우회는 Xcode 27.2로 올라간 뒤 불필요해져 `.zshrc`에서 제거(전역이면 iOS 빌드 방해 위험). 새 Mac은 `sudo xcodebuild -license accept`를 사용자가 직접(미동의면 Xcode 도구 exit 69) — 2026-11-11 완료.
 - iOS: Xcode 라이선스 동의 후 Office·Lab 개발 앱을 `xcodebuild ... -sdk iphonesimulator -derivedDataPath build`로 빌드 성공, iPhone 17 Pro(iOS 26.5)에 설치. 현재 Podfile은 시뮬레이터 arm64를 제외하지 않아 예전 "Apple Silicon 빌드 경계"는 해소. iOS 빌드 직후 고부하에 에뮬레이터 런처 ANR → 부하 내려간 뒤 회복.
 - 로그인: Office·Lab 앱은 모두 8081 Metro로 빌드돼 한 번에 하나만 연결 → Office 로그인 후 Metro를 Lab으로 바꿔 Lab 로그인.
+- 로그인 확인(2026-11-11): 웹 Clinic·Lab(테스트 Chrome 전용 프로필), Office Android·iOS(frankieDevOffice), Lab iOS(frankieDevLab) 로그인 확인. Android Lab은 로그인 화면까지 띄움. 키체인 비밀번호 항목은 없음(선택). Chrome Apple Events JS 허용 확인. 사용자가 "다 했어"라고 해도 화면·쿠키 이름으로 실제 상태를 확인한 뒤 진행(여러 번 실제와 달랐음).
 
 관련: [[user-environment]], [[codex-guidelines-adopted]]
