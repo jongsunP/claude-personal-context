@@ -29,7 +29,8 @@ metadata:
 **커넥터·로그인 준비 (같은 날)**: Claude 계정의 Figma·Atlassian MCP 커넥터는 실제 조회로 정상(Jira는 innovaid 사이트 read-write). 인증 필요로 뜨는 `atlassian`·`figma`는 웹 저장소 팀 `.mcp.json`, `plugin:figma:figma`는 플러그인 중복이라 무시. Xcode 라이선스 미동의 → 사용자 터미널에서 `sudo xcodebuild -license accept` 필요. 테스트 로그인은 전용 Chrome for Testing 프로필 `~/.local/share/codex-test-sessions/dentlink/development/browser-profile`(CDP 9233), 비밀번호는 키체인 `codex.dentlink.development.{web-clinic|web-lab|app-office|app-lab}`에 사용자가 직접. Chrome Apple Events JS 허용은 보안 설정이라 사용자가 직접.
 
 **도구**: Ruby3.4·JDK17·Android SDK·AVD `Dentlink_API_36`·Reactotron·Colima/Docker 격리 프로필(Stopped)·Chrome for Testing·Playwright. Office·Lab Android 개발 앱 설치.
-- 함정: 16GB Mac에서 빌드 후 Gradle/Kotlin 데몬이 남으면 에뮬레이터가 멈춤 → `./gradlew --stop`. `yarn start`는 `--experimental-debugger` 옵션 오류라 `yarn metro-log` 사용. SDKROOT·UTF-8 로케일 필요.
-- iOS 시뮬레이터 개발 앱 빌드는 시도하지 않음(플레이북상 Apple Silicon 빌드 경계).
+- 함정: 16GB Mac에서 빌드 후 Gradle/Kotlin 데몬이 남으면 에뮬레이터가 멈춤 → `./gradlew --stop`. `yarn start`는 `--experimental-debugger` 옵션 오류라 `yarn metro-log` 사용. UTF-8 로케일 필요. SDKROOT 우회는 Xcode 27.2로 올라간 뒤 불필요해져 `.zshrc`에서 제거(전역이면 iOS 빌드 방해 위험). 새 Mac은 `sudo xcodebuild -license accept`를 사용자가 직접(미동의면 Xcode 도구 exit 69) — 2026-11-11 완료.
+- iOS: Xcode 라이선스 동의 후 Office·Lab 개발 앱을 `xcodebuild ... -sdk iphonesimulator -derivedDataPath build`로 빌드 성공, iPhone 17 Pro(iOS 26.5)에 설치. 현재 Podfile은 시뮬레이터 arm64를 제외하지 않아 예전 "Apple Silicon 빌드 경계"는 해소. iOS 빌드 직후 고부하에 에뮬레이터 런처 ANR → 부하 내려간 뒤 회복.
+- 로그인: Office·Lab 앱은 모두 8081 Metro로 빌드돼 한 번에 하나만 연결 → Office 로그인 후 Metro를 Lab으로 바꿔 Lab 로그인.
 
 관련: [[user-environment]], [[codex-guidelines-adopted]]
