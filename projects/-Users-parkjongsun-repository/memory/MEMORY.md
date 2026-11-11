@@ -7,7 +7,7 @@
 - [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
 
 ## Feedback
-- [Lab i18n 코드만, 시트 불필요](feedback_lab_i18n_no_sheet.md) — 2026-11-11부터 ko/en 리소스(JSON)만 넣고 번역 시트는 채우지 않음
+- [Lab i18n 코드만, 시트 불필요](feedback_lab_i18n_no_sheet.md) — 2026-11-11 번역 지침 변경(모든 에이전트): 시트는 그대로, ko/en JSON만 관리, 기존 시트 스크립트는 유지
 - [env 팀 규칙](feedback_env_team_rule.md) — 에이전트는 실제 .env를 읽기·생성·수정 금지, Git 이력·GitHub Variables로 값 복원 금지(dentlink-client CLAUDE.md)
 - [실행 탭 안내·보고 범위](feedback_running_services_and_report_scope.md) — 계속 켜 둘 탭과 닫아도 될 탭을 구분해 안내, 사무실 Mac 미커밋은 보고에서 제외
 - [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context가 정본(읽는 순서·Claude Code 대응표), 핵심 규칙 요약, 기록은 양쪽에
