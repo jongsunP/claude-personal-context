@@ -16,3 +16,4 @@ metadata:
 - 웹 로그인 상태는 전용 Chrome for Testing 프로필(`.../development/browser-profile`, CDP 9233)을 먼저 재사용.
 
 관련: [[codex-guidelines-adopted]], [[dentlink-fe-main-session]]
+- 2026-11-11 네 항목 저장 완료, 값 출력 없이 확인창 없이 읽힘 확인. 일부만 다시: `store-test-login.sh web-clinic`(기존 참조 보존). 패널 터미널 탭 6개 제한 시 사용자 실행은 `~/.local/share/dentlink-local-runtime/*.command`로 macOS 터미널 창에 띄움.
