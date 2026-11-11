@@ -42,3 +42,4 @@ metadata:
 - 남은 인증 정리(2026-11-11): CodePush 알림 설정 `scripts/.env.codepush.local`은 두 앱 저장소에 이미 커밋돼 있어 준비 불필요(팀 README와 달리 Webhook 노출 상태, 팀 저장소는 미변경). Revopush 로그인은 사용자가 보류(CLI만 설치). 웹 Lab 시트 인증은 사용자가 "이제 그 시트에 추가 안 해도 된다"고 해 미준비(gcloud만 설치).
 - 사용자 결정(2026-11-11): CodePush Webhook이 저장소에 커밋된 것은 팀 방식 그대로 둔다(다시 문제 제기하지 않음). Lab 번역 시트는 더 이상 채우지 않으므로 시트 인증 불필요.
 - 마감 재검토: studio dev 4100 응답 확인. 비차단 한계 — e2e env 시크릿 전용 3키 비어 일부 가입 시나리오 로컬 건너뜀(사람 관리). 사무실 Codex는 다음 사용 때 pull + `./setup-local-codex.sh`로 오늘 지침 반영 필요.
+- GitHub 대조(2026-11-11): 기록에 링크된 PR 131개 중 열린 것은 4개(웹 #4862, Office #346, Lab #42, studio #62)뿐, 본인 열린 PR과 같고 집 Mac 체크아웃과 일치.
