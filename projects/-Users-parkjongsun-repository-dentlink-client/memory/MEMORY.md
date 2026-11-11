@@ -2,12 +2,12 @@
 
 ## User
 - [사용자 프로필](user_profile.md) — parkjongsun, Dentlink 프론트 개발자, 협업 파트너로서의 Claude를 지향
-- [작업 환경 (집/사무실)](user_environment.md) — 사무실이 주 작업환경, 집 컴퓨터는 git 동기화로 이어서 작업
+- [작업 환경 (집/사무실)](user_environment.md) — 사무실 Mac이 실행 호스트, 집 Mac은 보조(경로 소문자 repository), 환경을 최대한 맞추는 것이 우선
 
 - [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
 
 ## Feedback
-- [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context 지침(권한·브랜치·범위·기록·보고)을 모든 Dentlink 작업에 적용, 시작 시 pull·체크포인트 대조
+- [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context 지침 적용, 모든 기록은 Claude 메모리·codex 양쪽에, 앱은 main 기반·develop 미운용
 - [언어 및 말투 설정](feedback_language.md) — 항상 한글 존댓말로 일관되게 응답 (반말 혼용 금지)
 - [메모리 자동 저장 기준](feedback_memory_management.md) — 작업 마무리/중요 판단 시 자동 저장·push, 일관된 협업 방식 유지
 - [툴 사용 권한 사전 허락](feedback_permissions.md) — 작업 중 모든 툴 사용 묻지 않고 바로 진행 (외부 영향 제외)
@@ -26,7 +26,7 @@
 - [E2E 고정 오피스(setup fixture) 삭제 위험](feedback_e2e_fixture_office_risk.md) — 영구 보존 주석 있어도 삭제 가능. MAIN employer가 가장 안정적 타겟
 - [E2E specs vs scripts 폴더 기준](feedback_e2e_scripts_vs_specs.md) — specs/는 실제 시나리오만. one-off 환경 설정 스크립트는 e2e/scripts/에 보관
 - [claude-personal-context 레포 자동 동기화](feedback_claude_personal_repo_sync.md) — 설정·메모리 변경 시 커밋·푸시 자동 처리
-- [브랜치 네이밍 컨벤션](feedback_branch_naming.md) — 모든 브랜치에 feature/ prefix 필수 (QA 브랜치 포함)
+- [브랜치 네이밍 컨벤션](feedback_branch_naming.md) — 신규 브랜치는 feat/<Jira> (2026-11-04부터), 기존 feature/는 유지, 에이전트 prefix 금지
 - [커밋·푸쉬 명시적 요청 시에만](feedback_commit_push_explicit_only.md) — 코드 수정 후 커밋·푸쉬는 자동 실행 금지, 명시적 지시 필요
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
 - [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 타겟은 배포 예정 release
@@ -37,7 +37,7 @@
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
-- [로컬 레포 세팅 현황](project_local_repo_setup.md) — 집 컴퓨터에 dentlink-app·lab-app·studio clone·JS 의존성 완료, 실행 환경(Ruby·JDK·Android SDK·pods) 세팅 완료, env 파일만 미비
+- [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 저장소·도구는 사무실과 맞춤 완료(2026-11-11), 앱 env·웹 최신 env는 사무실에서 복사 필요
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함
 - [DL-14232 초대 기능 작업 현황](project_dl14232_invite_progress.md) — feature/DL-14232, 워크트리 `dentlink-client-invite`. FE 하위 8개 티켓(DL-15489~15495, DL-15162). 플래닝 진행 중.

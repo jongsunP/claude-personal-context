@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 64e5f883-42fa-4b78-8d56-577e5d6d31e0
-  modified: 2026-10-16T07:13:00.191Z
+  modified: 2026-11-11T06:11:52.015Z
 ---
 
 2026-10-15 사용자 지시: 다른 작업을 하더라도 codex-personal-context의 지침과 히스토리를 따른다. 정본은 그 repo의 AGENTS / SESSION_WORKFLOW / AI_WORKFLOW / DEVELOPMENT_STYLE / DECISION_FRAMEWORK / PROFILE이며, 아래는 요약이다. 애매하면 정본을 다시 읽는다 ([[codex-personal-context-handoff]]).
@@ -16,8 +16,9 @@ metadata:
 - **시작·재개:** 작업 시작 시 codex-personal-context `git pull` → 해당 `projects/<project>.md` 상단 "현재 상태" 확인 → 제품 repo fetch로 branch/HEAD/원격 차이/dirty/worktree 소유권 대조 후 진행. 기록보다 live Git·최신 사용자 지시가 우선. 맥락 복원만으로 구현·QA·서버를 재개하지 않는다(대기 상태 보존). 브랜치·워크트리 상태를 바꾸자고 제안하기 전에도 최신 "현재 상태"를 먼저 읽는다 — 2026-10-16 기록에 "워크트리는 release detached 유지"가 있는데 확인 없이 feature로 switch를 제안·실행해 되돌린 일이 있었다.
 - **권한:** 제품 코드 commit/push/PR 변경/merge/배포는 명시 요청 시에만. 보호 브랜치(master/develop/release/*) 직접 push·우회는 별도 승인. DB는 읽기 전용, 비밀값 출력 금지.
 - **CodeRabbit 처리 요청** = 미해결 스레드 전부 검증 → 수정 또는 근거 답글 → resolve → 비례 검사 → commit/push → CodeRabbit 체크 완료까지 새 스레드 재확인. merge 제외. 단순 "PR 만들어줘"는 생성에서 끝(감시·대응 안 함).
-- **웹 브랜치:** 신규 작업은 최신 `origin/master`에서 `feature/<Jira>`(에이전트 prefix 금지). PR 대상은 배포 예정 `release/vX.Y.Z`(live 확인). release 기반은 이미 release에 들어간 작업의 후속/QA 수정만. 예정 릴리즈가 없다는 이유로 master 기준을 다시 묻지 않는다. develop/stage는 환경 브랜치일 뿐.
-- **앱:** Office(`dentlink-app`)·Lab(`dentlink-lab-app`)은 별도 repo. 일반 feature PR은 `develop` 대상, release는 QA/배포 단계. 웹 규칙을 앱에 적용하지 않는다.
+- **양쪽 기록(2026-11-10 사용자 지시):** 체크포인트·결정·발견·선호 등 모든 기록은 Claude 메모리와 codex-personal-context **양쪽**에 남긴다. 한쪽만 쓰지 않는다.
+- **웹 브랜치:** 신규 작업은 최신 `origin/master`에서 `feat/<Jira>`(2026-11-04부터, 기존 `feature/` 브랜치는 이름 유지. `codex/`·`claude/` 등 에이전트 prefix 금지). PR 대상은 배포 예정 `release/vX.Y.Z`(live 확인). release 기반은 이미 release에 들어간 작업의 후속/QA 수정만. 예정 릴리즈가 없다는 이유로 master 기준을 다시 묻지 않는다. develop/stage는 환경 브랜치일 뿐.
+- **앱:** Office(`dentlink-app`)·Lab(`dentlink-lab-app`)은 별도 repo. 2026-10-29부터 `main → feat → release → main`: 일반 feature는 최신 `origin/main`에서 시작해 해당 release 대상 PR, release는 QA/배포 후 main으로. `develop`은 운용하지 않음(남은 develop 삭제는 별도 승인). 웹 규칙을 앱에 적용하지 않는다.
 - **범위:** 확정 요구·디자인 밖의 사용자 노출 UI/문구/동작(에러·빈 상태·자동 이동 포함)을 새로 넣을 땐 근거·제안 후 승인. 단 리뷰 지적을 고치는 수준은 예외([[handoff-review-scope]]). 가장 가까운 기존 구현 패턴(컴포넌트·hook·query·상태·타입)을 그대로 따른다.
 - **추가 파일:** 새 테스트 파일·helper 모듈·분석 파일·문서·Storybook은 검증 편의만으로 추가하지 않는다(요청 또는 필요 설명 후 승인). 기존 테스트 파일에 회귀 케이스 추가는 가능. 권한관리 기능은 Storybook 미사용.
 - **worktree:** 한 worktree에 쓰는 세션은 하나. 변경 전 정확한 경로·브랜치 확인, 다른 worktree로 작업을 옮기지 않는다. 웹/앱 Git 이력은 섞지 않는다.
