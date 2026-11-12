@@ -23,7 +23,8 @@ pull 후 변경사항이 있으면 "메모리 동기화 완료 (N개 파일 업�
 1. 작업 전 `PROJECTS.md`와 해당 `projects/<project>.md` 맨 위 "현재 상태"를 읽고, 제품 repo의 live Git(branch·HEAD·원격 차이·dirty·worktree)과 대조한다. 현재 사용자 지시와 live 상태가 기록보다 우선한다. 기록상 "대기"(PR 머지 대기 등)는 GitHub로 다시 확인한다.
 2. 작업 규칙은 그 repo의 `AGENTS.md`·`SESSION_WORKFLOW.md`·`AI_WORKFLOW.md`·`DEVELOPMENT_STYLE.md`를 따른다. 새 세션이 Dentlink 작업을 처음 맡으면 `BOOTSTRAP.md`의 Read Order(BOOTSTRAP → SESSION_WORKFLOW → PROFILE → AI_WORKFLOW → DEVELOPMENT_STYLE → PROJECTS → 해당 프로젝트 파일)를 따른다.
 3. Codex 고유 절차(세션 모델 지정, 원격 PIN, `~/.codex` 등)는 `AI_WORKFLOW.md`의 **Claude Code Mapping** 표대로 바꿔 적용한다. 규칙 자체는 그대로 따른다.
-4. 기록은 Claude 메모리와 codex-personal-context **양쪽**에 남긴다(2026-11-10 사용자 지시). 시점은 요청받은 작업이 끝날 때이며, 요청이 없어도 남길 가치가 있는 결정·상태·지침 변경은 넣는다(2026-11-12). 동기화는 새 세션 시작·재개 시 필요한 범위를 자동으로 맞춘다. 의미 있는 마감 시 기존 형식(프로젝트 파일 상단 "현재 상태" + `MEMORY_CHANGELOG.md`, 필요 시 `PROJECTS.md`·`HANDOFF.md`)으로 기록하고 commit·push한다. 제품 repo commit·push는 명시 요청 시에만.
+4. 기록은 Claude 메모리와 codex-personal-context **양쪽**에 남긴다(2026-11-10 사용자 지시). 시점은 요청받은 작업이 끝날 때이며, 요청이 없어도 남길 가치가 있는 결정·상태·지침 변경은 넣는다(2026-11-12). 동기화는 새 세션 시작·재개 시 필요한 범위를 자동으로 맞춘다.
+5. 동기화할 때 codex-personal-context `AGENT_INBOX.md`에서 내 섹션(사무실 Claude Code / 집 Claude Code)과 "모든 에이전트"의 `열림` 항목을 확인해 적용하고 완료 표시한다. 사용자가 "다른 에이전트도 이렇게 하래"라고 하면 그 에이전트 섹션에 항목을 남긴다. 다른 에이전트 항목은 처리하지 않는다. 의미 있는 마감 시 기존 형식(프로젝트 파일 상단 "현재 상태" + `MEMORY_CHANGELOG.md`, 필요 시 `PROJECTS.md`·`HANDOFF.md`)으로 기록하고 commit·push한다. 제품 repo commit·push는 명시 요청 시에만.
 
 ## Dentlink FE 메인세션 (에이전트별 1개, 2026-11-12 확정)
 

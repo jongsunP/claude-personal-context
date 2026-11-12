@@ -22,5 +22,7 @@ metadata:
 - 앱 설정(계정/기기): 브랜치 접두어 `feat`, 새 세션 Remote Control 연결 켬(사무실은 11-12 설정). 새 세션 기본 모델 설정은 `claude-sonnet-4-6`이라 하위 세션 모델은 반드시 상속으로.
 - 메인세션은 보관하지 않는다. "정리하고 대기"는 기록 저장 후 대기 의미.
 - 동기화·기록 시점은 [[record-to-both-claude-and-codex-context]].
+- 메인은 메인 폴더 아래 모든 프로젝트를 직접 읽기·수정·Git·빌드·실행할 수 있다. 구현은 기본 하위 세션, 수정 전 대상 repo·브랜치·worktree 확인, 각 repo CLAUDE.md 적용.
+- **에이전트 전달함(2026-11-12):** 사용자가 "다른 에이전트도 이렇게 하래"라고 하면 codex `AGENT_INBOX.md`의 그 에이전트 섹션에 남긴다. 동기화 때 내 섹션·"모든 에이전트"의 `열림` 항목을 적용하고 완료 표시. 남긴 것: 집 Claude(메인 폴더 아래 전체 제어 방식), 사무실 Codex(pull+setup-local-codex.sh), 집 Codex(사용 시 메인 지정), 모든 에이전트(11-12 구조·시점 확인).
 
 관련: [[codex-guidelines-adopted]], [[local-repo-setup-status]], [[user-environment]]
