@@ -9,6 +9,7 @@
 ## Feedback
 - [기록은 양쪽에·동기화/기록 시점](record-to-both-claude-and-codex-context.md) — codex-personal-context와 Claude 메모리 둘 다, 동기화는 세션 시작·재개 시 자동, 기록은 작업 끝날 때 필요한 것
 - [Dentlink 앱 수정 승인 범위](dentlink-app-fix-approval-scope.md) — 조사≠실행, JS만, 네이티브·애매하면 재질문, 리뷰용 PR 불변
+- [앱 작업 지침 재점검(먼저)](app-guidelines-recheck-from-app-dev-review.md) — 다음 앱 작업 전, 앱 개발자 리뷰 기준(models엔 생성 파일만·styled-components·응답 null 검증·공용 로직 QA)으로 지침부터 점검, 미처리
 - [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
 - [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
 - [Lab i18n 코드만, 시트 불필요](feedback_lab_i18n_no_sheet.md) — 2026-11-11 번역 지침 변경(모든 에이전트): 시트는 그대로, ko/en JSON만 관리, 기존 시트 스크립트는 유지
