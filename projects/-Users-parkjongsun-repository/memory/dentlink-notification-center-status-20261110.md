@@ -19,3 +19,5 @@ metadata:
 **갱신(2026-11-12):** PR #348/#44는 11-11 앱 개발자가 release에 머지 → 다니엘 머지 대기는 해소. 알림 설정 라벨 매핑 push(Office 8d9dfd5·Lab 2f6cb2d·Web 0b4cbab4f), 개발 CodePush·웹 develop 반영은 추가 개발 후로 보류(사용자 결정). 상세는 [[dentlink-notification-settings-render-audit-20261110]].
 
 **메인 세션 마감(2026-11-10 19:05):** 이 세션 요청 모두 완료·대기. 남은 작업은 별도 세션 “알림 설정 목록 서버 데이터 의존 여부 조사”(displayName 제거·매핑 정리 범위 승인 대기). 대기: 다니엘 머지·심사, 기획 결정, 사용자 폰 정리.
+
+**2026-11-12 dev 스웨거 재생성(commit 없음, 작업 트리 수정 상태):** 알림 설정 GET `/office|lab/notifications/settings` 응답이 `{view, setting}`→`NotificationSettingDto`로 바뀜(카테고리에 domain·toggleChannel·enabled·channels[{channel,enabled}], employee에 orderScopeOptions 코드 배열, view·OrderScopeDto 삭제). 세 제품 설정 코드는 옛 구조를 읽음(앱은 별도 `src/models/NotificationApi.ts`) → 사용자가 예정한 "알림 설정 목록" 추가 작업의 핵심. 그룹 규칙 차이·USER 표시도 그 작업에서 함께 다룸. appLandingUrl은 인박스 필드로 정식 반영, 앱은 이미 사용 중. Api.ts 전체 갱신은 알림 외 타입 오류(Office 6→315 주문 옵션, Lab 5→9·웹 lab 0→11 밀링)를 내므로 그대로 commit하지 않음. DL-17235는 사용자 카드가 아니라 남은 일에서 제외(사용자 지시). 로컬 Android 에뮬(Dentlink_API_36) 설치본(Office dev 2.2.4/134, Lab dev 1.0.5/9, 11-10 설치)은 Notifee 호환 패치 미포함. 패치는 release/v2.2.5·v1.0.6에만 있음.
