@@ -41,3 +41,5 @@ metadata:
 **2026-11-12 재점검(보고만, 메인 경유 요청·사용자 직접 요청 아님, 목록은 참고·진행은 사용자 결정 전):** 이미 push 상태. 리뷰 지적: 웹 settingCategories 조회 단계 누락(내 회귀), CodeRabbit categories 누락 방어·channels 생략 정책·밀링 FILE 계약, Lab PR #42 리뷰(배열 원소 null 검증·StyleSheet→styled, Office도 동일). 상세는 codex 정본 최상단.
 
 **2026-11-12 저녁 마감(사용자 지시로 최소 단계에서 멈춤):** Web 로컬 커밋 `7968ad66b`(channels 생략=토글만·categories 누락 차단·null 항목 조회 실패·설정 표시명 조회 복구) **push 전** — E2E 가드 재실행 필요. Office·Lab은 같은 응답 검증·null 처리·인박스 StyleSheet→styled 변경이 **미커밋 상태**(검증 완료: Office 테스트 50·tsc 6, Lab 53·tsc 5), 패치 백업은 side-session-notes `pending-app-patches-2026-11-12/`. 남은 일: 웹 가드·push, 앱 커밋·push·리뷰 resolve·화면 재확인, BE 노출 키 오면 웹 PUSH 숨김 교체, 밀링 FILE 계약은 범위 밖, QA 요청. 정본 codex 최상단 "오늘 마감 상태".
+
+**2026-11-12 리뷰 대응 push 완료(위 저녁 마감의 Git 상태 대체):** Office `4ed34bf`, Lab `0f03901`, Web `7968ad66b` push, 웹 E2E 가드는 사용자 지시로 SKIPPED. 남은 일: Lab #42 리뷰 resolve·인박스 화면 재확인·BE 노출 키 반영·QA.
