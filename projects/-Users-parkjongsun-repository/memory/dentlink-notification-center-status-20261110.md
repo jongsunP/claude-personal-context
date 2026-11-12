@@ -38,4 +38,4 @@ metadata:
 
 **2026-11-12 기기 OFF 안내(사용자):** 디자인과 같으면 유지 → Office 팝업 제목 "Get Lab Updates Instantly"(Figma 동일) 유지, 앱 진입 팝업은 기기당 1회(AsyncStorage `NOTIFICATION_PERMISSION_NOTICE_SHOWN`)라 디자인과 같음. 코드 변경 없음.
 
-**2026-11-12 재점검(보고만):** 이미 push 상태. 처리 대기: 웹 settingCategories 조회 단계 누락(내 회귀), CodeRabbit categories 누락 방어·channels 생략 정책·밀링 FILE 계약, Lab PR #42 리뷰(배열 원소 null 검증·StyleSheet→styled, Office도 동일). 상세는 codex 정본 최상단.
+**2026-11-12 재점검(보고만, 메인 경유 요청·사용자 직접 요청 아님, 목록은 참고·진행은 사용자 결정 전):** 이미 push 상태. 리뷰 지적: 웹 settingCategories 조회 단계 누락(내 회귀), CodeRabbit categories 누락 방어·channels 생략 정책·밀링 FILE 계약, Lab PR #42 리뷰(배열 원소 null 검증·StyleSheet→styled, Office도 동일). 상세는 codex 정본 최상단.
