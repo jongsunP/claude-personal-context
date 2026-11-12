@@ -80,3 +80,4 @@
 - [dev API 직접 조회](dev-api-live-check-with-test-accounts.md) — 키체인 테스트 계정으로 로그인해 실제 응답 확인, 사용자에게 달라고 하지 않기
 - [일반 메인·분리된 작업 세션](main-no-tracking-after-handoff.md) — 모든 에이전트 공통: 메인은 작업에 안 묶음, 큰 기능은 분리된 작업 세션, 넘긴 뒤 추적 금지
 - [앱 미리보기 = Reactotron 연결까지](app-preview-reactotron-required.md) — Reactotron 실행·adb reverse 9090·iOS/Android 두 연결 확인까지 한 세트
+- [웹 PUSH 숨김 재수정 대상](notification-web-push-hiding-pending-be-key.md) — toggleChannel 추론 임시 처리, BE 노출 키 생기면 그 키로 변경
