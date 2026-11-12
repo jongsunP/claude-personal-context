@@ -33,3 +33,5 @@ metadata:
 **2026-11-12 최종 기준:** 우선순위는 알림센터 설정. BE 구조·배열 순서 그대로, 디자인 참고, 표시명은 PM 승인 매핑표(Slack 스레드 첨부 F0CFYPDJ8UF)대로 영/한 다국어. 그룹 제목은 ORDERS=Order/주문, MANUFACTURING=Milling Center Order/밀링센터 주문, CHAT=Chat/채팅(웹만)만 → 그 도메인만 묶고 나머지는 단독 카드. PUSH 앱만.
 
 **2026-11-12 알림 설정 새 API 이전 완료(로컬 커밋, push 전):** Office `0947399`·Lab `901cfa1`·Web `75ac63b90`. 세 제품 공통 규칙(서버 순서, 그룹 제목 매핑 도메인만 묶음, options 2개 이상일 때만 범위, 저장은 GET 전체에서 읽기 전용 제거, 웹 PUSH 숨김·값 유지). 앱 NotificationApi.ts 삭제→생성 타입. 다국어: Office 앱 영어 고정(i18n 미초기화), Lab 앱 ko 고정, Web Clinic 영어, Web Lab ko. 라이브 PUT 왕복·화면 6종 확인, 원복 완료. 남은 것: push·배포는 사용자 지시 대기, Office 팝업 제목 "Lab" 문구 확인 필요. 정본 codex 프로젝트 파일 상단.
+
+**2026-11-12 후속(사용자 지시):** 영역 순서는 **user를 먼저**(이후 바뀔 수 있음) — Office `23966fc`·Lab `e64b61d`·Web `7891e21c2`. 사용자 지시로 세 브랜치 push 완료(웹은 E2E 가드 NO_IMPACT 기록 후). 배포(웹 develop·앱 CodePush)는 아직.
