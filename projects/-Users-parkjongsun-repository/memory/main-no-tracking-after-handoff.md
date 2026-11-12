@@ -1,6 +1,6 @@
 ---
 name: main-no-tracking-after-handoff
-description: 메인세션은 하위 세션에 넘긴 뒤 추적·폴링·재검증으로 쫓지 않는다 (2026-11-12 사용자)
+description: 모든 에이전트 공통 — 메인은 일반 메인, 큰 기능은 상시 하위 세션, 넘긴 뒤 추적·폴링·재검증 금지 (2026-11-12 사용자)
 metadata:
   type: feedback
 ---
@@ -10,3 +10,5 @@ metadata:
 **Why:** 사용자는 메인을 접수·조율·기록 중심으로 두고, 실행과 검증은 하위 세션에 맡기려 한다. 메인이 다시 따라가면 중복이다.
 
 **How to apply:** 넘긴 직후에는 한 줄 안내로 끝낸다. 완료 알림이 오면 보고 내용 중 사용자가 결정할 것과 남은 것만 전한다. 알림센터처럼 상시 하위 세션이 있는 기능은 그 세션으로 보낸다([[dentlink-fe-main-session]]).
+
+**모든 에이전트 공통(사용자 2026-11-12):** 이 에이전트만이 아니라 모든 에이전트(사무실/집 × Codex/Claude Code, 이후 추가분)의 작업 방식이다. 메인은 특정 작업·브랜치·PR에 묶지 않고, 큰 기능은 기능 전체를 맡는 상시 하위 세션 하나가 이어받는다. 정본은 codex `SESSION_WORKFLOW.md` "Standing feature sessions and a general main", 다른 에이전트 전달은 `AGENT_INBOX.md` 모든 에이전트 항목.
