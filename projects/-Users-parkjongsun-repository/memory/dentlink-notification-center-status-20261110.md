@@ -37,3 +37,5 @@ metadata:
 **2026-11-12 후속(사용자 지시):** 영역 순서는 **user를 먼저**(이후 바뀔 수 있음) — Office `23966fc`·Lab `e64b61d`·Web `7891e21c2`. 사용자 지시로 세 브랜치 push 완료(웹은 E2E 가드 NO_IMPACT 기록 후). 배포(웹 develop·앱 CodePush)는 아직.
 
 **2026-11-12 기기 OFF 안내(사용자):** 디자인과 같으면 유지 → Office 팝업 제목 "Get Lab Updates Instantly"(Figma 동일) 유지, 앱 진입 팝업은 기기당 1회(AsyncStorage `NOTIFICATION_PERMISSION_NOTICE_SHOWN`)라 디자인과 같음. 코드 변경 없음.
+
+**2026-11-12 재점검(보고만):** 이미 push 상태. 처리 대기: 웹 settingCategories 조회 단계 누락(내 회귀), CodeRabbit categories 누락 방어·channels 생략 정책·밀링 FILE 계약, Lab PR #42 리뷰(배열 원소 null 검증·StyleSheet→styled, Office도 동일). 상세는 codex 정본 최상단.
