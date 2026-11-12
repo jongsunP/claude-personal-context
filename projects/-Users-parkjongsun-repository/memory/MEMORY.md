@@ -77,4 +77,4 @@
 - [BE 안내는 멘션 기준으로 찾기](jira-find-be-comments-via-mentions.md) — 상위 카드에 없으면 BE 본인 카드의 사용자 멘션 댓글 확인
 - [알림센터 참조 자료](reference-notification-center-sources.md) — 노션 기획서·Jira DL-16140 상하위 카드·DL-17114 BE 안내·PM Slack
 - [dev API 직접 조회](dev-api-live-check-with-test-accounts.md) — 키체인 테스트 계정으로 로그인해 실제 응답 확인, 사용자에게 달라고 하지 않기
-- [넘긴 뒤 추적 금지](main-no-tracking-after-handoff.md) — 하위 세션 맡긴 뒤 폴링·재검증 없이 완료 보고만 전달
+- [일반 메인·상시 하위 세션](main-no-tracking-after-handoff.md) — 모든 에이전트 공통: 메인은 작업에 안 묶음, 큰 기능은 상시 하위 세션, 넘긴 뒤 추적 금지
