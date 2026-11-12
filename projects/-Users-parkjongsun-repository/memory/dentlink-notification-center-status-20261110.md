@@ -26,3 +26,4 @@ metadata:
 **2026-11-12 브랜치 최신화·스웨거 반영(로컬 커밋, push 전):** 하위 세션 noti-sync-swagger가 앱 origin/main merge(충돌 없음), dev 스웨거 생성 결과 커밋, FE 가공 계층 수정. Office `cfa55ec`(스웨거 스키마 이름 충돌로 덮인 카탈로그 타입 5개를 `src/services/catalog.types.ts`로 유지), Lab `7cb252d`·Web `27c549f79`(밀링 parameterValues 요청 타입). 메인 재검증 tsc Office 6·Lab 5·웹 0, clean. 웹 DL-17195(release/v1.93.0)와 나중 merge 시 밀링 파일 충돌 가능. 다음은 알림 설정 API 추가 작업.
 
 **2026-11-12 알림 설정 API 작업 근거:** Jira DL-17114 Leo 11-10 댓글(구조 변경 안내, PUT 일괄 교체·생략 시 초기화, MEMBER는 MY_ORDERS_ONLY 고정, 저장 시 읽기 전용 메타 제거), dev 스웨거 NotificationSettingDto, Slack PM 스레드 C04T5SU6A2U/p1794306299283819(11-12 매핑 유지, user credit 제외 예정, 숨김 주체 BE/FE 미정). 상위 DL-16140 댓글에는 옛 초안만. 디자인 카드 DL-17035 비어 있음.
+**2026-11-12 방향(사용자):** BE 응답을 그대로 그리고 표시명만 FE 매핑. 유저 크레딧 숨김은 당장 안 함. 웹·앱 같은 규칙으로 맞추는 것이 작업에 포함(FE 고정 묶음 예외 제거).
