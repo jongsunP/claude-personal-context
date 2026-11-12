@@ -30,3 +30,4 @@ metadata:
 **2026-11-12 노션 기획서(설정 절만) 대조:** 기획은 웹 PUSH 설정 없음(11-10 사용자 지시로 웹 PUSH 복원과 다름, 개발 협의로 바뀌었을 수 있음), 단일 카테고리 도메인은 단독·여러 개면 묶음, 도메인 전체 토글은 API에 없음. 기획 링크 https://app.notion.com/p/innovaid/3c7ce072e82f811184a8e647444f01fd
 **2026-11-12 PUSH·용어:** PUSH는 앱 전용(웹은 PUSH 채널·PUSH 토글 항목 미표시, 11-10 웹 PUSH 복원 되돌림). Figma 62:19720 기준 기획서 '도메인 전체 토글'은 실제 카테고리 토글(category.enabled, toggleChannel=NOTIFICATION) — 의도 같고 용어만 다름. 도메인 단위 토글은 없음.
 **2026-11-12 Figma 2:6 대조:** 디자인은 참고(데이터 맞춤 미완). 채널 없는 항목(LinkTalk·덴트링크 서포트)은 같은 도메인이어도 단독 카드 → 규칙 '채널 없는 항목 단독, 채널 있는 항목은 연속 도메인 묶음, 1개면 단독'. 디자인에만 있는 항목(Case Preference, 기공소 Feedback/밀링 결제, Credit Email)은 응답대로 안 나옴. 기공소 밀링 단독 시 라벨 확인 필요. 디바이스 OFF 안내 흐름(173:28434)은 기존 구현 점검 대상.
+**2026-11-12 최종 기준:** 우선순위는 알림센터 설정. BE 구조·배열 순서 그대로, 디자인 참고, 표시명은 PM 승인 매핑표(Slack 스레드 첨부 F0CFYPDJ8UF)대로 영/한 다국어. 그룹 제목은 ORDERS=Order/주문, MANUFACTURING=Milling Center Order/밀링센터 주문, CHAT=Chat/채팅(웹만)만 → 그 도메인만 묶고 나머지는 단독 카드. PUSH 앱만.
