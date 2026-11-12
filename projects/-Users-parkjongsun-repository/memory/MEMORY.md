@@ -46,8 +46,8 @@
 ## Project
 - [테스트 계정·env 토큰 규칙](feedback_test_credentials.md) — env 개인 토큰 금지, 개발 계정은 키체인 codex.dentlink.development.* 에 저장해 재사용
 - [Dentlink FE 메인세션](project_main_session.md) — 에이전트별 메인 1개(11-12 확정), 사무실 Claude ~/Repository·집 Claude ~/repository, 하위 세션은 feat 브랜치·모델 상속
-- [통합알림센터 상태](dentlink-notification-center-status-20261110.md) — iOS 배너 해결, Notifee 패치 #348/#44 11-11 머지, 웹 노출 현황, 개발 배포는 추가 개발 후
-- [알림 설정 렌더·매핑](dentlink-notification-settings-render-audit-20261110.md) — 서버 순서 렌더+라벨 매핑 push(11-12), CodePush·웹 develop 보류
+- [통합알림센터 상태](dentlink-notification-center-status-20261110.md) — 11-12 브랜치 최신화·스웨거 로컬 커밋(push 전), 다음은 알림 설정 API 이전, 배포는 그 뒤
+- [알림 설정 렌더·매핑](dentlink-notification-settings-render-audit-20261110.md) — 옛 {view, setting} 응답 기준 조사·매핑(11-12 API 변경으로 참고용)
 - [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 2026-11-11 세팅 완료·마감(저장소·도구·env·worktree·iOS/Android 앱·테스트 로그인·키체인), 실행 환경은 사용자가 종료
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
 - [Lab i18n 시스템 구현 현황](project_i18n_progress.md) — feature/i18n 브랜치, Sheets→JSON 파이프라인 완료. 언어 추가·CI 연결 등 향후 과제 포함

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 7af44387-e0c6-4bab-b140-732615ecd17e
-  modified: 2026-07-24T09:07:49.075Z
+  modified: 2026-07-27T02:19:35.980Z
 ---
 
 ## 작업 위치
@@ -36,7 +36,7 @@ metadata:
 
 ### 생성되는 파일
 - `lab/src/i18n/locales/{en,ko}/{common,dashboard,orders,sharedUi}.json`
-- 현재 빈 파일(`{}`) — generate 실행 전까지 TypeScript 에러로 빌드 차단 (의도된 설계)
+- Git에 포함 — generate 후 JSON을 코드와 같은 커밋에 포함해 배포. 번역 추가 시 반드시 JSON도 함께 커밋
 
 ### i18n 런타임 설정
 - `lab/src/i18n/i18n.ts` — i18next 초기화

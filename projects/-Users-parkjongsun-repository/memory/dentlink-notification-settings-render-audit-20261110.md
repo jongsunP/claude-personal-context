@@ -8,6 +8,8 @@ metadata:
   modified: 2026-11-10T09:02:21.377Z
 ---
 
+> 2026-11-12: dev 스웨거 알림 설정 응답이 `{view, setting}`→`NotificationSettingDto`로 바뀌어 아래 분석은 옛 응답 기준(참고용). 새 구조 이전은 알림 설정 추가 작업에서.
+
 2026-11-10 조사만 완료(코드 수정·커밋 없음). 정본: `~/Repository/codex-personal-context/projects/dentlink-unified-notification-center-settings-render-audit-2026-11-10.md`.
 
 - 4개 제품(Office앱·Lab앱·Clinic웹·Lab웹) 모두 서버 `view.employee.categories` 순서로 항목·채널·값을 그림. FE 하드코딩 목록은 없음(구 `ProfileNotificationSection`은 미사용 dead code).
