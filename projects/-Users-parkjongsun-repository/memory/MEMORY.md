@@ -74,3 +74,4 @@
 - [DL-13254 링크 모음](reference_dl13254_links.md) — AOX 관련 Figma 디자인·FigJam 보드·Notion Component 문서·Jira 티켓 URL
 - [스테이징 배포 태그 형식](reference_stg_deploy_tag.md) — 코드 변경 없이 배포 시 `stg/clinic/[브랜치명]` 태그 push 사용
 - [스웨거 생성 파일 그대로](swagger-generated-files-as-is.md) — 생성 결과 커밋, 변경은 FE 가공 계층에만
+- [BE 안내는 멘션 기준으로 찾기](jira-find-be-comments-via-mentions.md) — 상위 카드에 없으면 BE 본인 카드의 사용자 멘션 댓글 확인
