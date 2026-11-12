@@ -23,4 +23,6 @@ metadata:
 
 **주문 범위 매핑(미커밋):** 기존 리소스 All Orders/전체 주문, My Orders Only/내 주문만 보기를 치과앱·웹에 넣음. 코드당 한 문구 최종 매핑표 제안은 정본 문서 8절 — 사용자 확정 후 4제품 정렬. Figma API(figma-developer-mcp)는 토큰 만료 403.
 
+**매핑 반영(2026-11-12, push):** `영역.카테고리`→`카테고리`→코드, employee/user CREDITS = Office/User Credits(오피스/유저 크레딧), ALL_ORDERS/MY_ORDERS_ONLY = All Orders/My Orders Only(전체 주문/내 주문만 보기), Lab 다국어. Lab textRegistry에 일반 단어("Order")를 등록하면 채팅 문구까지 번역되는 충돌을 `i18next.t()` 직접 호출로 수정. Office `8d9dfd5`, Lab `2f6cb2d`, Web `0b4cbab4f`(원격 일치, PR #346·#42·#4862 포함). 테스트 Office 7·Lab 3 통과. 개발 CodePush·웹 develop 반영은 추가 개발 후(사용자 결정). 웹 develop은 11-10 master 재생성 후 #4865로 `bad9e697c`까지만 반영.
+
 **실제 응답·결정(2026-11-10):** 사용자 제공 Office/Lab DEV 응답을 정본 9절에 기록. MY_ORDERS_ONLY = "My Orders Only" 확정. 매핑 키는 `영역.카테고리`→`카테고리`→코드 제안(미구현). 앱/웹 묶음 규칙 차이(CHAT 그룹)는 미결.

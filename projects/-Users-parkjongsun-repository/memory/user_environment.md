@@ -16,3 +16,5 @@ metadata:
 2026-11-11 사용자 의도: 특정 업무를 재개하기 전에 **집 Mac 작업환경을 사무실 Mac과 최대한 똑같이 맞추는 것**이 우선. 세팅 현황은 [[local-repo-setup-status]].
 
 **How to apply:** 집 Mac에서는 사무실 작업을 이어받는 맥락. env·인증·의존성·서버·worktree는 git pull로 복원되지 않으므로 기록(codex `projects/dentlink-fe.md` "다른 기기에서 이어가기", `dentlink-app-local-development.md`)의 표준 구성과 실제 기기를 대조해 차이를 보고한다.
+
+2026-11-12: 사무실 Mac에서도 Claude Code를 쓴다(사무실 Claude 메인 `~/Repository`). 사무실 Mac은 Codex와 Claude가 함께 도는 호스트이고, 에이전트별 메인 구조는 [[dentlink-fe-main-session]].

@@ -1,7 +1,0 @@
-- [Dentlink 앱 수정 승인 범위](dentlink-app-fix-approval-scope.md) — 조사≠실행, JS만, 네이티브·애매하면 재질문, 리뷰용 PR 불변
-- [기록은 양쪽에](record-to-both-claude-and-codex-context.md) — Claude 메모리와 codex-personal-context 둘 다 필수
-- [알림센터 11-10 마감 상태](dentlink-notification-center-status-20261110.md) — iOS 배너 v142/v40 실기기 확인 대기, Android PR 완료, 웹 노출 현황
-- [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
-- [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
-- [커넥터 현황](connectors-status.md) — Slack·Figma·Notion 동작, Jira는 관리자 승인 대기
-- [알림 설정 렌더 조사](dentlink-notification-settings-render-audit-20261110.md) — 서버 GET 순서 렌더 push 완료(3 repo), 매핑은 사용자 공유 대기
