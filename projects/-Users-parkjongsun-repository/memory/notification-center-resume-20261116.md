@@ -1,3 +1,7 @@
+## 2026-11-19 밤 — DL-17529 링크톡 플로팅 버튼 폭 가변
+
+- Lab 1d7e826·Office 6ea4e941(feat/DL-16140) 푸시, CodePush 안 함. FloatingActionButton이 보이지 않는 측정용 글자로 폭을 재서 44+글자폭+16, 측정 전 $width 사용. 디자인·패딩·접힘 애니메이션 유지. 기기 화면 확인 안 함.
+
 ## 2026-11-19 밤 — 대기 중인 검토: Review Order 앱 연동
 
 - 웹 주문상세(웹뷰) 보류(PENDING_ORDER) Review Order → 앱 주문 수정 연동. 가능 판정, 작업은 사용자 지시로 대기. 앱 OrderScreen에 PENDING_ORDER 허용·옵션 단계부터 시작·뒤로가기 조정, 웹 OrderDetailBoxRequest 앱 메시지. 리메이크 제외 권장, DEV 보류 주문 데이터 필요. 상세는 codex-personal-context 프로젝트 파일.
