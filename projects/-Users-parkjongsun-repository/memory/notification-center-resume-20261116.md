@@ -1,3 +1,9 @@
+## 2026-11-19 마감 — DL-17524만 대기
+
+- 나머지 본인 카드 완료, DL-17488·17477은 READY FOR QA(할 일 없음). 웹 PR4903 release/v1.94.0 머지(최신 346741924 포함). Office PR354·Lab PR50 미머지. Office HEAD=PR head=7f43cd45=CodePush 소스, 프로필 파일 무변경.
+- STG 최신: Office 2.2.5 iOS v355 / Android v354, Lab 1.0.6 iOS/Android v71. DEV: Office v152/v152, Lab v49/v48.
+- DL-17524(치과앱 Android Auto-apply 반응 느림): 사용자가 DEV 데이터 세팅 알림 → iOS 시뮬·Android 에뮬 둘 다(사전 허락됨) 측정 → 원인 확정 → 프로필 해당 여부 검토만 → 수정·테스트·보고. 커밋·CodePush는 지시 시. 그전까지 대기.
+
 ## 2026-11-19 밤 — 대기 상태
 
 - Android STG 2.2.5.354에서 유저 크레딧 Auto-apply 토글만 답답(iOS·Android 프로필은 정상). 로직은 프로필과 동일, 차이는 ShadowedView 카드·FlatList 머리·감싼 영역 색 변경. 원인 미확정 → 사용자 DEV 데이터 세팅 후 에뮬레이터 측정(측정 전 확인받기). 사용자가 카드 생성.
