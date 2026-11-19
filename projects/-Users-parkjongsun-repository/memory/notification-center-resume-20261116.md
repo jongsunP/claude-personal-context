@@ -1,6 +1,6 @@
-## 2026-11-19 디자인QA 3건 수정(미커밋)
+## 2026-11-19 디자인QA 3건 수정(푸시 완료·미배포: Office 6a0d1c2c·8209ebec, Web 0c22f659d)
 
-- DL-17496 Payments 문구(Office 앱 2곳+테스트, 웹 공용 설정 문구), DL-17506 크레딧 Learn More 밑줄색, DL-17501 크레딧 화면 당겨서 새로고침 표시를 사용자 당김에만 연결. 모두 feat/DL-16140 작업트리에 있고 커밋·푸시는 사용자 지시 대기.
+- DL-17496 Payments 문구(Office 앱 2곳+테스트, 웹 공용 설정 문구), DL-17506 크레딧 Learn More 밑줄색, DL-17501 크레딧 화면 당겨서 새로고침 표시를 사용자 당김에만 연결. 모두 feat/DL-16140 작업트리에 있고 사용자 지시로 커밋·푸시 완료, 배포·CodePush 없음.
 - DL-17501 원인: 토글 저장 뒤 invalidate로 isRefetching이 RefreshControl에 걸려 iOS 화면이 밀림. 대상은 알림설정이 아니라 User Credits 화면.
 - Office Jest는 `npx jest --config jest.config.js __tests__`로 돌린다(package.json jest 키와 중복). 기존 실패 2건(App 네이티브모듈, useProfileMarketing) 무관.
 - DL-17505 띠배너는 앱 네이티브 배너 vs 웹 오프셋 방향 결정 대기.
