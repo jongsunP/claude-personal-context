@@ -1,3 +1,7 @@
+## 2026-11-19 밤 — DL-17537 탭 랜딩(EXTRA_FEE) 앱 전달
+
+- Lab 116f77f·Office 348b7fe0(feat/DL-16140) 푸시, 미배포. OrderDetailScreen이 딥링크 `tab`을 웹뷰 next(`/orders/{id}?tab=`, 인코딩)에 전달, DentlinkWebView 주문번호 파싱에서 쿼리 제거. 웹 수정 불필요. 랜딩 형식: 웹 `/orders/${orderId}?tab=EXTRA_FEE`, 앱 `dentlink-lab://order/${employerId}/${orderId}?tab=EXTRA_FEE`(기공소만, BE가 환경 스킴).
+
 ## 2026-11-19 밤 — DL-17529 링크톡 플로팅 버튼 폭 가변
 
 - Lab 1d7e826·Office 6ea4e941(feat/DL-16140) 푸시, CodePush 안 함. FloatingActionButton이 보이지 않는 측정용 글자로 폭을 재서 44+글자폭+16, 측정 전 $width 사용. 디자인·패딩·접힘 애니메이션 유지. 기기 화면 확인 안 함.
