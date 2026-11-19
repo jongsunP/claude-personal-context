@@ -1,3 +1,4 @@
+- [앱 검증은 위험에 따라 선택](feedback_app_runtime_risk_based.md) — 11/16 최신: 최초 기능·명시요청·구체 위험 때만 기기검증. 저위험 후속은 tests/static·기존 근거 재사용, 매번 전체검수 금지.
 # Memory Index
 
 ## User
@@ -7,9 +8,14 @@
 - [npm 캐시 권한 문제](user_npm_cache_permission.md) — ~/.npm 일부 root 소유, optional dep 조용한 설치 실패 원인
 
 ## Feedback
+- [앱 신규 스크린 안전영역·배경 필수](feedback_app_safe_area_background.md) — 스크린 추가 때 노치/헤더/본문색·inset·진입/복귀 및 기존 홈/프로필 영향 반드시 챙김; 실행검증은 위험 기반
+- [판단과 지침 예외 협의](feedback_collaborative_decisions.md) — 권장안·짧은 이유·확인할 선택을 설명, 승인된 일반 실행은 재질문 없음. 개별 예외 승인을 일괄 승인으로 확대하지 않음
+- [작업 완료 시 본인 문서 정리](feedback_owned_work_records_closeout.md) — PR 리뷰 기록·본인 Jira·관련 문서를 실제 완료/검증/잔여 상태와 맞춰 선제 정리
+- [브라우저는 인앱·비표시 우선](feedback_browser_visibility_default.md) — 일반 조사·자동화의 외부 창 깜박임 방지. 외부 visible은 사용자 요청/실제 필요 시, CfT 격리와 표시 모드 구분
+- [제품 간 동일 동작 검증](feedback_equivalent_product_behavior.md) — 같은 요구는 웹·양앱을 함께 대조. 저장 입력 차단과 비활성 색상 구분, 최종 영향 플랫폼 검증 없이 완료로 묶지 않음
 - [기록은 양쪽에·동기화/기록 시점](record-to-both-claude-and-codex-context.md) — codex-personal-context와 Claude 메모리 둘 다, 동기화는 세션 시작·재개 시 자동, 기록은 작업 끝날 때 필요한 것
 - [Dentlink 앱 수정 승인 범위](dentlink-app-fix-approval-scope.md) — 조사≠실행, JS만, 네이티브·애매하면 재질문, 리뷰용 PR 불변
-- [앱 작업 지침 재점검(먼저)](app-guidelines-recheck-from-app-dev-review.md) — 다음 앱 작업 전, 앱 개발자 리뷰 기준(models엔 생성 파일만·styled-components·응답 null 검증·공용 로직 QA)으로 지침부터 점검, 미처리
+- [앱 작업 지침 재점검(먼저)](app-guidelines-recheck-from-app-dev-review.md) — 다음 앱 작업 전, 앱 개발자 리뷰 기준(models엔 생성 파일만·styled-components·응답 null 검증·공용 로직 QA)으로 지침 대조·개인 지침·제품 스타일 잔존·최종 검증·리뷰 해결 완료
 - [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
 - [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
 - [Lab i18n 코드만, 시트 불필요](feedback_lab_i18n_no_sheet.md) — 2026-11-11 번역 지침 변경(모든 에이전트): 시트는 그대로, ko/en JSON만 관리, 기존 시트 스크립트는 유지
@@ -24,7 +30,7 @@
 - [개인 설정 기본값](feedback_personal_settings_default.md) — 별도 지정 없으면 모든 설정은 ~/.claude/ 개인 설정에 적용
 - [/welcome 페이지 가드 미추가는 의도된 설계](feedback_welcome_guard.md) — 이미 확인한 사용자의 /welcome 직접 접근을 막지 않는 것은 의도적 결정
 - [경고성 주석 배치 위치](feedback_warning_comment_placement.md) — NOTE 주석은 코드 블록 안이 아니라 함수/파일 상단 독립 위치에
-- [PR 리뷰 resolve 자동 처리](feedback_pr_review_resolve.md) — 리뷰 요청 시 수정·커밋·push·resolve 한 번에 처리
+- [PR 리뷰 안전 대응·resolve](feedback_pr_review_resolve.md) — 실제 요구사항/기존 기능 보존, 최소 수정·호출 흐름 회귀 검증 후 push/resolve. 요청 범위만 재검토, 새 리뷰 없으면 넘어가고 무한 폴링 없이 마감
 - [미완료 작업 선제 고지](feedback_honesty_incomplete.md) — 요청을 완전히 못 했으면 사용자가 묻기 전에 먼저 솔직하게 말한다
 - [브리핑 시 백로그 포함](feedback_briefing_include_backlog.md) — 현황 브리핑 시 즉시 작업 외 백로그(미구현·세팅 대기)도 함께 언급
 - [E2E 빨간색 waitFor 진단 원칙](feedback_e2e_red_highlights.md) — 근본 파악 우선. 시간 단축이 목적 아님. flaky 위험 생기면 대명제 위반
@@ -39,16 +45,31 @@
 - [커밋·푸쉬 명시적 요청 시에만](feedback_commit_push_explicit_only.md) — 코드 수정 후 커밋·푸쉬는 자동 실행 금지, 명시적 지시 필요
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
 - [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 타겟은 배포 예정 release
-- [노션 문서 응답 형식](feedback_notion_format.md) — 마크다운 코드블록 하나에 전체 내용, 중간 설명 없이 한 번에 복사 가능하게
+- [공유 문서 간결함·한 번에 복사·노션 위치](feedback_notion_format.md) — 상세 요청 전에는 짧고 쉽게; 노션은 직접 저장, 사용자 게시용 댓글·슬랙 등은 전체 완성본 코드블록 하나; 개발 자료 기본 DEV Team/Development Documents + 기존 태그
+- [설정 깜박임·반응성 함께 검증](feedback_inline_settings_responsiveness.md) — 일반 설정 즉시 표시·성공 유지·실패 복구, 최소 중복 가드, 동등 제품 최종 화면 함께 검증
 - [기존 코드·컨텍스트 기반 선제 추론](feedback_infer_from_context.md) — 확인/수정 시 기존 패턴·세트 파일을 먼저 보고 일관성 있게 처리 (사용자 지적 전에)
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
 
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
+- [11/16 로컬 브랜치·worktree 정리](project_local_cleanup_20261116.md) — 28브랜치·4worktree 정리 완료, 진행 세션 소유/현재 릴리즈/Lab 근거 부족4개 보존
+- [DLDS 준비용 워크트리 보관 판단](project_dlds_worktree_retention.md) — 11/16 사용자 승인으로 빈 준비용 사본 삭제 완료. 필요 시 최신 master에서 재준비, Studio/PR62/복구 백업 보존
+- [알림센터 11/16 현황](notification-center-resume-20261116.md) — Webf6e1a86dc/Officef71ad0b0/Lab2f4c4f0. 치과 리뷰6건+후속2건 처리/마지막미해결0, Draft이후리뷰영향10suite190tests·푸시. 기존PR유지·미배포. 사용자요청으로무한대응없이마감·폴링종료. 새설정디자인별도.
+- [알림 설정 즉시 표시·개발 전달 완료](notification-settings-immediate-20261113.md) — 11/13 로컬확인후 웹DEVPR4891→develop7c8eef28c 배포시작, Officev147both/LabiOSv46·Androidv45 게시·활성. PR유지/Jira댓글·공통지침·기록완료. 후속4구현실DEV저장/원복으로첫GET구값→두번째반영값확인,저장확인GET유지·추가수정없음. 사용자실기기QA결과대기. 후속 웹문구/스타일 a67e1e215 푸시·미배포; 1.93 후 Office 자체주문상세 랜딩 DL-17436 ToDo(기공소제외). 번역시트/사용처 동기화는11/11부터중단,코드ko/en만관리·검증.
+- [알림센터 최신 보완·앱 전달](notification-center-parity-20261113.md) — 직전 배포 이력: 11/13 16시 Web b6cffe2f8→DEV b8ce6c6ae 시작, Office v146/v146·Lab v45/v44 게시. 저장 깜박임·동등 흐름·조회 중복 수정/양OS 검증. 새 Amplitude 없음. iOS 아이콘 실행 배너는 기존탭방지와 다른 미확정 제보. 기존PR 유지·지침/기록 후 대기
+- [알림센터 최신 개발 QA 기준](notification-center-redeploy-20261113.md) — 11/13 명시 승인 후 DEV PR4888→develop f9d5fde66 양 웹 배포 시작만 확인. Office v145/v145(2.2.4), Lab v44/v43(1.0.5) 게시·활성, 기존 PR 유지. 이전 미배포 후속 포함. 실제 웹 결과/기기 적용·QA는 사용자 확인. 본인 Jira17058/17059/17060/17425 최신 전달 댓글 정리·개발완료 유지, 사용자 제보까지 자동 추적 없이 대기.
+- [알림센터 DL-17425 이벤트·문구](notification-analytics-20261113.md) — 11/13 Web2484bd91a/Office0b19ce6/Labc31f311 커밋·푸시·기존PR유지·미배포. 웹/양앱 클릭·조회·설정 분석, Lab배너/선택소제목 확정 반영. 브라우저/양OS 최종SDK경계 검증, DL17425개발완료. 사용자 해석: 분석문서는 개발API와 엄격일치 불필요, 가능한 의도대로 구현. 다음 요청까지 대기.
+- [해외 사용자 포털 API 실패 조사](project_overseas_api_access_investigation.md) — 11/13 조사 전용 세션 인계. 원인·FE/인프라 대응·관측 대안 분석, 개발/실제 조치 없음
+- [DL-17208 치과 마케팅 수신 동의](project_dl17208_email_marketing_consent.md) — 11/13 웹·Office 공통 세션 인계. 디자인/API 확인 후 확정 범위 진행, 앱 Profile 알림센터 접점 보존
+- [알림센터 11/13 DEV 배포·후속 수정](notification-center-dev-delivery-20261113.md) — 웹06f519aa6 양 DEV 성공, Officev144/LabiOSv43·Androidv42 게시. 이후 Webe34325468/Office3fe716a/Labcc41f03 디자인·저장 깜박임 수정은 push·미배포. 실제 DEV 기능/설정 원복·앱 양OS 검증 완료, Lab 문구/BE44994·45009/실기기·실푸시 후속. 사용자 재배포 지시까지 대기. 사용자 실기기 확인 인계·미확인 체크리스트 저장; 한계 반복 안내 없이 추가 요청까지 대기.
+- [알림센터 FE 보완·리뷰 감사 이력](notification-settings-live-review-20261112.md) — 11/12~13 배포 이전 감사 이력. 최신 결과는 위 11/13 정본. 밀링 담당범위 제외, 다음주1.93→master후수용; 본체2주뒤1.94.
+- [알림센터 DEV 전달·마감](notification-center-dev-delivery-20261112.md) — 웹develop e72bbafbee 배포시작, Officev143/LabiOSv42·Androidv41, 기존PR유지·후속Jira6건·임시폴더충돌복구
+- [알림센터 전체 규약·요구사항 검토](notification-center-convention-review-20261112.md) — 배포 승인 전 감사/최종 웹·양OS 검증 증거; 이후 DEV 전달은 위 마감 기록
+- [알림센터 Codex 재개 동기화](notification-center-codex-resume-sync-20261112.md) — 19시대 동기화 이력; 이후 제품 후속 완료 상태는 위 전체 검토 기록
 - [테스트 계정·env 토큰 규칙](feedback_test_credentials.md) — env 개인 토큰 금지, 개발 계정은 키체인 codex.dentlink.development.* 에 저장해 재사용
 - [Dentlink FE 메인세션](project_main_session.md) — 에이전트별 메인 1개(11-12 확정), 사무실 Claude ~/Repository·집 Claude ~/repository, 하위 세션은 feat 브랜치·모델 상속
-- [통합알림센터 상태](dentlink-notification-center-status-20261110.md) — 11-12 설정 이전·리뷰 대응 세 브랜치 push 완료, 남은 건 리뷰 resolve·화면 재확인·BE 키
+- [통합알림센터 상태](dentlink-notification-center-status-20261110.md) — 과거 배포/설정 이전 이력; 11-12 최종 후속은 위 전체 검토 기록
 - [알림 설정 렌더·매핑](dentlink-notification-settings-render-audit-20261110.md) — 옛 {view, setting} 응답 기준 조사·매핑(11-12 API 변경으로 참고용)
 - [집 Mac 작업환경 맞춤 현황](project_local_repo_setup.md) — 2026-11-11 세팅 완료·마감(저장소·도구·env·worktree·iOS/Android 앱·테스트 로그인·키체인), 실행 환경은 사용자가 종료
 - [DL-16317 권한관리 현황](project_dl16317_permission_progress.md) — PR #4700 (→release/v1.89.0), Claude가 Codex 작업 인수·CodeRabbit 3건 처리(55ad768d5). Office 앱 미커밋 변경 소유권 미확인
