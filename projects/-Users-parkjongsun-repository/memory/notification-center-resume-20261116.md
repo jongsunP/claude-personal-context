@@ -1,3 +1,9 @@
+## 2026-11-19 밤 — 브레이크포인트(현재 상태)
+
+- 치과 348b7fe0: STG iOS v356/Android v355, DEV v153/v153. 기공소 116f77f: STG v72/v72, DEV iOS v50/Android v49. 웹은 PR4903 머지본 배포 완료, 이후 변경 없음.
+- PR #354·#50 본문에 11/19 카드(치과 17496·17501·17506·17521·17524·17529·17537, 기공소 17529·17537) 반영. PR 미머지.
+- 다음(사용자 재개 지시 대기): DL-17535 Review Order 앱 연동 → DL-17533 결제 내역 화면(범위 정의부터).
+
 ## 2026-11-19 밤 — DL-17537 탭 랜딩(EXTRA_FEE) 앱 전달
 
 - Lab 116f77f·Office 348b7fe0(feat/DL-16140) 푸시, 미배포. OrderDetailScreen이 딥링크 `tab`을 웹뷰 next(`/orders/{id}?tab=`, 인코딩)에 전달, DentlinkWebView 주문번호 파싱에서 쿼리 제거. 웹 수정 불필요. 랜딩 형식: 웹 `/orders/${orderId}?tab=EXTRA_FEE`, 앱 `dentlink-lab://order/${employerId}/${orderId}?tab=EXTRA_FEE`(기공소만, BE가 환경 스킴).
