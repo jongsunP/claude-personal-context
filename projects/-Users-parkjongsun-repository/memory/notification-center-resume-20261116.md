@@ -1,3 +1,7 @@
+## 2026-11-19 밤 — 대기 중인 검토: Review Order 앱 연동
+
+- 웹 주문상세(웹뷰) 보류(PENDING_ORDER) Review Order → 앱 주문 수정 연동. 가능 판정, 작업은 사용자 지시로 대기. 앱 OrderScreen에 PENDING_ORDER 허용·옵션 단계부터 시작·뒤로가기 조정, 웹 OrderDetailBoxRequest 앱 메시지. 리메이크 제외 권장, DEV 보류 주문 데이터 필요. 상세는 codex-personal-context 프로젝트 파일.
+
 ## 2026-11-19 밤 — DL-17524 수정 푸시(Office 93b36b6a·6967366d, CodePush 안 함 — 사용자가 커밋·푸시까지만 지시, 스테이징 v355/v354 그대로 확인)
 
 - 원인: 저장 직후 확인 GET이 가끔 이전 값 → 캐시 덮어써 되돌아감(에뮬 로그로 확인). My Only는 목록 재렌더 중 `!value` 갱신 전 값. 첫 터치 씹힘 후보는 24dp 높이·hitSlop 없음(실기기 확인 필요).
