@@ -49,6 +49,7 @@
 - [의도적 제외 결정은 반드시 기록](feedback_intentional_exclusion.md) — 범위 제외·예외 처리 판단은 메모리나 주석에 근거 남기기
 - [PR 생성 시 /pr-create 스킬 필수](feedback_pr_create_skill.md) — PR 생성 요청 시 항상 /pr-create 스킬·템플릿 사용, 타겟은 배포 예정 release
 - [공유 문서 간결함·한 번에 복사·노션 위치](feedback_notion_format.md) — 상세 요청 전에는 짧고 쉽게; 노션은 직접 저장, 사용자 게시용 댓글·슬랙 등은 전체 완성본 코드블록 하나; 개발 자료 기본 DEV Team/Development Documents + 기존 태그
+- [앱 서버 저장 토글 체크리스트](feedback_app_server_toggle_pattern.md) — Switch는 정상, 즉시 표시·마지막 선택·확인 GET 재확인·작은 컴포넌트 분리·hitSlop·양OS 연속탭 확인
 - [설정 깜박임·반응성 함께 검증](feedback_inline_settings_responsiveness.md) — 일반 설정 즉시 표시·성공 유지·실패 복구, 최소 중복 가드, 동등 제품 최종 화면 함께 검증
 - [기존 코드·컨텍스트 기반 선제 추론](feedback_infer_from_context.md) — 확인/수정 시 기존 패턴·세트 파일을 먼저 보고 일관성 있게 처리 (사용자 지적 전에)
 - [워크트리 고아 폴더 판단 기준](feedback_worktree_orphan_check.md) — git worktree list 미등록 + .git 파일 존재 둘 다 확인 후 결론
