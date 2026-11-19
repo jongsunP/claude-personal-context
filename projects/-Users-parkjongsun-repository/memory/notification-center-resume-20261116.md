@@ -3,6 +3,7 @@
 - QA feat/DL-16140(PR 유지). Office 8209ebec: STG iOS v353/Android v352, DEV v150/v150. Lab bbf1d96: STG v71/v71, DEV iOS v49/Android v48. 전부 활성·mandatory·100%. 웹은 사용자가 배포.
 - CodePush 스크립트는 변경사항 입력에 TTY 필요 → expect로 `node scripts/codepush.js <env> all --mute` 실행.
 - 디자인 QA 4건 코드 완료(17496/17501/17505/17506). 다음은 사용자 QA 결과 대기, 폴링 없음.
+- Jira: 본인 카드 17488/17496/17501/17506/17507 → 사용자가 READY FOR QA 이동, 17505는 웹 배포 후. 17470/17477 기존 READY FOR QA. 미작업 없음, 사용자 다음 요청까지 대기.
 
 ## 2026-11-19 디자인QA 3건 수정(푸시 완료·미배포: Office 6a0d1c2c·8209ebec, Web 0c22f659d)
 
