@@ -1,6 +1,6 @@
 ## 2026-11-19 후속 — DL-17521·DL-17501 2차 (Office만, 푸시·미배포)
 
-- 기존 PR 브랜치 feat/DL-16140(PR354 미머지)에 이어서 작업. Office ab89cdee(청구서 목록 헤더 Billing Statements), dcfe7aa3(유저 크레딧 Auto-apply 스위치 animateOnMount=false·저장 중 disabled 제거). 웹·Lab 변경 없음(해당 화면 없음). 연속 탭 최신값 저장은 미적용. 배포 안 함.
+- 기존 PR 브랜치 feat/DL-16140(PR354 미머지)에 이어서 작업. Office ab89cdee(청구서 목록 헤더 Billing Statements), dcfe7aa3(유저 크레딧 Auto-apply 스위치 animateOnMount=false·저장 중 disabled 제거). 웹·Lab 변경 없음(해당 화면 없음). 연속 탭 최신값 저장은 미적용. 이후 사용자 지시로 Office STG iOS v354/Android v353, DEV v151/v151 CodePush(활성 확인). Lab·웹 조치 없음. 사용자 QA 대기.
 
 ## 2026-11-19 마감 — 양앱 STG·DEV CodePush, 사용자 QA 대기
 
