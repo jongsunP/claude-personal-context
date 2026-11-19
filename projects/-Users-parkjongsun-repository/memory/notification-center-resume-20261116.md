@@ -1,3 +1,8 @@
+## 2026-11-19 밤 — DL-17524 수정 완료(미커밋)
+
+- 원인: 저장 직후 확인 GET이 가끔 이전 값 → 캐시 덮어써 되돌아감(에뮬 로그로 확인). My Only는 목록 재렌더 중 `!value` 갱신 전 값. 첫 터치 씹힘 후보는 24dp 높이·hitSlop 없음(실기기 확인 필요).
+- 수정: 확인 GET 다르면 0/200/500/1000ms 재확인(알림 설정 방식), Auto-apply·My Orders Only·My Patients Only hitSlop 10, My Only 마지막 선택 기준. 프로필 무변경. 에뮬·시뮬·테스트 확인, 커밋·CodePush는 지시 대기.
+
 ## 2026-11-19 마감 — DL-17524만 대기
 
 - 나머지 본인 카드 완료, DL-17488·17477은 READY FOR QA(할 일 없음). 웹 PR4903 release/v1.94.0 머지(최신 346741924 포함). Office PR354·Lab PR50 미머지. Office HEAD=PR head=7f43cd45=CodePush 소스, 프로필 파일 무변경.
