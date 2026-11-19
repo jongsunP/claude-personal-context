@@ -14,6 +14,7 @@
 - [브라우저는 인앱·비표시 우선](feedback_browser_visibility_default.md) — 일반 조사·자동화의 외부 창 깜박임 방지. 외부 visible은 사용자 요청/실제 필요 시, CfT 격리와 표시 모드 구분
 - [제품 간 동일 동작 검증](feedback_equivalent_product_behavior.md) — 같은 요구는 웹·양앱을 함께 대조. 저장 입력 차단과 비활성 색상 구분, 최종 영향 플랫폼 검증 없이 완료로 묶지 않음
 - [기록은 양쪽에·동기화/기록 시점](record-to-both-claude-and-codex-context.md) — codex-personal-context와 Claude 메모리 둘 다, 동기화는 세션 시작·재개 시 자동, 기록은 작업 끝날 때 필요한 것
+- [시뮬·에뮬 실행 전 확인](feedback_ask_before_device_runs.md) — 띄우기 전에 묻고 그 환경 데이터 유무부터 확인, 아니면 실기기 CodePush 후 사용자 QA
 - [방향 근거는 확인한 범위만](feedback_no_guessing_on_direction.md) — 선례·약속을 일부 사례로 일반화하거나 추정을 사실처럼 말하지 않음
 - [앱은 심사 필요 변경만 알림](feedback_app_store_review_only.md) — CodePush 시차·옛 앱 버전 언급·대비 금지, 네이티브(심사) 필요할 때만 알림
 - [Dentlink 앱 수정 승인 범위](dentlink-app-fix-approval-scope.md) — 조사≠실행, JS만, 네이티브·애매하면 재질문, 리뷰용 PR 불변

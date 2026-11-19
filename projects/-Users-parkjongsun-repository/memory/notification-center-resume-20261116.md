@@ -1,3 +1,7 @@
+## 2026-11-19 저녁 — DL-17501 3차 Office 7f43cd45 푸시(미배포)
+
+- 유저 크레딧 Auto-apply 토글을 프로필 방식(즉시 표시·마지막 선택 순차 저장·토글 영역 분리·마지막 선택 기준 계산)으로 수정, feat/DL-16140에 push. CodePush는 아직 안 함(사용자 지시 대기). 사용자가 실기기에서 확인 예정.
+
 ## 2026-11-19 후속 — DL-17521·DL-17501 2차 (Office만, 푸시·미배포)
 
 - 기존 PR 브랜치 feat/DL-16140(PR354 미머지)에 이어서 작업. Office ab89cdee(청구서 목록 헤더 Billing Statements), dcfe7aa3(유저 크레딧 Auto-apply 스위치 animateOnMount=false·저장 중 disabled 제거). 웹·Lab 변경 없음(해당 화면 없음). 연속 탭 최신값 저장은 미적용. 이후 사용자 지시로 Office STG iOS v354/Android v353, DEV v151/v151 CodePush(활성 확인). Lab·웹 조치 없음. 사용자 QA 대기.
