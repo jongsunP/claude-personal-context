@@ -1,3 +1,9 @@
+## 2026-11-19 마감 — 양앱 STG·DEV CodePush, 사용자 QA 대기
+
+- QA feat/DL-16140(PR 유지). Office 8209ebec: STG iOS v353/Android v352, DEV v150/v150. Lab bbf1d96: STG v71/v71, DEV iOS v49/Android v48. 전부 활성·mandatory·100%. 웹은 사용자가 배포.
+- CodePush 스크립트는 변경사항 입력에 TTY 필요 → expect로 `node scripts/codepush.js <env> all --mute` 실행.
+- 디자인 QA 4건 코드 완료(17496/17501/17505/17506). 다음은 사용자 QA 결과 대기, 폴링 없음.
+
 ## 2026-11-19 디자인QA 3건 수정(푸시 완료·미배포: Office 6a0d1c2c·8209ebec, Web 0c22f659d)
 
 - DL-17496 Payments 문구(Office 앱 2곳+테스트, 웹 공용 설정 문구), DL-17506 크레딧 Learn More 밑줄색, DL-17501 크레딧 화면 당겨서 새로고침 표시를 사용자 당김에만 연결. 모두 feat/DL-16140 작업트리에 있고 사용자 지시로 커밋·푸시 완료, 배포·CodePush 없음.
