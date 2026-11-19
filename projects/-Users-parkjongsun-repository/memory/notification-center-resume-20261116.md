@@ -2,6 +2,8 @@
 
 - 나머지 본인 카드 완료, DL-17488·17477은 READY FOR QA(할 일 없음). 웹 PR4903 release/v1.94.0 머지(최신 346741924 포함). Office PR354·Lab PR50 미머지. Office HEAD=PR head=7f43cd45=CodePush 소스, 프로필 파일 무변경.
 - STG 최신: Office 2.2.5 iOS v355 / Android v354, Lab 1.0.6 iOS/Android v71. DEV: Office v152/v152, Lab v49/v48.
+- DL-17524 실기기(STG) 증상: iOS v355는 모두 정상. Android v354 — Auto-apply: 첫 터치부터 씹힘·연속 시 돌아갔다 옴. 주문목록 My ~ Only(OrderSearchForm)·환자목록 My Patients Only(OrderPatientListSection): 첫 터치 괜찮고 연속 터치 시 더 버벅임. 프로필 정상(기준). 측정 시 토글별로 ①터치가 Switch에 도달하는지 ②도달 후 반영 시간 분리. 가설(미확인): My Only는 목록 재렌더 중 갱신 전 값으로 `!value` 계산, Auto-apply 첫 터치는 입력 전달 문제(ShadowedView·FlatList 머리·옆 설명 버튼·hitSlop 없음).
+- 아직 DEV 데이터 세팅 안 됨(사용자 확인 11/19).
 - DL-17524(치과앱 Android Auto-apply 반응 느림): 사용자가 DEV 데이터 세팅 알림 → iOS 시뮬·Android 에뮬 둘 다(사전 허락됨) 측정 → 원인 확정 → 프로필 해당 여부 검토만 → 수정·테스트·보고. 커밋·CodePush는 지시 시. 그전까지 대기.
 
 ## 2026-11-19 밤 — 대기 상태
