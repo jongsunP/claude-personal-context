@@ -1,4 +1,10 @@
-## 2026-11-20 — DL-17545·17541·17556 구현·CodePush·PR 본문 갱신 (현재 상태)
+## 2026-11-20 — DL-17542 보완·리뷰 반영·웹 PR #4927 (현재 상태, 이번 분 미배포)
+
+- 모두 읽음 낙관적 업데이트: 치과 fbead3ea, 기공소 d485f19, 웹 feat/DL-17542 → PR #4927(release/v1.94.0). Jira Ready for Deploy.
+- PR #354 CodeRabbit 4건 반영·resolve(4a821c24), 기공소 동일 코드 fc18c7d. head: 치과 4a821c24, 기공소 fc18c7d.
+- 이번 분 CodePush·웹 배포는 지시 대기.
+
+## 2026-11-20 — DL-17545·17541·17556 구현·CodePush·PR 본문 갱신
 
 - CodePush STG·DEV: 치과 STG iOS v357·Android v356, DEV v154/v154 / 기공소 STG v73/v73, DEV iOS v51·Android v50. PR #354·#50 본문 갱신, 미머지. 실기기 확인은 사용자가 직접. 이후 대기.
 
