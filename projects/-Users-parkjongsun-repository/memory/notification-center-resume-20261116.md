@@ -1,3 +1,9 @@
+## 2026-11-20 — 웹 PR #4927 머지, 이후 STG만 (현재 상태)
+
+- 웹 PR #4927 머지, 웹 STG(release/v1.94.0)는 사용자 직접. 이후 웹·앱 DEV 무시, STG만([[feedback_notification_center_stg_only]]).
+- 카드: DL-17545 완료, DL-17541·17542·17556 READY FOR QA.
+- DL-17535·DL-17533·DL-17469는 사용자가 의도적으로 하지 않은 것(남은 일로 올리지 않음, 지시 시에만).
+
 ## 2026-11-20 — 양앱 PR 머지·release STG 배포 (현재 상태)
 
 - 사용자 머지: 치과 PR #354→release/v2.2.5(c3cea104), 기공소 PR #50→release/v1.0.6(62b6d9f). release에서 STG만 CodePush: 치과 iOS v358·Android v357, 기공소 v74/v74. DEV 미배포(이번 분 미포함). 로컬은 feat/DL-16140 복귀(내용 동일). 웹 PR #4927 미머지.
