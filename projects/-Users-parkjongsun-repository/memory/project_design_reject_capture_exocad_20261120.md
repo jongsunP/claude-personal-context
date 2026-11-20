@@ -1,9 +1,11 @@
 ---
 name: project-design-reject-capture-exocad-20261120
-description: 웹 디자인 컨펌 Reject→Capture & annotate에서 exocad HTML 모델이 빠지는 제보 원인 확정(11/20), 수정은 사용자 승인 대기
+description: 웹 디자인 컨펌 Reject→Capture & annotate exocad 모델 누락(Firefox) 조사·노션 공유 마감(11/20), 다음 진행은 사용자 팀 회의 결정 대기
 metadata:
   type: project
 ---
+
+**현재 상태(11/20 마감):** 조사·재현·노션 공유 완료. 코드 수정·커밋·배포 없음. 다음 진행은 사용자가 팀 회의 후 결정해 지시할 때까지 대기(먼저 진행하거나 추적하지 않음).
 
 2026-11-20 Slack 제보(New York DMD Sandra Low, Thomas→Tom→Frankie) 조사. 단독 세션 "디자인 reject Capture&annotate exocad 화면 오류 조사"(메인에서 분리).
 
