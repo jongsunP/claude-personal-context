@@ -1,7 +1,9 @@
-## 2026-11-20 — DL-17545·17541·17556 구현 커밋·푸시, DL-17542 정리 (현재 상태, 미배포)
+## 2026-11-20 — DL-17545·17541·17556 구현·CodePush·PR 본문 갱신 (현재 상태)
+
+- CodePush STG·DEV: 치과 STG iOS v357·Android v356, DEV v154/v154 / 기공소 STG v73/v73, DEV iOS v51·Android v50. PR #354·#50 본문 갱신, 미머지. 실기기 확인은 사용자가 직접. 이후 대기.
 
 - 치과 PR354 head cf078f94(a390a0e0 홈 헤더 고정, 0deb3d87 실패 토스트 1.5초 뒤 재확인, cf078f94 시트 85%), 기공소 PR50 head f7cf609(e9b4655 홈 헤더, f7cf609 시트 85%). 공용 BOTTOM_SHEET_MAX_HEIGHT_RATIO=0.85.
-- 검증: lint 0, tsc 기존만, 관련 테스트 통과. 기존 실패(치과 useProfileMarketing·App.test, 기공소 App.test) 무관. 기기 확인·CodePush·PR 본문 갱신 안 함.
+- 검증: lint 0, tsc 기존만, 관련 테스트 통과. 기존 실패(치과 useProfileMarketing·App.test, 기공소 App.test) 무관. 에이전트 기기 확인 안 함.
 - DL-17542 Jira 댓글로 정리(코드 수정 없음).
 
 ## 2026-11-20 — DL-17556 병원 선택 시트 배경 터치 안 됨: 검토 완료, 구현 대기
