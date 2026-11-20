@@ -1,3 +1,7 @@
+## 2026-11-20 — 양앱 PR 머지·release STG 배포 (현재 상태)
+
+- 사용자 머지: 치과 PR #354→release/v2.2.5(c3cea104), 기공소 PR #50→release/v1.0.6(62b6d9f). release에서 STG만 CodePush: 치과 iOS v358·Android v357, 기공소 v74/v74. DEV 미배포(이번 분 미포함). 로컬은 feat/DL-16140 복귀(내용 동일). 웹 PR #4927 미머지.
+
 ## 2026-11-20 — DL-17542 보완·리뷰 반영·웹 PR #4927 (현재 상태, 이번 분 미배포)
 
 - 모두 읽음 낙관적 업데이트: 치과 fbead3ea, 기공소 d485f19, 웹 feat/DL-17542 → PR #4927(release/v1.94.0). Jira Ready for Deploy.
