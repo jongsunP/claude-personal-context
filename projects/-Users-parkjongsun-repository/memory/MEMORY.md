@@ -22,7 +22,7 @@
 - [앱 작업 지침 재점검(먼저)](app-guidelines-recheck-from-app-dev-review.md) — 다음 앱 작업 전, 앱 개발자 리뷰 기준(models엔 생성 파일만·styled-components·응답 null 검증·공용 로직 QA)으로 지침 대조·개인 지침·제품 스타일 잔존·최종 검증·리뷰 해결 완료
 - [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
 - [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
-- [Lab i18n JSON만, 시트 운영 중단](feedback_lab_i18n_no_sheet.md) — 11-20 확정: 시트·generate/check/audit 미사용, 기존 ko/en JSON이 정본. generate:i18n 실행 금지(2,086 key 삭제). 시트 연동 제거 PR #4928(→release/v1.94.0) 리뷰 대기
+- [Lab i18n JSON만, 시트 운영 중단](feedback_lab_i18n_no_sheet.md) — 11-20 확정: 시트·generate/check/audit 미사용, 기존 ko/en JSON이 정본. generate:i18n 실행 금지(2,086 key 삭제). 시트 연동 제거 PR #4928 release/v1.94.0 머지·정리 완료
 - [env 팀 규칙](feedback_env_team_rule.md) — 에이전트는 실제 .env를 읽기·생성·수정 금지, Git 이력·GitHub Variables로 값 복원 금지(dentlink-client CLAUDE.md)
 - [시뮬·에뮬은 클로드 앱 밖](feedback_devices_outside_claude_app.md) — 인앱 시뮬 패널 대신 DeviceHub(Xcode 27.2)·터미널 창 .command로 에뮬·Metro
 - [실행 탭 안내·보고 범위](feedback_running_services_and_report_scope.md) — 계속 켜 둘 탭과 닫아도 될 탭을 구분해 안내, 사무실 Mac 미커밋은 보고에서 제외
