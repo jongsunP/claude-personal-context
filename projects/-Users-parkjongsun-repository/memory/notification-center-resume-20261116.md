@@ -1,3 +1,8 @@
+## 2026-11-20 — DL-17556 병원 선택 시트 배경 터치 안 됨: 검토 완료, 구현 대기
+
+- 원인: DL-17059에서 시트 최대 높이를 height-topInset로 키움(iPhone 12 mini·병원 많음에서 거의 전체 덮음). 배경 터치 막는 코드 없음.
+- 사용자 결정: 최대 높이 지정 시트만 80%로 통일(DesignConfirmVersionDropdown "최대 80%" 주석 근거) — 치과 EmployeeSelectBottomSheet·NotificationOfficeSelectSheet, 기공소 NotificationLabSelectSheet. 고정 snap 시트(쉐이드 가이드 80/100% 유지)·밀링 제외. 기공소 HomeProfile 85% 포함 여부 확인 대기.
+
 ## 2026-11-20 — DL-17541·17542 검토 완료, 작업은 재개 지시 때(현재 대기)
 
 - DL-17542(앱, Read All 후 Unread 탭 숫자 늦게 갱신): 치과·기공소·웹 모두 readAll 성공 후 목록·unread count를 서버에서 함께 재조회, count를 따로 보관·덮어쓰는 곳 없음 → 앱 코드 동기화 문제 없음. 후보는 BE count 반영 지연(DEV API 미확인). 사용자 방향: 코드 문제 없으면 정리만.
