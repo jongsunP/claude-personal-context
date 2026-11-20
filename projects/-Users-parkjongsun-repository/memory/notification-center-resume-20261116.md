@@ -2,7 +2,7 @@
 
 - 웹 PR #4927 머지, 웹 STG(release/v1.94.0)는 사용자 직접. 이후 웹·앱 DEV 무시, STG만([[feedback_notification_center_stg_only]]).
 - 사용자 지시로 앱만 release DEV CodePush: 치과 v155/v155, 기공소 iOS v52·Android v51.
-- 카드: DL-17545 완료, DL-17541·17542·17556 READY FOR QA.
+- 카드(최종 Jira): DL-17545·17556 완료, DL-17541·17542 READY FOR QA(사용자 댓글로 재발 시 재검토).
 - DL-17535·DL-17533·DL-17469는 사용자가 의도적으로 하지 않은 것(남은 일로 올리지 않음, 지시 시에만).
 
 ## 2026-11-20 — 양앱 PR 머지·release STG 배포 (현재 상태)
