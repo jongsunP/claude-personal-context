@@ -1,7 +1,8 @@
 ## 2026-11-20 — DL-17542 보완·리뷰 반영·웹 PR #4927 (현재 상태, 이번 분 미배포)
 
 - 모두 읽음 낙관적 업데이트: 치과 fbead3ea, 기공소 d485f19, 웹 feat/DL-17542 → PR #4927(release/v1.94.0). Jira Ready for Deploy.
-- PR #354 CodeRabbit 4건 반영·resolve(4a821c24), 기공소 동일 코드 fc18c7d. head: 치과 4a821c24, 기공소 fc18c7d.
+- PR #354 CodeRabbit 4건 반영·resolve(4a821c24), 기공소 동일 코드 fc18c7d. 
+- 웹 PR #4927 리뷰 2건(진행 중 갱신의 unread 제외, 이전 값 없는 실패 재조회) 세 곳 반영·resolve. head: 치과 30631824, 기공소 b54cd7e, 웹 21b4dc33c. E2E는 넘어가고 결과 폴링 금지(사용자).
 - 이번 분 CodePush·웹 배포는 지시 대기.
 
 ## 2026-11-20 — DL-17545·17541·17556 구현·CodePush·PR 본문 갱신
