@@ -62,7 +62,7 @@
 - [11/16 로컬 브랜치·worktree 정리](project_local_cleanup_20261116.md) — 28브랜치·4worktree 정리 완료, 진행 세션 소유/현재 릴리즈/Lab 근거 부족4개 보존
 - [DLDS 준비용 워크트리 보관 판단](project_dlds_worktree_retention.md) — 11/16 사용자 승인으로 빈 준비용 사본 삭제 완료. 필요 시 최신 master에서 재준비, Studio/PR62/복구 백업 보존
 - [디자인 Reject 캡처 exocad 원인(11/20)](project_design_reject_capture_exocad_20261120.md) — Firefox에서 HTML 복제 캡처가 WebGL 모델 누락, Chrome은 화면공유로 정상. 노션 공유 완료, 방향은 팀 회의 후
-- [알림센터 현황(11/20 STG만)](notification-center-resume-20261116.md) — 양앱·웹 머지 완료, STG 배포(치과 v358/v357·기공소 v74/v74, 웹은 사용자). DL-17541·17542·17556 READY FOR QA. DL-17535·17533·17469는 의도적 보류
+- [알림센터 현황(11/20 마감)](notification-center-resume-20261116.md) — 양앱·웹 release 머지, 앱 STG·DEV 배포, FE 할 일 없음. DL-17541·17542 QA 대기(재발 시만), DL-17535·17533·17469 의도적 보류. 대기
 - [알림 설정 즉시 표시·개발 전달 완료](notification-settings-immediate-20261113.md) — 11/13 로컬확인후 웹DEVPR4891→develop7c8eef28c 배포시작, Officev147both/LabiOSv46·Androidv45 게시·활성. PR유지/Jira댓글·공통지침·기록완료. 후속4구현실DEV저장/원복으로첫GET구값→두번째반영값확인,저장확인GET유지·추가수정없음. 사용자실기기QA결과대기. 후속 웹문구/스타일 a67e1e215 푸시·미배포; 1.93 후 Office 자체주문상세 랜딩 DL-17436 ToDo(기공소제외). 번역시트/사용처 동기화는11/11부터중단,코드ko/en만관리·검증.
 - [알림센터 최신 보완·앱 전달](notification-center-parity-20261113.md) — 직전 배포 이력: 11/13 16시 Web b6cffe2f8→DEV b8ce6c6ae 시작, Office v146/v146·Lab v45/v44 게시. 저장 깜박임·동등 흐름·조회 중복 수정/양OS 검증. 새 Amplitude 없음. iOS 아이콘 실행 배너는 기존탭방지와 다른 미확정 제보. 기존PR 유지·지침/기록 후 대기
 - [알림센터 최신 개발 QA 기준](notification-center-redeploy-20261113.md) — 11/13 명시 승인 후 DEV PR4888→develop f9d5fde66 양 웹 배포 시작만 확인. Office v145/v145(2.2.4), Lab v44/v43(1.0.5) 게시·활성, 기존 PR 유지. 이전 미배포 후속 포함. 실제 웹 결과/기기 적용·QA는 사용자 확인. 본인 Jira17058/17059/17060/17425 최신 전달 댓글 정리·개발완료 유지, 사용자 제보까지 자동 추적 없이 대기.

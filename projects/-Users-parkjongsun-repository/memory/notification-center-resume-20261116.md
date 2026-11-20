@@ -1,3 +1,9 @@
+## 2026-11-20 마감 — FE 할 일 없음, 대기 (최신)
+
+- 머지: 치과 #354→release/v2.2.5, 기공소 #50→release/v1.0.6, 웹 #4927→release/v1.94.0. 앱 STG 치과 v358/v357·기공소 v74/v74, DEV 치과 v155/v155·기공소 v52/v51, 웹 STG는 사용자.
+- Jira: DL-17545·17556 완료, DL-17541·17542 READY FOR QA(재발 시만, 내 일 아님), DL-17535·17533·17469 의도적 보류. 최종 확인 이상 없음.
+- 이후 STG만([[feedback_notification_center_stg_only]]). 다음 지시까지 대기.
+
 ## 2026-11-20 — 웹 PR #4927 머지, 이후 STG만 (현재 상태)
 
 - 웹 PR #4927 머지, 웹 STG(release/v1.94.0)는 사용자 직접. 이후 웹·앱 DEV 무시, STG만([[feedback_notification_center_stg_only]]).
