@@ -31,4 +31,6 @@ pull 후 변경사항이 있으면 "메모리 동기화 완료 (N개 파일 업�
 - 에이전트(사무실/집 × Codex/Claude Code, 이후 추가분)마다 메인세션은 하나이고 각자 따로 운영한다. 서로 통제하지 않으며 공통 기록은 codex-personal-context에만 둔다. `~/.claude`에는 Claude 실행에 필요한 것만 둔다.
 - Claude 메인: 사무실 Mac "Dentlink FE 메인세션 (사무실 Claude)"(폴더 `~/Repository`), 집 Mac "Dentlink FE 메인세션"(폴더 `~/repository`). 둘 다 저장소들이 모인 일반 폴더이며 같은 메모리 폴더 키를 쓴다. 정본은 codex-personal-context `projects/dentlink-fe.md`의 Session Ownership.
 - 메인은 접수·분류·조율·기록·마감만 맡고, 구현은 기능별 하위 세션에 맡긴다(작은 작업도 기본은 하위 세션). 넘긴 뒤에는 폴링하지 않는다. 메인세션은 보관하지 않는다.
-- 하위 세션: 브랜치·worktree는 Git으로 직접 `feat/<Jira>`로 만들고, `start_session`에 `cwd`=그 worktree, `use_worktree: false`, `model`·`effort`는 생략(메인 상속)해서 만든다. 만든 뒤 `get_session`으로 실제 모델을 확인한다.
+- 세션 폴더 기본값(2026-11-20): 사용자가 따로 지정하지 않으면 새로 만드는 모든 세션(조사·구현 포함)의 `cwd`는 `~/Repository`(집 Mac은 `~/repository`)로 한다.
+- 하위 세션: 브랜치·worktree는 Git으로 직접 `feat/<Jira>`로 만들고, `start_session`에 `cwd`=`~/Repository`, `use_worktree: false`, `model`·`effort`는 생략(메인 상속)해서 만든다. 브리프에 작업할 repo/worktree 절대경로를 적는다. 만든 뒤 `get_session`으로 실제 모델을 확인한다.
+- 이 경우 repo의 CLAUDE.md·PR 전 E2E 가드 훅·repo 전용 스킬이 자동으로 켜지지 않으므로, 세션은 작업 전 해당 repo CLAUDE.md를 직접 읽고 PR 전 E2E 가드 절차를 직접 수행한다(가드 기록 우회 금지).

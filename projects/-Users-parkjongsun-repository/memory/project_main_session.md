@@ -18,7 +18,7 @@ metadata:
 
 **How to apply:**
 - macOS 대소문자 무시로 사무실 `Repository`와 집 `repository`는 같은 메모리 폴더 키(`-Users-parkjongsun-repository/memory`)를 쓴다. 웹 폴더 키 `-Users-parkjongsun-repository-dentlink-client/memory`는 여기로 연결된 링크.
-- 작업 세션(기능 담당, 메인과 분리): Git으로 `feat/<Jira>` 브랜치·worktree를 직접 만든 뒤 `start_session`(`cwd`=worktree, `use_worktree: false`, `model`·`effort` 생략=메인 상속). 만든 뒤 `get_session`으로 모델 확인하고 바로 `detach_session`으로 top-level 분리(메인에 자동 알림 안 오게). 넘긴 뒤 폴링 금지(완료 알림은 앱이 줌).
+- 작업 세션(기능 담당, 메인과 분리): Git으로 `feat/<Jira>` 브랜치·worktree를 직접 만든 뒤 `start_session`(`cwd`=`~/Repository`(2026-11-20 변경, worktree 절대경로는 브리프에 명시), `use_worktree: false`, `model`·`effort` 생략=메인 상속). 만든 뒤 `get_session`으로 모델 확인하고 바로 `detach_session`으로 top-level 분리(메인에 자동 알림 안 오게). 넘긴 뒤 폴링 금지(완료 알림은 앱이 줌).
 - 앱 설정(계정/기기): 브랜치 접두어 `feat`, 새 세션 Remote Control 연결 켬(사무실은 11-12 설정). 새 세션 기본 모델 설정은 `claude-sonnet-4-6`이라 작업 세션 모델은 반드시 상속으로.
 - 메인세션은 보관하지 않는다. "정리하고 대기"는 기록 저장 후 대기 의미.
 - 동기화·기록 시점은 [[record-to-both-claude-and-codex-context]].

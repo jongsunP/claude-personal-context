@@ -9,6 +9,7 @@
 
 ## Feedback
 - [앱 신규 스크린 안전영역·배경 필수](feedback_app_safe_area_background.md) — 스크린 추가 때 노치/헤더/본문색·inset·진입/복귀 및 기존 홈/프로필 영향 반드시 챙김; 실행검증은 위험 기반
+- [세션 폴더 기본값 ~/Repository](feedback_session_folder_repository_default.md) — 11/20: 따로 지정 없으면 조사·구현 모든 새 세션 cwd=~/Repository, 구현은 worktree 경로를 브리프에·repo 지침/E2E 가드 직접 수행
 - [판단과 지침 예외 협의](feedback_collaborative_decisions.md) — 권장안·짧은 이유·확인할 선택을 설명, 승인된 일반 실행은 재질문 없음. 개별 예외 승인을 일괄 승인으로 확대하지 않음
 - [작업 완료 시 본인 문서 정리](feedback_owned_work_records_closeout.md) — PR 리뷰 기록·본인 Jira·관련 문서를 실제 완료/검증/잔여 상태와 맞춰 선제 정리
 - [브라우저는 인앱·비표시 우선](feedback_browser_visibility_default.md) — 일반 조사·자동화의 외부 창 깜박임 방지. 외부 visible은 사용자 요청/실제 필요 시, CfT 격리와 표시 모드 구분
