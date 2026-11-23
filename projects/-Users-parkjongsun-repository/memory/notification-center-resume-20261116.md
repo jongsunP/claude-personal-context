@@ -1,4 +1,10 @@
-## 2026-11-23 저녁 — DL-17533 결제 내역 앱 화면·DL-17590 마침표 통일 PR (현재 상태, 미머지)
+## 2026-11-23 저녁 마감 — DL-17533·DL-17590 배포 완료 (현재 상태)
+
+- 웹 #4940·치과앱 #359(b882f649) 사용자 release 머지, 웹은 사용자 STG 재배포. 치과앱 release/v2.2.5 CodePush: STG iOS v361/Android v360, DEV v158/v158(네이티브 변경 없음). 기공소앱은 변경 없음(재배포 불필요). Jira DL-17533·17590 배포 댓글, 상태 Ready for Deploy 유지. DL-17202 제목 "[치과앱] 알림센터 연계 크레딧·청구서·결제 내역 목록 추가"·설명 추가 범위 반영.
+- 로컬 정리: DL-17533 worktree·로컬 브랜치, 웹 feat/DL-17590 로컬 브랜치 삭제(머지 head와 동일). 치과앱 기본 checkout release/v2.2.5, 웹 알림센터 worktree origin/release/v1.94.0 detached. 확인용 Metro·에뮬레이터·시뮬레이터·Reactotron은 사용자가 닫으면 됨.
+- 다음: 사용자 QA·새 요청 대기. 보류 DL-17535·17469 등은 지시 시만. BE 필드 삭제 후 Swagger 재생성.
+
+## 2026-11-23 저녁 — DL-17533 결제 내역 앱 화면·DL-17590 마침표 통일 PR (이력, 이후 머지·배포됨)
 
 - 범위(사용자 확정): 치과 앱만. 새 화면은 Payment History 하나(웹 모바일 디자인·API 그대로, 검색·상태 필터/개수·펼침 Order Date/Payment Method·주문 상세 이동·권한 OWNER/PAYMENT_MANAGER). 결제(체크박스·Pay Now)·웹뷰·PDF(Invoice/Receipt/Statement) 제외. Statements 카드에 View(청구서 번호 keyword로 결제 내역 이동, NO_CHARGE 비활성) 추가. 딥링크 `billing/payment-history?employerId=`(Statements와 동일 형태)·웹 URL 변환 추가.
 - DL-17590(디자인QA): Retention Type 설명 끝 마침표를 웹 규칙(끝 마침표 없음)으로 통일. 앱 4개·웹 SCRP 2개. 문장 사이 마침표는 유지.
