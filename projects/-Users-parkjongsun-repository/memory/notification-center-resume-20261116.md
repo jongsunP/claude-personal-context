@@ -1,3 +1,9 @@
+## 2026-11-23 저녁 — DL-17533 결제 내역 앱 화면·DL-17590 마침표 통일 PR (현재 상태, 미머지)
+
+- 범위(사용자 확정): 치과 앱만. 새 화면은 Payment History 하나(웹 모바일 디자인·API 그대로, 검색·상태 필터/개수·펼침 Order Date/Payment Method·주문 상세 이동·권한 OWNER/PAYMENT_MANAGER). 결제(체크박스·Pay Now)·웹뷰·PDF(Invoice/Receipt/Statement) 제외. Statements 카드에 View(청구서 번호 keyword로 결제 내역 이동, NO_CHARGE 비활성) 추가. 딥링크 `billing/payment-history?employerId=`(Statements와 동일 형태)·웹 URL 변환 추가.
+- DL-17590(디자인QA): Retention Type 설명 끝 마침표를 웹 규칙(끝 마침표 없음)으로 통일. 앱 4개·웹 SCRP 2개. 문장 사이 마침표는 유지.
+- PR: 치과 앱 Innvoaid/dentlink-app#359(feat/DL-17533 → release/v2.2.5, worktree `~/Repository/dentlink-app-dl17533`), 웹 Innvoaid/dentlink-client#4940(feat/DL-17590 → release/v1.94.0, E2E 가드 NO_IMPACT). 단위 테스트 추가·통과, tsc 기존 7건 외 추가 없음. App.test·useProfileMarketing 실패는 release 동일(기존). 기기 실행 검증 전, Jira 상태 변경·배포 없음.
+
 ## 2026-11-23 마감 — 이번 release 알림센터 FE 작업 종료 (현재 상태)
 
 - 사용자가 Jira DL-17557·DL-17548을 READY FOR QA로 변경(확인). DL-17541·17542·17545·17556 완료. 사용자 판단: 이번 release(웹 v1.94.0·치과 v2.2.5·기공소 v1.0.6)에 지금까지 나온 FE 작업은 모두 완료. 앱은 STG·DEV CodePush 완료, 웹 배포는 사용자.
