@@ -11,4 +11,6 @@ metadata:
 
 **How to apply:** 앞으로 env가 필요하면 키 이름·`.env.example`만 다루고 실제 값 준비는 사람에게 안내한다. 사용자가 다시 env 값 작업을 지시하면 이 팀 규칙과 충돌함을 먼저 알리고 확인한다. 작업 전 해당 저장소의 최신 `CLAUDE.md`를 다시 확인한다.
 
+**예외 (2026-10-29 승인, 2026-11-23 재확인):** 새 worktree를 만들면 메인 worktree의 로컬 `.env*`(Git 무시·미추적, example·산출물 폴더 제외)를 내용을 보지 않고 같은 경로로 복사한다. 묻지 않고 worktree 생성 직후 `~/.claude/scripts/copy-worktree-env.sh <메인> <새 worktree>`로 실행한다. 11-23에 DL-17548 worktree에서 env가 없어 웹 로컬 확인이 막혔고, 사용자가 "로컬용이라 괜찮다, 앞으로도 자동으로"라고 지시했다. 값 읽기·수정·복원·커밋은 여전히 금지.
+
 관련: [[test-credentials-and-env-tokens]], [[codex-guidelines-adopted]]

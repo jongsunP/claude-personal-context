@@ -24,7 +24,7 @@
 - [앱 PR 팀 규칙](dentlink-app-pr-team-rules.md) — 제목 [DL-]/[QA], 스쿼시는 PR 제목, release 네이티브 PR은 실기기 확인 후 머지
 - [막히면 커넥터 직접 연결](connect-tools-directly-when-blocked.md) — Slack·Jira 등 접근 제한 시 MCP 커넥터 연결을 먼저 제안
 - [Lab i18n JSON만, 시트 운영 중단](feedback_lab_i18n_no_sheet.md) — 11-20 확정: 시트·generate/check/audit 미사용, 기존 ko/en JSON이 정본. generate:i18n 실행 금지(2,086 key 삭제). 시트 연동 제거 PR #4928 release/v1.94.0 머지·정리 완료
-- [env 팀 규칙](feedback_env_team_rule.md) — 에이전트는 실제 .env를 읽기·생성·수정 금지, Git 이력·GitHub Variables로 값 복원 금지(dentlink-client CLAUDE.md)
+- [env 팀 규칙](feedback_env_team_rule.md) — 에이전트는 실제 .env 읽기·작성·수정·값 복원 금지. 예외: 새 worktree 만들면 메인의 로컬 .env*를 스크립트로 내용 안 보고 자동 복사(11-23)
 - [시뮬·에뮬은 클로드 앱 밖](feedback_devices_outside_claude_app.md) — 인앱 시뮬 패널 대신 DeviceHub(Xcode 27.2)·터미널 창 .command로 에뮬·Metro
 - [실행 탭 안내·보고 범위](feedback_running_services_and_report_scope.md) — 계속 켜 둘 탭과 닫아도 될 탭을 구분해 안내, 사무실 Mac 미커밋은 보고에서 제외
 - [Codex 지침 승계](feedback_codex_guidelines_adopted.md) — codex-personal-context가 정본(읽는 순서·Claude Code 대응표), 핵심 규칙 요약, 기록은 양쪽에
@@ -59,6 +59,7 @@
 - [인수 작업은 리뷰 대응만](feedback_handoff_review_scope.md) — 완성된 작업의 리뷰 지적 처리 시 범위 한정, 무관 사항을 확인 필요로 올리지 않음
 
 ## Project
+- [DL-17548 CP SCRP 분리](project_dl17548_cp_scrp.md) — 웹 #4936·치과앱 #358 release 머지 완료(11-23), BE #2744 STG 반영과 함께 배포 필요
 - [11/16 로컬 브랜치·worktree 정리](project_local_cleanup_20261116.md) — 28브랜치·4worktree 정리 완료, 진행 세션 소유/현재 릴리즈/Lab 근거 부족4개 보존
 - [DLDS 준비용 워크트리 보관 판단](project_dlds_worktree_retention.md) — 11/16 사용자 승인으로 빈 준비용 사본 삭제 완료. 필요 시 최신 master에서 재준비, Studio/PR62/복구 백업 보존
 - [디자인 Reject 캡처 exocad 원인(11/20)](project_design_reject_capture_exocad_20261120.md) — Firefox에서 HTML 복제 캡처가 WebGL 모델 누락, Chrome은 화면공유로 정상. 노션 공유 완료, 방향은 팀 회의 후
