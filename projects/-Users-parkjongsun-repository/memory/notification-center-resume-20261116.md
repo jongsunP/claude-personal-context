@@ -1,3 +1,9 @@
+## 2026-11-23 마감 — 이번 release 알림센터 FE 작업 종료 (현재 상태)
+
+- 사용자가 Jira DL-17557·DL-17548을 READY FOR QA로 변경(확인). DL-17541·17542·17545·17556 완료. 사용자 판단: 이번 release(웹 v1.94.0·치과 v2.2.5·기공소 v1.0.6)에 지금까지 나온 FE 작업은 모두 완료. 앱은 STG·DEV CodePush 완료, 웹 배포는 사용자.
+- 정리: DL-17548 세션(비실행, PR 머지)의 worktree `dentlink-client-dl17548`·`dentlink-app-dl17548`(clean, 머지 head와 동일)과 로컬 feat/DL-17548 삭제. ~/.codex 아래 Codex worktree는 손대지 않음.
+- 다음: 사용자 QA 결과·새 요청 대기. BE 필드 삭제 후 Swagger 재생성, 보류 DL-17535·17533·17469는 지시 시만.
+
 ## 2026-11-23 저녁 — 앱 release CodePush 완료·로컬 정리 (현재 상태)
 
 - 사용자 지시(웹은 사용자가 직접 배포, 앱만 STG·DEV, BE 상태 무관): 치과 release/v2.2.5(ebb4febf) STG iOS v360/Android v359·DEV v157/v157, 기공소 release/v1.0.6(6e00a8d) STG v76/v76·DEV iOS v54/Android v53 게시·활성. 포함: DL-17541 리뷰 후속·DL-17557·구 API/pushEnable 정리, 치과는 DL-17548(타 세션 머지분) 포함. 네이티브 변경 없음 확인. Jira DL-17557 배포 댓글(45249), 상태는 Ready for Deploy 유지.
