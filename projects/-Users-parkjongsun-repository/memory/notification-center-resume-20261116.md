@@ -1,6 +1,7 @@
 ## 2026-11-23 — 구 알림 API 잔여 코드 정리 PR (최신)
 
 - BE(Leo) 삭제 예정 10개 API(push-preferences·push-settings·/messages/notifications) 실제 호출 없음 확인. 미사용 코드 정리 PR: 치과 #357, 기공소 #53, 웹 #4935(feat/DL-16140-api-cleanup, release/v2.2.5·v1.0.6·v1.94.0). 타입 검사만, 실행 검증 생략(사용자). 생성 파일은 BE 삭제 후 재생성.
+- 같은 PR에 pushEnable 필드 삭제 대응 추가: 양앱 Amplitude user_push, 웹 user_push·관리자 푸시 상태 표시·CSV 열 제거(차트·CSV는 없어진 대로 대응, 사용자).
 
 ## 2026-11-23 — DL-17557 구현·PR, 미배포 (최신)
 
