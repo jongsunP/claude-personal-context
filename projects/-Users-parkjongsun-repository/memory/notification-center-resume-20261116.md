@@ -1,3 +1,9 @@
+## 2026-11-23 저녁 — 앱 release CodePush 완료·로컬 정리 (현재 상태)
+
+- 사용자 지시(웹은 사용자가 직접 배포, 앱만 STG·DEV, BE 상태 무관): 치과 release/v2.2.5(ebb4febf) STG iOS v360/Android v359·DEV v157/v157, 기공소 release/v1.0.6(6e00a8d) STG v76/v76·DEV iOS v54/Android v53 게시·활성. 포함: DL-17541 리뷰 후속·DL-17557·구 API/pushEnable 정리, 치과는 DL-17548(타 세션 머지분) 포함. 네이티브 변경 없음 확인. Jira DL-17557 배포 댓글(45249), 상태는 Ready for Deploy 유지.
+- 웹 PR #4935·#4938 포함 release/v1.94.0 배포는 사용자가 진행. 로컬 정리: 머지된 feat/DL-16140·api-cleanup·DL-17541·DL-17557(양앱), feat/DL-16140·api-cleanup·pushenable-type-cleanup(웹) 로컬 브랜치 삭제(모두 원격 PR head와 동일). 양앱 기본 checkout은 각 release, 웹 알림센터 worktree는 origin/release/v1.94.0 detached. 원격 브랜치는 유지.
+- 남음: BE 필드 삭제 후 Swagger 재생성, 의도적 보류 DL-17535·17533·17469(지시 시만).
+
 ## 2026-11-23 저녁 — FE 관리 타입 pushEnable 선언 정리 PR (현재 상태, 머지 620d0187e)
 
 - 사용자 요청 "8곳 모두 정리": 웹 FE 관리 타입 user.types.ts(2)·employer.types.ts(1)·api.types.ts(5)의 pushEnable 선언 제거, pushEnable만 담던 미사용 DTO(UserPreferenceUpdateDto·UserPushPreferenceResponseDto·ApiResponseUserPushPreferenceResponseDto·UpdateUserPreferenceData)도 제거. 웹 PR #4938(feat/DL-16140-pushenable-type-cleanup 7cd525438 → release/v1.94.0), clinic·lab·admin tsc 통과, E2E 가드 NO_IMPACT. 실행 검증 생략(사용처 없음).
