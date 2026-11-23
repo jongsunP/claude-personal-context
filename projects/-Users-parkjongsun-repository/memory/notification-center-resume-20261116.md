@@ -5,6 +5,7 @@
 - PR: 치과 앱 Innvoaid/dentlink-app#359(feat/DL-17533 → release/v2.2.5, worktree `~/Repository/dentlink-app-dl17533`), 웹 Innvoaid/dentlink-client#4940(feat/DL-17590 → release/v1.94.0, E2E 가드 NO_IMPACT). 단위 테스트 추가·통과, tsc 기존 7건 외 추가 없음. App.test·useProfileMarketing 실패는 release 동일(기존). 기기 실행 검증 전, Jira 상태 변경·배포 없음.
 - 후속(같은 날): 사용자 지시로 카드 펼침 토글 제거, Order Date·Payment Method 항상 표시(40ea2c39, PR 반영). Receipt·Invoice는 범위상 제외 유지. 로컬 DEV(iPhone 17 Pro·Android API 36, 메인 checkout을 feat 커밋으로 detach한 Metro)에서 목록·필터(Canceled/Refunded)·검색(서버 개수 일치)·주문 상세 이동·Statements View·딥링크 확인. Retention Type 문구는 설문 Next가 단계마다 저장해서 기기 확인 생략(코드 확인). 처음에 설치된 DEV 앱 대신 STG 빌드를 임의로 시작했던 실수 → 사용자 지시로 로컬 DEV 기본 규칙 추가.
 - DL-17590 최종(사용자 재지시): 끝 마침표만 제거, 문장 사이 마침표("…with a screw. Ships as…")는 유지. 잠깐 쉼표로 바꿨던 커밋은 되돌림(웹 07b906cba #4940, 앱 487ce11b #359 push, PR 설명 복원). 웹·치과 앱 4개 문구 완전 동일.
+- 마감(11/23 17시대): 웹 #4940 사용자 머지(86d294600). 앱 #359 CodeRabbit 2건: 토글 접근성은 토글 제거로 해소, 건수 조회 실패 시 (0) 표시는 건수 없이 표시로 수정(f5c56bad, 필터 테스트 추가), 답글·resolve 완료. Jira: DL-17533·DL-17590 → Ready for Deploy(전환명 "요구사항에 대해 개발 완료") + 결과 댓글, DL-17202 설명에 추가 범위(결제 내역·Statements View) 반영 + 댓글. 앱 #359 머지·CodePush 전.
 
 ## 2026-11-23 마감 — 이번 release 알림센터 FE 작업 종료 (현재 상태)
 
