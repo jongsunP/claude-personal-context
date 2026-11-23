@@ -1,6 +1,6 @@
 ## 2026-11-23 — DL-17557 구현·PR, 미배포 (최신)
 
-- PM 답변대로 권한 OFF에도 푸시 실제 값 기존 색 표시(회색 강제 제거), 권한 요청 동작·배너·저장 로직 유지. 치과 PR #356(9504a050, release/v2.2.5), 기공소 PR #52(80f17ec, release/v1.0.6). CodePush 안 함. Jira Ready for Deploy·댓글.
+- PM 답변대로 권한 OFF에도 푸시 실제 값 기존 색 표시(회색 강제 제거), 권한 요청 동작·배너·저장 로직 유지. 치과 PR #356(9504a050, release/v2.2.5), 기공소 PR #52(80f17ec, release/v1.0.6). CodePush 안 함. Jira Ready for Deploy·댓글. 리뷰: #356 Minor 1건(fixture key) fedf3335 반영·resolve, #52 없음.
 - 주말 사이 Codex가 DL-17541 리뷰 처리·사용자 머지(#355/#51). release 기준 STG 재배포는 아직.
 - 기공소 appServiceIsolation 테스트(DL-17541 getProfile 인자 변경 여파) 기대값 수정해 PR #52에 추가(bfde45a), 기공소 단위 App.test만 기존 실패.
 
