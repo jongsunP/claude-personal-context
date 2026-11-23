@@ -17,4 +17,4 @@ metadata:
 
 **Why:** 알림센터가 release 머지·STG QA 단계로 넘어가 DEV 정합성은 더 이상 의미가 없다.
 
-**How to apply:** 배포·검증·남은 일 정리 때 STG 기준으로만 판단한다. 다시 DEV를 언급하면 그때 따른다. 관련: [[notification-center-resume-20261116]]
+**How to apply:** 배포·검증·남은 일 정리 때 STG 기준으로만 판단한다. 단 로컬 시뮬·에뮬 기기 테스트 환경은 DEV([[feedback_app_local_test_dev]], 11/23). 다시 DEV를 언급하면 그때 따른다. 관련: [[notification-center-resume-20261116]]
