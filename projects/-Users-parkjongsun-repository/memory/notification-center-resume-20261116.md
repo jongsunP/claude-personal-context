@@ -1,3 +1,7 @@
+## 2026-11-23 — 구 알림 API 잔여 코드 정리 PR (최신)
+
+- BE(Leo) 삭제 예정 10개 API(push-preferences·push-settings·/messages/notifications) 실제 호출 없음 확인. 미사용 코드 정리 PR: 치과 #357, 기공소 #53, 웹 #4935(feat/DL-16140-api-cleanup, release/v2.2.5·v1.0.6·v1.94.0). 타입 검사만, 실행 검증 생략(사용자). 생성 파일은 BE 삭제 후 재생성.
+
 ## 2026-11-23 — DL-17557 구현·PR, 미배포 (최신)
 
 - PM 답변대로 권한 OFF에도 푸시 실제 값 기존 색 표시(회색 강제 제거), 권한 요청 동작·배너·저장 로직 유지. 치과 PR #356(9504a050, release/v2.2.5), 기공소 PR #52(80f17ec, release/v1.0.6). CodePush 안 함. Jira Ready for Deploy·댓글. 리뷰: #356 Minor 1건(fixture key) fedf3335 반영·resolve, #52 없음.
