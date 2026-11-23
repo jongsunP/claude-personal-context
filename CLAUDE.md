@@ -34,3 +34,9 @@ pull 후 변경사항이 있으면 "메모리 동기화 완료 (N개 파일 업�
 - 세션 폴더 기본값(2026-11-20): 사용자가 따로 지정하지 않으면 새로 만드는 모든 세션(조사·구현 포함)의 `cwd`는 `~/Repository`(집 Mac은 `~/repository`)로 한다.
 - 하위 세션: 브랜치·worktree는 Git으로 직접 `feat/<Jira>`로 만들고, `start_session`에 `cwd`=`~/Repository`, `use_worktree: false`, `model`·`effort`는 생략(메인 상속)해서 만든다. 브리프에 작업할 repo/worktree 절대경로를 적는다. 만든 뒤 `get_session`으로 실제 모델을 확인한다.
 - 이 경우 repo의 CLAUDE.md·PR 전 E2E 가드 훅·repo 전용 스킬이 자동으로 켜지지 않으므로, 세션은 작업 전 해당 repo CLAUDE.md를 직접 읽고 PR 전 E2E 가드 절차를 직접 수행한다(가드 기록 우회 금지).
+
+## 새 worktree의 로컬 env 자동 복사 (2026-11-23 사용자 지시)
+
+- worktree를 새로 만들면 묻지 않고 바로 `~/.claude/scripts/copy-worktree-env.sh <메인 worktree> <새 worktree>`를 실행해 메인 worktree의 로컬 env 파일을 같은 경로로 복사한다. 모든 저장소에 적용한다.
+- 대상은 Git이 무시하고 추적하지 않는 `.env*` 파일이다. `.env.example`·`.env.sample`, `node_modules`·`.next`·`dist`·`build` 같은 산출물 폴더 안의 파일은 제외한다. 스크립트는 내용을 열거나 출력하지 않고, 이미 있는 파일은 덮어쓰지 않는다.
+- repo 팀 규칙(에이전트는 env 값을 읽기·작성·수정·복원하지 않음)은 그대로다. 이 복사만 사용자의 개인 로컬 예외이며, 값 확인·수정·커밋·외부 전송은 여전히 하지 않는다. 정본은 codex-personal-context `SESSION_WORKFLOW.md`의 Local Env Inheritance.
