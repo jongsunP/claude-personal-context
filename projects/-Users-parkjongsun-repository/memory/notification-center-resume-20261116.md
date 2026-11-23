@@ -1,4 +1,9 @@
-## 2026-11-23 저녁 마감 — DL-17533·DL-17590 배포 완료 (현재 상태)
+## 2026-11-23 저녁 — DL-17533 QA 보완 PR (현재 상태, 미머지)
+
+- 사용자 QA 요청: 결제 내역 주문 번호 밑줄색(공용 Typography 기본 mono400 → information), 결제 내역·Billing Statements 탑 버튼(공용 ScrollTopButton·useListScroll), 검색·상태 필터를 ListHeaderComponent로 옮겨 함께 스크롤. 치과앱만.
+- 브랜치 QA/DL-17533(머지된 feat/DL-17533 재사용 불가, 앱 PR 템플릿 QA 규칙), worktree `~/Repository/dentlink-app-dl17533-qa`, 8f7c8c7f. PR Innvoaid/dentlink-app#360 → release/v2.2.5. 테스트 17건·tsc 기존 7건·린트 통과, 로컬 DEV iOS·Android 확인(검색 입력 중 키보드 유지 포함). 확인용으로 메인 checkout에 잠시 적용한 패치는 되돌림. 머지·CodePush 전.
+
+## 2026-11-23 저녁 마감 — DL-17533·DL-17590 배포 완료 (이력)
 
 - 웹 #4940·치과앱 #359(b882f649) 사용자 release 머지, 웹은 사용자 STG 재배포. 치과앱 release/v2.2.5 CodePush: STG iOS v361/Android v360, DEV v158/v158(네이티브 변경 없음). 기공소앱은 변경 없음(재배포 불필요). Jira DL-17533·17590 배포 댓글, 이후 사용자가 READY FOR QA로 이동(확인). DL-17557·DL-17548·DL-17202는 완료. DL-17202 제목 "[치과앱] 알림센터 연계 크레딧·청구서·결제 내역 목록 추가"·설명 추가 범위 반영.
 - 로컬 정리: DL-17533 worktree·로컬 브랜치, 웹 feat/DL-17590 로컬 브랜치 삭제(머지 head와 동일). 치과앱 기본 checkout release/v2.2.5, 웹 알림센터 worktree origin/release/v1.94.0 detached. 확인용 Metro·에뮬레이터·시뮬레이터·Reactotron은 사용자가 닫으면 됨.
