@@ -1,4 +1,8 @@
-## 2026-11-23 저녁 — DL-17533 QA 보완 PR·배포 완료 (현재 상태)
+## 2026-11-23 저녁 — 이번 릴리즈 상용 배포 전환·로컬 정리 (현재 상태)
+
+- 사용자: 이번 릴리즈 웹·앱은 상용 배포 단계, 로컬 작업 종료. 알림센터 포함 이번 릴리즈 worktree·로컬 브랜치 정리 완료(상세 dentlink-fe.md 2026-11-23). 이후 요청 대기.
+
+## 2026-11-23 저녁 — DL-17533 QA 보완 PR·배포 완료 (이력)
 
 - 사용자 QA 요청: 결제 내역 주문 번호 밑줄색(공용 Typography 기본 mono400 → information), 결제 내역·Billing Statements 탑 버튼(공용 ScrollTopButton·useListScroll), 검색·상태 필터를 ListHeaderComponent로 옮겨 함께 스크롤. 치과앱만.
 - 브랜치 QA/DL-17533(머지된 feat/DL-17533 재사용 불가, 앱 PR 템플릿 QA 규칙), worktree `~/Repository/dentlink-app-dl17533-qa`, 8f7c8c7f. PR Innvoaid/dentlink-app#360 → release/v2.2.5. 테스트 17건·tsc 기존 7건·린트 통과, 로컬 DEV iOS·Android 확인(검색 입력 중 키보드 유지 포함). 확인용으로 메인 checkout에 잠시 적용한 패치는 되돌림. 머지·CodePush 전.
