@@ -4,7 +4,7 @@
 - DL-17590(디자인QA): Retention Type 설명 끝 마침표를 웹 규칙(끝 마침표 없음)으로 통일. 앱 4개·웹 SCRP 2개. 문장 사이 마침표는 유지.
 - PR: 치과 앱 Innvoaid/dentlink-app#359(feat/DL-17533 → release/v2.2.5, worktree `~/Repository/dentlink-app-dl17533`), 웹 Innvoaid/dentlink-client#4940(feat/DL-17590 → release/v1.94.0, E2E 가드 NO_IMPACT). 단위 테스트 추가·통과, tsc 기존 7건 외 추가 없음. App.test·useProfileMarketing 실패는 release 동일(기존). 기기 실행 검증 전, Jira 상태 변경·배포 없음.
 - 후속(같은 날): 사용자 지시로 카드 펼침 토글 제거, Order Date·Payment Method 항상 표시(40ea2c39, PR 반영). Receipt·Invoice는 범위상 제외 유지. 로컬 DEV(iPhone 17 Pro·Android API 36, 메인 checkout을 feat 커밋으로 detach한 Metro)에서 목록·필터(Canceled/Refunded)·검색(서버 개수 일치)·주문 상세 이동·Statements View·딥링크 확인. Retention Type 문구는 설문 Next가 단계마다 저장해서 기기 확인 생략(코드 확인). 처음에 설치된 DEV 앱 대신 STG 빌드를 임의로 시작했던 실수 → 사용자 지시로 로컬 DEV 기본 규칙 추가.
-- DL-17590 후속(사용자: 마침표는 전부 제거): SCRP 두 설명의 문장 사이 마침표도 쉼표로 연결 "…secured with a screw, ships as one unit / two parts". 웹 63b1c6475(#4940)·앱 4fe04521(#359) push, PR 설명 갱신. 범위는 웹+치과 앱(관리자·기공소 해당 문구 없음).
+- DL-17590 최종(사용자 재지시): 끝 마침표만 제거, 문장 사이 마침표("…with a screw. Ships as…")는 유지. 잠깐 쉼표로 바꿨던 커밋은 되돌림(웹 07b906cba #4940, 앱 487ce11b #359 push, PR 설명 복원). 웹·치과 앱 4개 문구 완전 동일.
 
 ## 2026-11-23 마감 — 이번 release 알림센터 FE 작업 종료 (현재 상태)
 
