@@ -1,3 +1,8 @@
+## 2026-11-23 저녁 — FE 관리 타입 pushEnable 선언 정리 PR (현재 상태, 미머지)
+
+- 사용자 요청 "8곳 모두 정리": 웹 FE 관리 타입 user.types.ts(2)·employer.types.ts(1)·api.types.ts(5)의 pushEnable 선언 제거, pushEnable만 담던 미사용 DTO(UserPreferenceUpdateDto·UserPushPreferenceResponseDto·ApiResponseUserPushPreferenceResponseDto·UpdateUserPreferenceData)도 제거. 웹 PR #4938(feat/DL-16140-pushenable-type-cleanup 7cd525438 → release/v1.94.0), clinic·lab·admin tsc 통과, E2E 가드 NO_IMPACT. 실행 검증 생략(사용처 없음).
+- 양앱(release/v2.2.5·v1.0.6)은 생성 models 밖 pushEnable 없음 → 대상 없음. 남은 pushEnable은 Swagger 생성 파일뿐(BE 삭제 후 재생성). 배포 없음.
+
 ## 2026-11-23 오후 — PR 모두 머지 확인 (최신)
 
 - MERGED: DL-17557 치과 #356·기공소 #52, 구 API·pushEnable 정리 치과 #357·기공소 #53·웹 #4935, DL-17541 #355·#51 (release/v2.2.5·v1.0.6·v1.94.0). 아래 "미머지" 기록은 대체.
