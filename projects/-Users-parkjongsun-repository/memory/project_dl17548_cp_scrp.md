@@ -14,6 +14,7 @@ metadata:
 - worktree `dentlink-client-dl17548`·`dentlink-app-dl17548`와 로컬 feat/DL-17548은 11-23 정리(삭제). Jira READY FOR QA(사용자 변경).
 - 결정: 두 SCRP 모두 주문 옵션 "SCRP (Screwmentable)" 연결(기획 미확인 기본안), 기존 SCRP는 Crown Cemented로 표시·선택. 생성 모델은 DEV 재생성 시 무관 변경이 커서 재생성하지 않고 FE 타입 계층에만 추가. 이미지 4장 270×180 교체, 웹 `?t=20261123`. 웹 카드 제목은 480px 이상에서 nowrap.
 - 11-23 배포: 치과앱 release/v2.2.5 CodePush(알림센터 세션) STG iOS v360/Android v359·DEV v157에 포함. BE #2744는 develop 머지(06:26Z), DEV 배포 완료·STG 배포(release/261123) 진행 중이었음(사용자: BE 무관하게 진행). 웹 배포는 사용자.
+- 11-23 사용자 QA: 앱 주문 상세에 BE 값 그대로 보임 제보 → 앱 주문 상세는 치과 웹 /orders/{id} WebView라 웹 STG 배포 완료 전이었던 것. 배포 후 정상 확인(사용자). 코드 문제 없음. 앱 설정 화면만 네이티브(CodePush).
 - API: DEV 저장·조회 확인, STG는 400(BE 미반영). 사용자 지시로 E2E 가드 SKIPPED.
 
 **Why:** BE와 배포 시점이 어긋나면 SCRP 저장이 실패한다.
