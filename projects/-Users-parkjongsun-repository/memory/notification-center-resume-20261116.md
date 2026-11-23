@@ -1,3 +1,20 @@
+## 2026-11-23 — 재개 동기화: 다른 에이전트 작업·실제 머지·Jira 상태 확인
+
+- 요청: 사용자 부재 중이 아니라 이 세션 외에서 진행된 알림센터 작업 싱크/상황 파악만. 제품 코드·PR·Jira·배포 변경, 기기/E2E/전수검사 없음. 개인 컨텍스트 최신화 후 세 제품 현재 checkout `feat/DL-16140-api-cleanup` fetch/pull --ff-only 확인, 모두 clean·upstream 일치. 원격 release 최신화는 확인했지만 현재 feature에 별도 merge하지 않음. 다른 worktree의 사용자 변경은 건드리지 않음.
+- 실제 GitHub 확인(이전 미머지 기록 대체): Office #355(DL-17541)→release/v2.2.5 abe5e933, Lab #51→release/v1.0.6 2e5704c는 11/20 머지. Office #356(DL-17557) b9386a60·#357(구 API/pushEnable 정리) 493166ee, Lab #52 b8627ec·#53 6e00a8d는 11/23 머지. Web #4935→release/v1.94.0 45423d6c도 11/23 15:27 KST 머지.
+- DL-17557은 PM 답변 대기/미착수가 아님: OS 권한 OFF여도 서버에 저장된 PUSH 설정값의 기존 색을 유지하도록 양앱 반영. 권한 요청·배너·저장 정책 유지. 기존 테스트 및 Office 리뷰 fixture, Lab getProfile 인자 기대값 보완 포함. 현재 Jira Ready for Deploy.
+- 구 API 정리: 실제 사용 안 하던 push-preferences/push-settings/구 messages notifications 코드 제거. 치과 목록 조회 필터는 기기 저장 유지. 현재 알림함·읽음·설정 API는 유지. pushEnable 소비자(양앱 Amplitude user_push, 웹 user_push/관리자CRM 푸시 상태/회원CSV) 제거도 위 PR에 포함. 생성 Swagger 타입은 BE 정리 후 정본 재생성 단계와 구분.
+- 관리자 알림 senderServiceType/senderEmployerId/senderEmployerName 미사용 문의: 사용자 BE 답변 전달 완료. 생성 타입 선언 외 별도 복사 타입/렌더링/전송 사용 없어 추가 FE 리팩터링 불필요. API 자체는 사용 중이며 세 필드 제거만 해당.
+- Jira 현재 조회: DL-17541·17542·17545·17556 완료. DL-17557 Ready for Deploy. BE DL-17560 구 코드 제거·DL-17559 템플릿 재마이그레이션 진행 중, DL-17558 관리자 일괄메시지 푸시 READY FOR QA. BE 리메이크 발송 DL-17538/17483·Lab 디자인컨펌 푸시17540·인보이스 문구17528 완료. 담당자/범위 구분, FE 작업으로 임의 전환하지 않음.
+- 배포 경계: 머지 확인은 배포 확인이 아님. DL-17541 리뷰 후속·DL-17557·구 API 정리 추가분의 배포 완료는 현재 기록에서 확인되지 않음. 이번 배포 서비스 조회/CodePush 실행 없음. 다음 배포 요청 시 실제 대상 release/배포 라벨과 차이부터 확인. 기본 STG, DEV는 명시 지시 시만.
+- 의도적 보류 DL-17535·17533·17469는 자동 재개 안 함. 이번 동기화만으로 새 FE 구현 항목을 추가하지 않음. 다음 사용자 요청에 맞춰 QA/배포/신규 이슈 중 필요한 범위만 진행.
+
+## 2026-11-23 — BE 관리자 웹알림 발신자 3필드 제거 문의 확인
+
+- Slack https://innovaidhq.slack.com/archives/C04T5SU6A2U/p1795409904774179 (Leo 13:58 KST): GET /admin/messages/notifications data[]의 senderServiceType/senderEmployerId/senderEmployerName 제거 예정, 어드민 사용 여부 요청. 기존 pushEnable 제거 건과 별도. 신규 발송은 이미 null/“-”, 과거만 값 존재한다는 BE 설명.
+- 읽기 전용 코드 대조: API-cleanup HEAD 057cb30ef와 원격 release/v1.94.0 dfc69f5780. 3필드는 생성 data-contracts.ts 선언 외 사용 없음. 실제 API caller(관리자 웹알림 목록·CRM 알림 타임라인) 및 컬럼/렌더링 대조, 수신자·내용·읽음 등만 사용. 두 브랜치의 해당 소비자 파일 diff 없음.
+- 결론: 확인한 릴리즈/작업 코드 기준 3필드 제거 대응용 FE 화면 수정 불필요. API 자체는 계속 사용, 필드만 미사용. 생성 타입은 BE Swagger 정리 시 재생성 대상으로 구분. 이번 코드 수정·외부 답변 게시·배포 없음.
+
 ## 2026-11-23 — 구 알림 API 잔여 코드 정리 PR (최신)
 
 - BE(Leo) 삭제 예정 10개 API(push-preferences·push-settings·/messages/notifications) 실제 호출 없음 확인. 미사용 코드 정리 PR: 치과 #357, 기공소 #53, 웹 #4935(feat/DL-16140-api-cleanup, release/v2.2.5·v1.0.6·v1.94.0). 타입 검사만, 실행 검증 생략(사용자). 생성 파일은 BE 삭제 후 재생성.
